@@ -1,0 +1,2 @@
+/Users/djaffe/Documents/Neutrinos/SimWbLS/MyStuff/B1-build/CMakeFiles/exampleB1.dir
+/Users/djaffe/Documents/Neutrinos/SimWbLS/MyStuff/B1-build/CMakeFiles/B1.dir

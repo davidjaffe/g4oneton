@@ -1,0 +1,29 @@
+/control/verbose 2
+/tracking/verbose 0
+# avoid all those annoying 'FresnelRefraction' messages
+/process/setVerbose 0 OpBoundary
+# I like this view
+#/vis/viewer/set/viewpointThetaPhi 90. 0.
+# this view essentially puts 1ton vessel vertical
+/vis/viewer/set/viewpointThetaPhi -80. 90.
+#
+# cosmic muon
+#/gun/particle mu+
+#/gun/energy 5 GeV
+#/gun/position 0 0 3.5 cm
+#/gun/direction 0 0 -1
+#
+# photon at typical position with  cerenkov angle
+/gun/particle opticalphoton
+/gun/energy 3 eV
+/OpNovice/gun/optPhotonPolar
+### typical for cerenkov angle
+/gun/position 0 10. 66. cm
+/gun/direction  0.892 0 -1
+### aim at  bottom central pmt from close range
+#/gun/position 0 0 -650 mm
+#/gun/direction 0 0 -1
+### aim at central pmt from top of vessel
+#/gun/position 0 0 650 mm
+#
+/run/beamOn 1

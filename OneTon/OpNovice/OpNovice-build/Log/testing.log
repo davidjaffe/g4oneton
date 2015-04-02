@@ -1,0 +1,1294 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-01    (5-December-2014)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+ >>>> OpNoviceStackingAction: prescaleFactor 100 thresFactor 0.99. Kill optical photon if uniform random number (0,1) < thresFactor. 
+ Hello from OnetonTrackingAction 
+Water G4MaterialPropertiesTable
+ABSLENGTH
+2.034e-06	3448
+2.068e-06	4082
+2.103e-06	6329
+2.139e-06	9174
+2.177e-06	12346
+2.216e-06	13889
+2.256e-06	15152
+2.298e-06	17241
+2.341e-06	18868
+2.386e-06	20000
+2.433e-06	26316
+2.481e-06	35714
+2.532e-06	45455
+2.585e-06	47619
+2.64e-06	52632
+2.697e-06	52632
+2.757e-06	55556
+2.82e-06	52632
+2.885e-06	52632
+2.954e-06	47619
+3.026e-06	45455
+3.102e-06	41667
+3.181e-06	37037
+3.265e-06	33333
+3.353e-06	30000
+3.446e-06	28500
+3.545e-06	27000
+3.649e-06	24500
+3.76e-06	22000
+3.877e-06	19500
+4.002e-06	17500
+4.136e-06	14500
+FASTCOMPONENT
+2.034e-06	1
+2.068e-06	1
+2.103e-06	1
+2.139e-06	1
+2.177e-06	1
+2.216e-06	1
+2.256e-06	1
+2.298e-06	1
+2.341e-06	1
+2.386e-06	1
+2.433e-06	1
+2.481e-06	1
+2.532e-06	1
+2.585e-06	1
+2.64e-06	1
+2.697e-06	1
+2.757e-06	1
+2.82e-06	1
+2.885e-06	1
+2.954e-06	1
+3.026e-06	1
+3.102e-06	1
+3.181e-06	1
+3.265e-06	1
+3.353e-06	1
+3.446e-06	1
+3.545e-06	1
+3.649e-06	1
+3.76e-06	1
+3.877e-06	1
+4.002e-06	1
+4.136e-06	1
+RINDEX
+2.034e-06	1.3435
+2.068e-06	1.344
+2.103e-06	1.3445
+2.139e-06	1.345
+2.177e-06	1.3455
+2.216e-06	1.346
+2.256e-06	1.3465
+2.298e-06	1.347
+2.341e-06	1.3475
+2.386e-06	1.348
+2.433e-06	1.3485
+2.481e-06	1.3492
+2.532e-06	1.35
+2.585e-06	1.3505
+2.64e-06	1.351
+2.697e-06	1.3518
+2.757e-06	1.3522
+2.82e-06	1.353
+2.885e-06	1.3535
+2.954e-06	1.354
+3.026e-06	1.3545
+3.102e-06	1.355
+3.181e-06	1.3555
+3.265e-06	1.356
+3.353e-06	1.3568
+3.446e-06	1.3572
+3.545e-06	1.358
+3.649e-06	1.3585
+3.76e-06	1.359
+3.877e-06	1.3595
+4.002e-06	1.36
+4.136e-06	1.3608
+SLOWCOMPONENT
+2.034e-06	0.01
+2.068e-06	1
+2.103e-06	2
+2.139e-06	3
+2.177e-06	4
+2.216e-06	5
+2.256e-06	6
+2.298e-06	7
+2.341e-06	8
+2.386e-06	9
+2.433e-06	8
+2.481e-06	7
+2.532e-06	6
+2.585e-06	4
+2.64e-06	3
+2.697e-06	2
+2.757e-06	1
+2.82e-06	0.01
+2.885e-06	1
+2.954e-06	2
+3.026e-06	3
+3.102e-06	4
+3.181e-06	5
+3.265e-06	6
+3.353e-06	7
+3.446e-06	8
+3.545e-06	9
+3.649e-06	8
+3.76e-06	7
+3.877e-06	6
+4.002e-06	5
+4.136e-06	4
+FASTTIMECONSTANT
+1
+RESOLUTIONSCALE
+1
+SCINTILLATIONYIELD
+100
+SLOWTIMECONSTANT
+10
+YIELDRATIO
+0.8
+
+ ++++++ NO BLACK TEFLON LINER ++++++ 
+
+SUPPRESS use of surfaces 
+ OpNoviceDetectorConstruction::ConstructSDandField: number of PMTs is 10
+ AddDiscreteProcess to OpticalPhoton 
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  OpenGLImmediateX (OGLI, OGLIX)
+  OpenGLStoredX (OGL, OGLS, OGLSX)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+/tracking/verbose 10
+# avoid all those annoying 'FresnelRefraction' messages
+/process/setVerbose 10 OpBoundary
+# avoid all other optical photon messages
+/process/setVerbose 0 Cerenkov
+/process/setVerbose 0 Scintillation
+/process/setVerbose 10 OpAbsorption
+/process/setVerbose 0 OpRayleigh
+#  I like this view
+#/vis/viewer/set/viewpointThetaPhi 90. 0.
+# this view essentially puts 1ton vessel vertical
+/vis/viewer/set/viewpointThetaPhi -80. 90.
+ERROR: G4VisCommandsViewerSet::SetNewValue: no current viewer.
+#
+# no scintillation
+/process/inactivate Scintillation
+/run/physicsModified
+#
+# deal with lots of optical photons
+/vis/ogl/set/displayListLimit 150000
+G4OpenGLViewerMessenger::SetNewValue: No current viewer.
+  "/vis/open", or similar, to get one.
+#
+# drawing particle trajectories with initial kinetic energy 2.99-3.0 eV (optical photons, hopefully)
+#/vis/filtering/trajectories/create/attributeFilter
+#/vis/filtering/trajectories/attributeFilter-0/setAttribute IKE
+#/vis/filtering/trajectories/attributeFilter-0/addInterval 2.98 eV 3. eV
+#/vis/filtering/trajectories/list
+#
+# cosmic muon. z=121cm is just under top of dark box
+/gun/particle mu+
+/gun/energy 5 GeV
+#/gun/position 20 30. 121. cm
+#/gun/direction 0 0 -1
+#/gun/direction -.2 0 -1
+#
+# muon starts at edge of vessel and bisects vessel diagonally (approximately)
+/gun/position 52.3 0. 121. cm
+/gun/direction -104 0 -242
+#
+# muon starts at at outer edge of vessel, midway between pmts and traverses vessel vertically
+##/gun/position 35. 35. 121. cm
+##/gun/direction 0 0 -1
+#
+# muon starts midway between pmts and traverses vessel vertically
+#/gun/position 18. 18. 121. cm
+#/gun/direction 0. 0. -1.
+#
+# coordinate axes
+/vis/scene/add/axes 0. 0. 0. 0.5 m
+ERROR: No current scene.  Please create one.
+#
+# draw all particles above 1. keV
+#/vis/filtering/trajectories/create/attributeFilter
+#/vis/filtering/trajectories/attributeFilter-0/setAttribute IMag
+#/vis/filtering/trajectories/attributeFilter-0/addInterval 1. keV 999. GeV
+#
+# suppress drawing opticalphoton
+#/vis/filtering/trajectories/create/particleFilter
+#/vis/filtering/trajectories/particleFilter-0/add opticalphoton
+#/vis/filtering/trajectories/particleFilter-0/invert true
+#/run/beamOn 10
+/process/activate Scintillation
+/run/physicsModified
+#/run/beamOn 100
+/run/beamOn 1
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.022 MeV to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        BetheHeitler :  Emin=        0 eV    Emax=       80 GeV
+     BetheHeitlerLPM :  Emin=       80 GeV   Emax=       10 TeV
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100 eV  to 1 MeV, 7 bins per decade, spline: 1
+      LambdaPrime table from 1 MeV to 10 TeV in 49 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina :  Emin=        0 eV    Emax=       10 TeV
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200 keV to 10 TeV in 54 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PhotoElectric :  Emin=        0 eV    Emax=       10 TeV   AngularGenSauterGavrila
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=   7.9452 MeV
+          BetheBloch :  Emin=   7.9452 MeV   Emax=       10 TeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : Air
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : Acrylic
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  2.76798 keV    e-  389.196 keV    e+  376.336 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : Water
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  2.94056 keV    e-  351.877 keV    e+  342.545 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : Pyrex
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  5.3478 keV    e-  540.972 keV    e+  519.593 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes
+ Material : Vacuum
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 5     used in the geometry : Yes
+ Material : Photocathode
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  6.90363 keV    e-  598.345 keV    e+  570.85 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+### Run 0 start.
+ Hello from OnetonUserTrackInformation 
+
+*********************************************************************************************************
+* G4Track Information:   Particle = mu+,   Track ID = 1,   Parent ID = 0
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      523        0 1.21e+03     5e+03        0        0         0       World initStep
+
+ >>DefinePhysicalStepLength (List of proposed StepLengths): 
+    ++ProposedStep(PostStep ) = 1.79769e+308 : ProcName = Scintillation (StronglyForced)
+    ++ProposedStep(PostStep ) =   329.747 : ProcName = Cerenkov (StronglyForced)
+    ++ProposedStep(PostStep ) = 1.04498e+08 : ProcName = Decay (No ForceCondition)
+    ++ProposedStep(PostStep ) = 4.36875e+07 : ProcName = muPairProd (No ForceCondition)
+    ++ProposedStep(PostStep ) = 2.23489e+08 : ProcName = muBrems (No ForceCondition)
+    ++ProposedStep(PostStep ) =   185.205 : ProcName = muIoni (No ForceCondition)
+    ++ProposedStep(PostStep ) = 1.79769e+308 : ProcName = msc (Forced)
+    ++ProposedStep(PostStep ) = 1.79769e+308 : ProcName = Transportation (Forced)
+    ++ProposedStep(AlongStep) = 1.79769e+308 : ProcName = muPairProd (NotCandidateForSelection)
+    ++ProposedStep(AlongStep) = 1.79769e+308 : ProcName = muBrems (NotCandidateForSelection)
+    ++ProposedStep(AlongStep) = 5.92503e+06 : ProcName = muIoni (CandidateForSelection)
+    ++ProposedStep(AlongStep) =   185.205 : ProcName = msc (NotCandidateForSelection)
+    ++ProposedStep(AlongStep) =   185.205 : ProcName = Transportation (CandidateForSelection)
+
+ >>AlongStepDoIt (process by process):    Process Name = Transportation
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049060597562
+      Energy Deposit (MeV)  : 0
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554 -0.3948354981831554
+         Momentum Direct - y :                    0                   0
+         Momentum Direct - z :  -0.9187518323108038 -0.9187518323108038
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.463459978928
+         Momentum - y (MeV/c):                    0                   0
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.828435720198
+         Total Energy (MeV)  :         5105.6583715        5105.6583715
+         Kinetic Energy (MeV):                 5000                5000
+         Velocity (mm/ns)    :    299.7282130152776   299.7282130152776
+         Volume Name         :                World               World
+         Safety (mm)         :                    0                   0
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+          !Note! Safety of PostStep is only valid after all DoIt invocations.
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                  185
+        Stepping Control      :                    0
+        Mass (GeV)   :                    0
+        Charge (eplus)   :                    0
+        MagneticMoment   :                    0
+                :  =                    0*[e hbar]/[2 m]
+        Position - x (mm)   :                  450
+        Position - y (mm)   :                    0
+        Position - z (mm)   :             1.04e+03
+        Time (ns)           :                0.618
+        Proper Time (ns)    :               0.0128
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :                    0
+        Momentum Direct - z :               -0.919
+        Kinetic Energy (MeV):                5e+03
+        Velocity  (/c):                    1
+        Polarization - x    :                    0
+        Polarization - y    :                    0
+        Polarization - z    :                    0
+        Touchable (pointer) :                  0x0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>AlongStepDoIt (process by process):    Process Name = msc
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049060597562
+      Energy Deposit (MeV)  : 0
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.571819894388
+         Momentum - y (MeV/c):                    0 -0.1068107051480302
+         Momentum - z (MeV/c):   -4689.828435720198   -4689.78186512327
+         Total Energy (MeV)  :         5105.6583715        5105.6583715
+         Kinetic Energy (MeV):                 5000                5000
+         Velocity (mm/ns)    :    299.7282130152776   299.7282130152776
+         Volume Name         :                World               World
+         Safety (mm)         :                    0                   0
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+          !Note! Safety of PostStep is only valid after all DoIt invocations.
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                  185
+        Stepping Control      :                    0
+        Position - x (mm)   :                  450
+        Position - y (mm)   :                    0
+        Position - z (mm)   :             1.04e+03
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :            -2.09e-05
+        Momentum Direct - z :               -0.919
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>AlongStepDoIt (process by process):    Process Name = muIoni
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049060597562
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.559919286108
+         Momentum - y (MeV/c):                    0 -0.1068100745020024
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.754175086953
+         Total Energy (MeV)  :         5105.6583715   5105.628238900141
+         Kinetic Energy (MeV):                 5000   4999.969867400141
+         Velocity (mm/ns)    :    299.7282130152776   299.7282122671583
+         Volume Name         :                World               World
+         Safety (mm)         :                    0                   0
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+          !Note! Safety of PostStep is only valid after all DoIt invocations.
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):               0.0301
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                    0
+        Stepping Control      :                    0
+        Charge (eplus)   :                    1
+        Kinetic Energy (MeV):                5e+03
+        Momentum Direct - x :                    0
+        Momentum Direct - y :                    0
+        Momentum Direct - z :                    0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>AlongStepDoIt (process by process):    Process Name = muBrems
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049060597562
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.559919286108
+         Momentum - y (MeV/c):                    0 -0.1068100745020024
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.754175086953
+         Total Energy (MeV)  :         5105.6583715   5105.628238900141
+         Kinetic Energy (MeV):                 5000   4999.969867400141
+         Velocity (mm/ns)    :    299.7282130152776   299.7282122671583
+         Volume Name         :                World               World
+         Safety (mm)         :                    0                   0
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+          !Note! Safety of PostStep is only valid after all DoIt invocations.
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                    0
+        Stepping Control      :                    0
+        Charge (eplus)   :                    1
+        Kinetic Energy (MeV):                5e+03
+        Momentum Direct - x :                    0
+        Momentum Direct - y :                    0
+        Momentum Direct - z :                    0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>AlongStepDoIt (process by process):    Process Name = muPairProd
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049060597562
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.559919286108
+         Momentum - y (MeV/c):                    0 -0.1068100745020024
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.754175086953
+         Total Energy (MeV)  :         5105.6583715   5105.628238900141
+         Kinetic Energy (MeV):                 5000   4999.969867400141
+         Velocity (mm/ns)    :    299.7282130152776   299.7282122671583
+         Volume Name         :                World               World
+         Safety (mm)         :                    0                   0
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+          !Note! Safety of PostStep is only valid after all DoIt invocations.
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                    0
+        Stepping Control      :                    0
+        Charge (eplus)   :                    1
+        Kinetic Energy (MeV):                5e+03
+        Momentum Direct - x :                    0
+        Momentum Direct - y :                    0
+        Momentum Direct - z :                    0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>AlongStepDoIt (after all invocations):
+    ++List of invoked processes 
+      1) Transportation
+      2) msc
+      3) muIoni
+      4) muBrems
+      5) muPairProd
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.559919286108
+         Momentum - y (MeV/c):                    0 -0.1068100745020024
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.754175086953
+         Total Energy (MeV)  :         5105.6583715   5105.628238900141
+         Kinetic Energy (MeV):                 5000   4999.969867400141
+         Velocity (mm/ns)    :    299.7282130152776   299.7282122671583
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3573467953513
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>PostStepDoIt (process by process):    Process Name = Transportation
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8745286499317
+         Position - y (mm)   :                    0                   0
+         Position - z (mm)   :                 1210   1039.842653204649
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.559919286108
+         Momentum - y (MeV/c):                    0 -0.1068100745020024
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.754175086953
+         Total Energy (MeV)  :         5105.6583715   5105.628238900141
+         Kinetic Energy (MeV):                 5000   4999.969867400141
+         Velocity (mm/ns)    :    299.7282130152776   299.7282122671583
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3573467953513
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                  185
+        Stepping Control      :                    0
+        Mass (GeV)   :                    0
+        Charge (eplus)   :                    0
+        MagneticMoment   :                    0
+                :  =                    0*[e hbar]/[2 m]
+        Position - x (mm)   :                  450
+        Position - y (mm)   :                    0
+        Position - z (mm)   :             1.04e+03
+        Time (ns)           :                0.618
+        Proper Time (ns)    :               0.0128
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :                    0
+        Momentum Direct - z :               -0.919
+        Kinetic Energy (MeV):                5e+03
+        Velocity  (/c):                    1
+        Polarization - x    :                    0
+        Polarization - y    :                    0
+        Polarization - z    :                    0
+        Touchable (pointer) :       0x7fc7c284cff0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>PostStepDoIt (process by process):    Process Name = msc
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8780616747899
+         Position - y (mm)   :                    0-0.006669255162248747
+         Position - z (mm)   :                 1210   1039.841134879916
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394856726224275
+         Momentum Direct - y :                    0-2.09245460490053e-05
+         Momentum Direct - z :  -0.9187518323108038  -0.918742708987457
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.559919286108
+         Momentum - y (MeV/c):                    0 -0.1068100745020024
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.754175086953
+         Total Energy (MeV)  :         5105.6583715   5105.628238900141
+         Kinetic Energy (MeV):                 5000   4999.969867400141
+         Velocity (mm/ns)    :    299.7282130152776   299.7282122671583
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3573467953513
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                  185
+        Stepping Control      :                    0
+        Position - x (mm)   :                  450
+        Position - y (mm)   :             -0.00667
+        Position - z (mm)   :             1.04e+03
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :            -2.09e-05
+        Momentum Direct - z :               -0.919
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>PostStepDoIt (process by process):    Process Name = muIoni
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8780616747899
+         Position - y (mm)   :                    0-0.006669255162248747
+         Position - z (mm)   :                 1210   1039.841134879916
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394861883729229
+         Momentum Direct - y :                    0-3.501220365684508e-05
+         Momentum Direct - z :  -0.9187518323108038 -0.9187404919518627
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.583930230349
+         Momentum - y (MeV/c):                    0 -0.1787208083651893
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.737470076865
+         Total Energy (MeV)  :         5105.6583715   5105.622375524352
+         Kinetic Energy (MeV):                 5000   4999.964004024352
+         Velocity (mm/ns)    :    299.7282130152776   299.7282121215849
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3496483189396
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    1
+        Pointer to 2ndaries :       0x7fc7c284ccb8
+        (Showed only 1st one)
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :                Alive
+        True Path Length (mm) :                    0
+        Stepping Control      :                    0
+        Charge (eplus)   :                    1
+        Kinetic Energy (MeV):                5e+03
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :             -3.5e-05
+        Momentum Direct - z :               -0.919
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+
+ >>PostStepDoIt (process by process):    Process Name = Cerenkov
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8780616747899
+         Position - y (mm)   :                    0-0.006669255162248747
+         Position - z (mm)   :                 1210   1039.841134879916
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394861883729229
+         Momentum Direct - y :                    0-3.501220365684508e-05
+         Momentum Direct - z :  -0.9187518323108038 -0.9187404919518627
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.583930230349
+         Momentum - y (MeV/c):                    0 -0.1787208083651893
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.737470076865
+         Total Energy (MeV)  :         5105.6583715   5105.622375524352
+         Kinetic Energy (MeV):                 5000   4999.964004024352
+         Velocity (mm/ns)    :    299.7282130152776   299.7282121215849
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3496483189396
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    9
+        Pointer to 2ndaries :       0x7fc7c284cdc0
+        (Showed only 1st one)
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :              Suspend
+        True Path Length (mm) :                  185
+        Stepping Control      :                    0
+        Mass (GeV)   :                0.106
+        Charge (eplus)   :                    1
+        MagneticMoment   :              2.8e-10
+                :  =                    1*[e hbar]/[2 m]
+        Position - x (mm)   :                  450
+        Position - y (mm)   :             -0.00667
+        Position - z (mm)   :             1.04e+03
+        Time (ns)           :                0.618
+        Proper Time (ns)    :               0.0128
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :             -3.5e-05
+        Momentum Direct - z :               -0.919
+        Kinetic Energy (MeV):                5e+03
+        Velocity  (/c):                    1
+        Polarization - x    :                    0
+        Polarization - y    :                    0
+        Polarization - z    :                    0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 1
+        449.878 -0.00666926   1039.84 0.00586338  0.617909                 e-
+
+ >>PostStepDoIt (process by process):    Process Name = Scintillation
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8780616747899
+         Position - y (mm)   :                    0-0.006669255162248747
+         Position - z (mm)   :                 1210   1039.841134879916
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394861883729229
+         Momentum Direct - y :                    0-3.501220365684508e-05
+         Momentum Direct - z :  -0.9187518323108038 -0.9187404919518627
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.583930230349
+         Momentum - y (MeV/c):                    0 -0.1787208083651893
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.737470076865
+         Total Energy (MeV)  :         5105.6583715   5105.622375524352
+         Kinetic Energy (MeV):                 5000   4999.964004024352
+         Velocity (mm/ns)    :    299.7282130152776   299.7282121215849
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3496483189396
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+
+    ++G4ParticleChange Information 
+      -----------------------------------------------
+        G4ParticleChange Information  
+      -----------------------------------------------
+        # of 2ndaries       :                    0
+      -----------------------------------------------
+        Energy Deposit (MeV):                    0
+        Non-ionizing Energy Deposit (MeV):                    0
+        Track Status        :              Suspend
+        True Path Length (mm) :                  185
+        Stepping Control      :                    0
+        Mass (GeV)   :                0.106
+        Charge (eplus)   :                    1
+        MagneticMoment   :              2.8e-10
+                :  =                    1*[e hbar]/[2 m]
+        Position - x (mm)   :                  450
+        Position - y (mm)   :             -0.00667
+        Position - z (mm)   :             1.04e+03
+        Time (ns)           :                0.618
+        Proper Time (ns)    :               0.0128
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :             -3.5e-05
+        Momentum Direct - z :               -0.919
+        Kinetic Energy (MeV):                5e+03
+        Velocity  (/c):                    1
+        Polarization - x    :                    0
+        Polarization - y    :                    0
+        Polarization - z    :                    0
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 10
+        449.878 -0.00666926   1039.84 0.00586338  0.617909                 e-
+        482.469 -0.00369674   1115.68 6.5587e-06  0.342505      opticalphoton
+        452.781 -0.00640448    1046.6 3.385e-06  0.593378      opticalphoton
+        507.022 -0.0014573   1172.82 1.06991e-05  0.135019      opticalphoton
+         456.61 -0.00605524   1055.51 6.0753e-06  0.561021      opticalphoton
+        508.175 -0.00135216    1175.5 1.33107e-05  0.125278      opticalphoton
+        480.129 -0.00391017   1110.24 1.47669e-05  0.362279      opticalphoton
+        499.138 -0.00217641   1154.47 3.92496e-06  0.201645      opticalphoton
+         522.45 -5.01688e-05   1208.72 3.8856e-06 0.00464816      opticalphoton
+        503.713 -0.00175915   1165.12 3.70662e-06  0.162986      opticalphoton
+
+ **PostStepDoIt (after all invocations):
+    ++List of invoked processes 
+      1) Transportation
+      2) msc
+      3) muIoni (Forced)
+
+    ++G4Step Information 
+      Address of G4Track    : 0x7fc7c284cbb0
+      Step Length (mm)      : 185.2049064801149
+      Energy Deposit (MeV)  : 0.03013259985928553
+      -----------------------------------------------------------------------
+        StepPoint Information               PreStep            PostStep
+      -----------------------------------------------------------------------
+         Position - x (mm)   :                  523   449.8780616747899
+         Position - y (mm)   :                    0-0.006669255162248747
+         Position - z (mm)   :                 1210   1039.841134879916
+         Global Time (ns)    :                    0  0.6179094860526727
+         Local Time (ns)     :                    0  0.6179094860526727
+         Proper Time (ns)    :                    0 0.01278724608664847
+         Momentum Direct - x :  -0.3948354981831554  -0.394861883729229
+         Momentum Direct - y :                    0-3.501220365684508e-05
+         Momentum Direct - z :  -0.9187518323108038 -0.9187404919518627
+         Momentum - x (MeV/c):   -2015.463459978928  -2015.583930230349
+         Momentum - y (MeV/c):                    0 -0.1787208083651893
+         Momentum - z (MeV/c):   -4689.828435720198  -4689.737470076865
+         Total Energy (MeV)  :         5105.6583715   5105.622375524352
+         Kinetic Energy (MeV):                 5000   4999.964004024352
+         Velocity (mm/ns)    :    299.7282130152776   299.7282121215849
+         Volume Name         :                World               World
+         Safety (mm)         :                    0   179.3496483189396
+         Polarization - x    :                    0                   0
+         Polarization - y    :                    0                   0
+         Polarization - Z    :                    0                   0
+         Weight              :                    1                   1
+         Step Status         :            Undefined       PostStep Proc
+         Process defined Step:            Undefined              muIoni
+      -----------------------------------------------------------------------
+
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 10
+      [Note]Secondaries from AlongStepDoIt included.
+        449.878 -0.00666926   1039.84 0.00586338  0.617909                 e-
+        482.469 -0.00369674   1115.68 6.5587e-06  0.342505      opticalphoton
+        452.781 -0.00640448    1046.6 3.385e-06  0.593378      opticalphoton
+        507.022 -0.0014573   1172.82 1.06991e-05  0.135019      opticalphoton
+         456.61 -0.00605524   1055.51 6.0753e-06  0.561021      opticalphoton
+        508.175 -0.00135216    1175.5 1.33107e-05  0.125278      opticalphoton
+        480.129 -0.00391017   1110.24 1.47669e-05  0.362279      opticalphoton
+        499.138 -0.00217641   1154.47 3.92496e-06  0.201645      opticalphoton
+         522.45 -5.01688e-05   1208.72 3.8856e-06 0.00464816      opticalphoton
+        503.713 -0.00175915   1165.12 3.70662e-06  0.162986      opticalphoton
+
+    ++G4Track Information 
+      -----------------------------------------------
+        G4Track Information  
+      -----------------------------------------------
+        Step number         :                    1
+        Position - x (mm)   :                  450
+        Position - y (mm)   :             -0.00667
+        Position - z (mm)   :             1.04e+03
+        Global Time (ns)    :                0.618
+        Local Time (ns)     :                0.618
+        Momentum Direct - x :               -0.395
+        Momentum Direct - y :             -3.5e-05
+        Momentum Direct - z :               -0.919
+        Kinetic Energy (MeV):                5e+03
+        Polarization - x    :                    0
+        Polarization - y    :                    0
+        Polarization - z    :                    0
+        Track Length        :                  185
+        Track ID #          :                    1
+        Parent Track ID #   :                    0
+        Next Volume         :                World 
+        Track Status        :              Suspend
+        Vertex - x (mm)     :                  523
+        Vertex - y (mm)     :                    0
+        Vertex - z (mm)     :             1.21e+03
+        Vertex - Px (MomDir):               -0.395
+        Vertex - Py (MomDir):                    0
+        Vertex - Pz (MomDir):               -0.919
+        Vertex - KineE (MeV):                5e+03
+        Creator Process     :      Event Generator
+      -----------------------------------------------
+
+#Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    1      450 -0.00667 1.04e+03     5e+03   0.0301      185       185       World muIoni
+ Number of Scintillation Photons in previous event: 0
+ Number of Cerenkov Photons in previous event: 0

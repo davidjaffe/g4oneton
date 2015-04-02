@@ -1,0 +1,2096 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-01    (5-December-2014)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Water G4MaterialPropertiesTable
+ABSLENGTH
+2.034e-06	3448
+2.068e-06	4082
+2.103e-06	6329
+2.139e-06	9174
+2.177e-06	12346
+2.216e-06	13889
+2.256e-06	15152
+2.298e-06	17241
+2.341e-06	18868
+2.386e-06	20000
+2.433e-06	26316
+2.481e-06	35714
+2.532e-06	45455
+2.585e-06	47619
+2.64e-06	52632
+2.697e-06	52632
+2.757e-06	55556
+2.82e-06	52632
+2.885e-06	52632
+2.954e-06	47619
+3.026e-06	45455
+3.102e-06	41667
+3.181e-06	37037
+3.265e-06	33333
+3.353e-06	30000
+3.446e-06	28500
+3.545e-06	27000
+3.649e-06	24500
+3.76e-06	22000
+3.877e-06	19500
+4.002e-06	17500
+4.136e-06	14500
+FASTCOMPONENT
+2.034e-06	1
+2.068e-06	1
+2.103e-06	1
+2.139e-06	1
+2.177e-06	1
+2.216e-06	1
+2.256e-06	1
+2.298e-06	1
+2.341e-06	1
+2.386e-06	1
+2.433e-06	1
+2.481e-06	1
+2.532e-06	1
+2.585e-06	1
+2.64e-06	1
+2.697e-06	1
+2.757e-06	1
+2.82e-06	1
+2.885e-06	1
+2.954e-06	1
+3.026e-06	1
+3.102e-06	1
+3.181e-06	1
+3.265e-06	1
+3.353e-06	1
+3.446e-06	1
+3.545e-06	1
+3.649e-06	1
+3.76e-06	1
+3.877e-06	1
+4.002e-06	1
+4.136e-06	1
+RINDEX
+2.034e-06	1.3435
+2.068e-06	1.344
+2.103e-06	1.3445
+2.139e-06	1.345
+2.177e-06	1.3455
+2.216e-06	1.346
+2.256e-06	1.3465
+2.298e-06	1.347
+2.341e-06	1.3475
+2.386e-06	1.348
+2.433e-06	1.3485
+2.481e-06	1.3492
+2.532e-06	1.35
+2.585e-06	1.3505
+2.64e-06	1.351
+2.697e-06	1.3518
+2.757e-06	1.3522
+2.82e-06	1.353
+2.885e-06	1.3535
+2.954e-06	1.354
+3.026e-06	1.3545
+3.102e-06	1.355
+3.181e-06	1.3555
+3.265e-06	1.356
+3.353e-06	1.3568
+3.446e-06	1.3572
+3.545e-06	1.358
+3.649e-06	1.3585
+3.76e-06	1.359
+3.877e-06	1.3595
+4.002e-06	1.36
+4.136e-06	1.3608
+SLOWCOMPONENT
+2.034e-06	0.01
+2.068e-06	1
+2.103e-06	2
+2.139e-06	3
+2.177e-06	4
+2.216e-06	5
+2.256e-06	6
+2.298e-06	7
+2.341e-06	8
+2.386e-06	9
+2.433e-06	8
+2.481e-06	7
+2.532e-06	6
+2.585e-06	4
+2.64e-06	3
+2.697e-06	2
+2.757e-06	1
+2.82e-06	0.01
+2.885e-06	1
+2.954e-06	2
+3.026e-06	3
+3.102e-06	4
+3.181e-06	5
+3.265e-06	6
+3.353e-06	7
+3.446e-06	8
+3.545e-06	9
+3.649e-06	8
+3.76e-06	7
+3.877e-06	6
+4.002e-06	5
+4.136e-06	4
+FASTTIMECONSTANT
+1
+RESOLUTIONSCALE
+1
+SCINTILLATIONYIELD
+100
+SLOWTIMECONSTANT
+10
+YIELDRATIO
+0.8
+
+ ++++++ BLACK TEFLON LINER ENABLED ++++++ 
+
+SUPPRESS use of surfaces 
+ OpNoviceDetectorConstruction::ConstructSDandField: number of PMTs is 10
+ AddDiscreteProcess to OpticalPhoton 
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  OpenGLImmediateX (OGLI, OGLIX)
+  OpenGLStoredX (OGL, OGLS, OGLSX)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+/tracking/verbose 0
+# avoid all those annoying 'FresnelRefraction' messages
+/process/setVerbose 0 OpBoundary
+# avoid all other optical photon messages
+/process/setVerbose 0 Cerenkov
+/process/setVerbose 0 Scintillation
+/process/setVerbose 0 OpAbsorption
+/process/setVerbose 0 OpRayleigh
+#  I like this view
+#/vis/viewer/set/viewpointThetaPhi 90. 0.
+# this view essentially puts 1ton vessel vertical
+/vis/viewer/set/viewpointThetaPhi -80. 90.
+ERROR: G4VisCommandsViewerSet::SetNewValue: no current viewer.
+#
+# no scintillation
+/process/inactivate Scintillation
+/run/physicsModified
+#
+# deal with lots of optical photons
+/vis/ogl/set/displayListLimit 150000
+G4OpenGLViewerMessenger::SetNewValue: No current viewer.
+  "/vis/open", or similar, to get one.
+#
+# drawing particle trajectories with initial kinetic energy 2.99-3.0 eV (optical photons, hopefully)
+##/vis/filtering/trajectories/create/attributeFilter
+##/vis/filtering/trajectories/attributeFilter-0/setAttribute IKE
+##/vis/filtering/trajectories/attributeFilter-0/addInterval 2.98 eV 3. eV
+##/vis/filtering/trajectories/list
+#
+# cosmic muon. z=121cm is just under top of dark box
+/gun/particle mu+
+/gun/energy 5 GeV
+#/gun/position 20 30. 121. cm
+#/gun/direction 0 0 -1
+#/gun/direction -.2 0 -1
+#
+# muon starts at edge of vessel and bisects vessel diagonally (approximately)
+/gun/position 52.3 0. 121. cm
+/gun/direction -104 0 -242
+#
+# muon starts at midpoint between pmts and traverses vessel vertically
+#/gun/position 35. 35. 121. cm
+#/gun/direction 0 0 -1
+#
+# coordinate axes
+/vis/scene/add/axes 0. 0. 0. 0.5 m
+ERROR: No current scene.  Please create one.
+#
+# draw all particles above 1. keV
+#/vis/filtering/trajectories/create/attributeFilter
+#/vis/filtering/trajectories/attributeFilter-0/setAttribute IMag
+#/vis/filtering/trajectories/attributeFilter-0/addInterval 1. keV 999. GeV
+#
+# suppress drawing opticalphoton
+/vis/filtering/trajectories/create/particleFilter
+/vis/filtering/trajectories/particleFilter-0/add opticalphoton
+/vis/filtering/trajectories/particleFilter-0/invert true
+#/run/beamOn 10
+/process/activate Scintillation
+/run/physicsModified
+/run/beamOn 100
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.022 MeV to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        BetheHeitler :  Emin=        0 eV    Emax=       80 GeV
+     BetheHeitlerLPM :  Emin=       80 GeV   Emax=       10 TeV
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100 eV  to 1 MeV, 7 bins per decade, spline: 1
+      LambdaPrime table from 1 MeV to 10 TeV in 49 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina :  Emin=        0 eV    Emax=       10 TeV
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200 keV to 10 TeV in 54 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PhotoElectric :  Emin=        0 eV    Emax=       10 TeV   AngularGenSauterGavrila
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=   7.9452 MeV
+          BetheBloch :  Emin=   7.9452 MeV   Emax=       10 TeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : Air
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : Acrylic
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  2.76798 keV    e-  389.196 keV    e+  376.336 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : Water
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  2.94056 keV    e-  351.877 keV    e+  342.545 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : Teflon
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  4.17053 keV    e-  540.972 keV    e+  519.593 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes
+ Material : Pyrex
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  5.3478 keV    e-  540.972 keV    e+  519.593 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 5     used in the geometry : Yes
+ Material : Vacuum
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 6     used in the geometry : Yes
+ Material : Photocathode
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  6.90363 keV    e-  598.345 keV    e+  570.85 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+### Run 0 start.
+ Number of Scintillation Photons in previous event: 0
+ Number of Cerenkov Photons in previous event: 0
+### G4EmSaturation::FindBirksCoefficient Birks coefficient for Water  0.126 mm/MeV
+Number of Scintillation photons produced in this event : 32738 killed: 0 propagated (fraction): 32738(1)
+Number of Cerenkov photons produced in this event : 80752 killed: 0 propagated (fraction): 80752(1)
+---> end of event: 0
+PMT# 0 #hits= 9 #Cer.hits= 5 sum wts 1.62786 sum Cer.wts 0.858969
+PMT# 1 #hits= 6 #Cer.hits= 3 sum wts 1.26178 sum Cer.wts 0.56887
+PMT# 2 #hits= 343 #Cer.hits= 319 sum wts 39.2451 sum Cer.wts 34.7663
+PMT# 3 #hits= 8 #Cer.hits= 6 sum wts 1.12439 sum Cer.wts 0.700961
+PMT# 4 #hits= 31 #Cer.hits= 22 sum wts 5.70149 sum Cer.wts 4.15215
+PMT# 100 #hits= 34 #Cer.hits= 24 sum wts 6.011 sum Cer.wts 4.17573
+PMT# 101 #hits= 32 #Cer.hits= 12 sum wts 4.81726 sum Cer.wts 0.699948
+PMT# 102 #hits= 6 #Cer.hits= 3 sum wts 1.07587 sum Cer.wts 0.428241
+PMT# 103 #hits= 23 #Cer.hits= 15 sum wts 3.43801 sum Cer.wts 1.92989
+PMT# 104 #hits= 14 #Cer.hits= 7 sum wts 2.43199 sum Cer.wts 1.13794
+ Number of Scintillation Photons in previous event: 32738
+ Number of Cerenkov Photons in previous event: 80752
+Number of Scintillation photons produced in this event : 26778 killed: 0 propagated (fraction): 26778(1)
+Number of Cerenkov photons produced in this event : 69186 killed: 0 propagated (fraction): 69186(1)
+---> end of event: 1
+PMT# 0 #hits= 9 #Cer.hits= 6 sum wts 1.90567 sum Cer.wts 1.14062
+PMT# 1 #hits= 3 #Cer.hits= 1 sum wts 0.680098 sum Cer.wts 0.255252
+PMT# 2 #hits= 268 #Cer.hits= 243 sum wts 33.7874 sum Cer.wts 29.2328
+PMT# 3 #hits= 5 #Cer.hits= 3 sum wts 0.951975 sum Cer.wts 0.487646
+PMT# 4 #hits= 14 #Cer.hits= 8 sum wts 2.3018 sum Cer.wts 1.11315
+PMT# 100 #hits= 34 #Cer.hits= 28 sum wts 6.01993 sum Cer.wts 4.75172
+PMT# 101 #hits= 19 #Cer.hits= 1 sum wts 3.71829 sum Cer.wts 0
+PMT# 102 #hits= 9 #Cer.hits= 8 sum wts 0.794295 sum Cer.wts 0.566349
+PMT# 103 #hits= 5 #Cer.hits= 3 sum wts 1.12248 sum Cer.wts 0.68526
+PMT# 104 #hits= 7 #Cer.hits= 5 sum wts 1.49157 sum Cer.wts 1.03145
+ Number of Scintillation Photons in previous event: 26778
+ Number of Cerenkov Photons in previous event: 69186
+Number of Scintillation photons produced in this event : 32022 killed: 0 propagated (fraction): 32022(1)
+Number of Cerenkov photons produced in this event : 79779 killed: 0 propagated (fraction): 79779(1)
+---> end of event: 2
+PMT# 0 #hits= 13 #Cer.hits= 8 sum wts 2.64368 sum Cer.wts 1.65873
+PMT# 1 #hits= 4 #Cer.hits= 2 sum wts 0.918556 sum Cer.wts 0.471138
+PMT# 2 #hits= 271 #Cer.hits= 254 sum wts 36.6021 sum Cer.wts 33.0868
+PMT# 3 #hits= 8 #Cer.hits= 6 sum wts 1.5914 sum Cer.wts 1.08122
+PMT# 4 #hits= 12 #Cer.hits= 9 sum wts 2.25778 sum Cer.wts 1.59675
+PMT# 100 #hits= 33 #Cer.hits= 28 sum wts 5.08789 sum Cer.wts 4.14992
+PMT# 101 #hits= 55 #Cer.hits= 0 sum wts 10.1268 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 3 sum wts 0.48923 sum Cer.wts 0.000342244
+PMT# 103 #hits= 13 #Cer.hits= 8 sum wts 2.54974 sum Cer.wts 1.58719
+PMT# 104 #hits= 10 #Cer.hits= 5 sum wts 2.46921 sum Cer.wts 1.23517
+ Number of Scintillation Photons in previous event: 32022
+ Number of Cerenkov Photons in previous event: 79779
+Number of Scintillation photons produced in this event : 33304 killed: 0 propagated (fraction): 33304(1)
+Number of Cerenkov photons produced in this event : 90514 killed: 0 propagated (fraction): 90514(1)
+---> end of event: 3
+PMT# 0 #hits= 11 #Cer.hits= 4 sum wts 2.06382 sum Cer.wts 0.820581
+PMT# 1 #hits= 4 #Cer.hits= 2 sum wts 0.769621 sum Cer.wts 0.38469
+PMT# 2 #hits= 5446 #Cer.hits= 5419 sum wts 249.683 sum Cer.wts 245.198
+PMT# 3 #hits= 14 #Cer.hits= 9 sum wts 2.74196 sum Cer.wts 1.7939
+PMT# 4 #hits= 12 #Cer.hits= 7 sum wts 1.88265 sum Cer.wts 1.06277
+PMT# 100 #hits= 34 #Cer.hits= 25 sum wts 5.95959 sum Cer.wts 4.05023
+PMT# 101 #hits= 35 #Cer.hits= 19 sum wts 5.535 sum Cer.wts 2.35925
+PMT# 102 #hits= 8 #Cer.hits= 5 sum wts 0.676095 sum Cer.wts 0.0584298
+PMT# 103 #hits= 16 #Cer.hits= 7 sum wts 2.82446 sum Cer.wts 1.0772
+PMT# 104 #hits= 14 #Cer.hits= 7 sum wts 2.69051 sum Cer.wts 1.28908
+ Number of Scintillation Photons in previous event: 33304
+ Number of Cerenkov Photons in previous event: 90514
+Number of Scintillation photons produced in this event : 32163 killed: 0 propagated (fraction): 32163(1)
+Number of Cerenkov photons produced in this event : 84241 killed: 0 propagated (fraction): 84241(1)
+---> end of event: 4
+PMT# 0 #hits= 12 #Cer.hits= 7 sum wts 2.09025 sum Cer.wts 1.13167
+PMT# 1 #hits= 9 #Cer.hits= 2 sum wts 1.88389 sum Cer.wts 0.46787
+PMT# 2 #hits= 196 #Cer.hits= 174 sum wts 25.0619 sum Cer.wts 20.8271
+PMT# 3 #hits= 24 #Cer.hits= 20 sum wts 2.87556 sum Cer.wts 2.33176
+PMT# 4 #hits= 10 #Cer.hits= 6 sum wts 1.17007 sum Cer.wts 0.526275
+PMT# 100 #hits= 29 #Cer.hits= 23 sum wts 3.79408 sum Cer.wts 3.00117
+PMT# 101 #hits= 87 #Cer.hits= 48 sum wts 11.245 sum Cer.wts 3.66323
+PMT# 102 #hits= 13 #Cer.hits= 9 sum wts 1.36906 sum Cer.wts 0.785061
+PMT# 103 #hits= 13 #Cer.hits= 12 sum wts 2.32144 sum Cer.wts 2.08372
+PMT# 104 #hits= 19 #Cer.hits= 14 sum wts 3.15224 sum Cer.wts 2.06696
+ Number of Scintillation Photons in previous event: 32163
+ Number of Cerenkov Photons in previous event: 84241
+Number of Scintillation photons produced in this event : 32809 killed: 0 propagated (fraction): 32809(1)
+Number of Cerenkov photons produced in this event : 81786 killed: 0 propagated (fraction): 81786(1)
+---> end of event: 5
+PMT# 0 #hits= 19 #Cer.hits= 15 sum wts 3.49853 sum Cer.wts 2.54726
+PMT# 1 #hits= 9 #Cer.hits= 4 sum wts 1.57175 sum Cer.wts 0.633026
+PMT# 2 #hits= 253 #Cer.hits= 233 sum wts 33.6018 sum Cer.wts 29.8371
+PMT# 3 #hits= 22 #Cer.hits= 16 sum wts 3.75077 sum Cer.wts 2.47035
+PMT# 4 #hits= 18 #Cer.hits= 12 sum wts 2.60964 sum Cer.wts 1.57175
+PMT# 100 #hits= 26 #Cer.hits= 23 sum wts 3.97381 sum Cer.wts 3.54865
+PMT# 101 #hits= 27 #Cer.hits= 1 sum wts 5.62247 sum Cer.wts 0.193752
+PMT# 102 #hits= 5 #Cer.hits= 4 sum wts 0.40377 sum Cer.wts 0.187072
+PMT# 103 #hits= 16 #Cer.hits= 11 sum wts 2.735 sum Cer.wts 1.97405
+PMT# 104 #hits= 9 #Cer.hits= 4 sum wts 1.97219 sum Cer.wts 1.01726
+ Number of Scintillation Photons in previous event: 32809
+ Number of Cerenkov Photons in previous event: 81786
+Number of Scintillation photons produced in this event : 25842 killed: 0 propagated (fraction): 25842(1)
+Number of Cerenkov photons produced in this event : 74514 killed: 0 propagated (fraction): 74514(1)
+---> end of event: 6
+PMT# 0 #hits= 13 #Cer.hits= 7 sum wts 2.28258 sum Cer.wts 1.19518
+PMT# 1 #hits= 10 #Cer.hits= 6 sum wts 1.54445 sum Cer.wts 0.89182
+PMT# 2 #hits= 970 #Cer.hits= 954 sum wts 92.3356 sum Cer.wts 88.9304
+PMT# 3 #hits= 11 #Cer.hits= 11 sum wts 2.3868 sum Cer.wts 2.3868
+PMT# 4 #hits= 14 #Cer.hits= 10 sum wts 2.69592 sum Cer.wts 1.88397
+PMT# 100 #hits= 26 #Cer.hits= 20 sum wts 4.10215 sum Cer.wts 2.70226
+PMT# 101 #hits= 71 #Cer.hits= 37 sum wts 12.6578 sum Cer.wts 5.70937
+PMT# 102 #hits= 5 #Cer.hits= 4 sum wts 0.472721 sum Cer.wts 0.356109
+PMT# 103 #hits= 14 #Cer.hits= 10 sum wts 3.03388 sum Cer.wts 2.15177
+PMT# 104 #hits= 13 #Cer.hits= 10 sum wts 1.76818 sum Cer.wts 1.24926
+ Number of Scintillation Photons in previous event: 25842
+ Number of Cerenkov Photons in previous event: 74514
+Number of Scintillation photons produced in this event : 29968 killed: 0 propagated (fraction): 29968(1)
+Number of Cerenkov photons produced in this event : 75831 killed: 0 propagated (fraction): 75831(1)
+---> end of event: 7
+PMT# 0 #hits= 12 #Cer.hits= 8 sum wts 2.13666 sum Cer.wts 1.33118
+PMT# 1 #hits= 4 #Cer.hits= 2 sum wts 0.906488 sum Cer.wts 0.493987
+PMT# 2 #hits= 117 #Cer.hits= 103 sum wts 20.1058 sum Cer.wts 17.0221
+PMT# 3 #hits= 14 #Cer.hits= 10 sum wts 2.58727 sum Cer.wts 1.84463
+PMT# 4 #hits= 13 #Cer.hits= 10 sum wts 2.08961 sum Cer.wts 1.41567
+PMT# 100 #hits= 41 #Cer.hits= 37 sum wts 6.54151 sum Cer.wts 5.85884
+PMT# 101 #hits= 76 #Cer.hits= 43 sum wts 9.70453 sum Cer.wts 3.59814
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.78875 sum Cer.wts 0.322647
+PMT# 103 #hits= 12 #Cer.hits= 5 sum wts 2.02458 sum Cer.wts 0.891851
+PMT# 104 #hits= 10 #Cer.hits= 9 sum wts 2.19277 sum Cer.wts 1.97254
+ Number of Scintillation Photons in previous event: 29968
+ Number of Cerenkov Photons in previous event: 75831
+Number of Scintillation photons produced in this event : 28787 killed: 0 propagated (fraction): 28787(1)
+Number of Cerenkov photons produced in this event : 75467 killed: 0 propagated (fraction): 75467(1)
+---> end of event: 8
+PMT# 0 #hits= 7 #Cer.hits= 3 sum wts 1.46292 sum Cer.wts 0.731484
+PMT# 1 #hits= 9 #Cer.hits= 6 sum wts 2.03466 sum Cer.wts 1.32805
+PMT# 2 #hits= 280 #Cer.hits= 258 sum wts 36.5487 sum Cer.wts 32.0987
+PMT# 3 #hits= 20 #Cer.hits= 14 sum wts 3.65925 sum Cer.wts 2.29936
+PMT# 4 #hits= 4 #Cer.hits= 2 sum wts 0.7657 sum Cer.wts 0.369957
+PMT# 100 #hits= 33 #Cer.hits= 26 sum wts 4.68538 sum Cer.wts 3.64533
+PMT# 101 #hits= 32 #Cer.hits= 15 sum wts 5.73733 sum Cer.wts 1.95328
+PMT# 102 #hits= 10 #Cer.hits= 6 sum wts 1.60404 sum Cer.wts 0.640175
+PMT# 103 #hits= 6 #Cer.hits= 4 sum wts 1.07423 sum Cer.wts 0.618118
+PMT# 104 #hits= 6 #Cer.hits= 4 sum wts 1.15883 sum Cer.wts 0.648099
+ Number of Scintillation Photons in previous event: 28787
+ Number of Cerenkov Photons in previous event: 75467
+Number of Scintillation photons produced in this event : 38526 killed: 0 propagated (fraction): 38526(1)
+Number of Cerenkov photons produced in this event : 90388 killed: 0 propagated (fraction): 90388(1)
+---> end of event: 9
+PMT# 0 #hits= 15 #Cer.hits= 8 sum wts 2.84246 sum Cer.wts 1.35689
+PMT# 1 #hits= 8 #Cer.hits= 5 sum wts 1.55536 sum Cer.wts 0.969701
+PMT# 2 #hits= 742 #Cer.hits= 714 sum wts 66.3065 sum Cer.wts 61.3647
+PMT# 3 #hits= 13 #Cer.hits= 8 sum wts 2.34304 sum Cer.wts 1.32644
+PMT# 4 #hits= 13 #Cer.hits= 9 sum wts 2.44884 sum Cer.wts 1.65764
+PMT# 100 #hits= 25 #Cer.hits= 20 sum wts 3.81531 sum Cer.wts 2.78229
+PMT# 101 #hits= 43 #Cer.hits= 16 sum wts 7.02124 sum Cer.wts 1.25635
+PMT# 102 #hits= 5 #Cer.hits= 3 sum wts 0.404442 sum Cer.wts 0.016152
+PMT# 103 #hits= 9 #Cer.hits= 5 sum wts 1.63042 sum Cer.wts 0.987394
+PMT# 104 #hits= 15 #Cer.hits= 13 sum wts 2.98544 sum Cer.wts 2.4945
+ Number of Scintillation Photons in previous event: 38526
+ Number of Cerenkov Photons in previous event: 90388
+Number of Scintillation photons produced in this event : 28386 killed: 0 propagated (fraction): 28386(1)
+Number of Cerenkov photons produced in this event : 75194 killed: 0 propagated (fraction): 75194(1)
+---> end of event: 10
+PMT# 0 #hits= 9 #Cer.hits= 4 sum wts 1.42012 sum Cer.wts 0.631733
+PMT# 1 #hits= 3 #Cer.hits= 1 sum wts 0.544407 sum Cer.wts 0.255891
+PMT# 2 #hits= 411 #Cer.hits= 367 sum wts 53.7861 sum Cer.wts 44.9049
+PMT# 3 #hits= 13 #Cer.hits= 9 sum wts 2.68231 sum Cer.wts 1.87548
+PMT# 4 #hits= 8 #Cer.hits= 5 sum wts 1.5231 sum Cer.wts 1.08574
+PMT# 100 #hits= 38 #Cer.hits= 30 sum wts 7.1136 sum Cer.wts 5.32015
+PMT# 101 #hits= 26 #Cer.hits= 4 sum wts 4.74134 sum Cer.wts 0.357946
+PMT# 102 #hits= 3 #Cer.hits= 1 sum wts 0.394229 sum Cer.wts 0
+PMT# 103 #hits= 9 #Cer.hits= 5 sum wts 1.39918 sum Cer.wts 0.732983
+PMT# 104 #hits= 14 #Cer.hits= 9 sum wts 2.6451 sum Cer.wts 1.38044
+ Number of Scintillation Photons in previous event: 28386
+ Number of Cerenkov Photons in previous event: 75194
+Number of Scintillation photons produced in this event : 27881 killed: 0 propagated (fraction): 27881(1)
+Number of Cerenkov photons produced in this event : 70486 killed: 0 propagated (fraction): 70486(1)
+---> end of event: 11
+PMT# 0 #hits= 14 #Cer.hits= 8 sum wts 2.58164 sum Cer.wts 1.51939
+PMT# 1 #hits= 3 #Cer.hits= 1 sum wts 0.692873 sum Cer.wts 0.204586
+PMT# 2 #hits= 269 #Cer.hits= 244 sum wts 34.9484 sum Cer.wts 30.1558
+PMT# 3 #hits= 11 #Cer.hits= 7 sum wts 2.3142 sum Cer.wts 1.53972
+PMT# 4 #hits= 12 #Cer.hits= 8 sum wts 2.18706 sum Cer.wts 1.29897
+PMT# 100 #hits= 29 #Cer.hits= 23 sum wts 4.03004 sum Cer.wts 3.13001
+PMT# 101 #hits= 19 #Cer.hits= 1 sum wts 3.49137 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 6 sum wts 0.587319 sum Cer.wts 0.330448
+PMT# 103 #hits= 12 #Cer.hits= 9 sum wts 1.86406 sum Cer.wts 1.40065
+PMT# 104 #hits= 12 #Cer.hits= 8 sum wts 2.22563 sum Cer.wts 1.51204
+ Number of Scintillation Photons in previous event: 27881
+ Number of Cerenkov Photons in previous event: 70486
+Number of Scintillation photons produced in this event : 25745 killed: 0 propagated (fraction): 25745(1)
+Number of Cerenkov photons produced in this event : 67524 killed: 0 propagated (fraction): 67524(1)
+---> end of event: 12
+PMT# 0 #hits= 11 #Cer.hits= 10 sum wts 1.47589 sum Cer.wts 1.41345
+PMT# 1 #hits= 6 #Cer.hits= 4 sum wts 1.14719 sum Cer.wts 0.886401
+PMT# 2 #hits= 192 #Cer.hits= 173 sum wts 25.132 sum Cer.wts 21.2507
+PMT# 3 #hits= 14 #Cer.hits= 9 sum wts 2.94758 sum Cer.wts 1.7941
+PMT# 4 #hits= 15 #Cer.hits= 11 sum wts 3.07078 sum Cer.wts 2.16206
+PMT# 100 #hits= 34 #Cer.hits= 30 sum wts 5.51084 sum Cer.wts 4.75496
+PMT# 101 #hits= 26 #Cer.hits= 6 sum wts 4.66679 sum Cer.wts 0.642526
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.410885 sum Cer.wts 0.0157841
+PMT# 103 #hits= 15 #Cer.hits= 10 sum wts 2.71378 sum Cer.wts 1.79904
+PMT# 104 #hits= 12 #Cer.hits= 6 sum wts 2.11334 sum Cer.wts 1.1366
+ Number of Scintillation Photons in previous event: 25745
+ Number of Cerenkov Photons in previous event: 67524
+Number of Scintillation photons produced in this event : 32638 killed: 0 propagated (fraction): 32638(1)
+Number of Cerenkov photons produced in this event : 78924 killed: 0 propagated (fraction): 78924(1)
+---> end of event: 13
+PMT# 0 #hits= 10 #Cer.hits= 5 sum wts 2.33665 sum Cer.wts 1.18308
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.8672 sum Cer.wts 0.914571
+PMT# 2 #hits= 120 #Cer.hits= 97 sum wts 17.1219 sum Cer.wts 12.3987
+PMT# 3 #hits= 13 #Cer.hits= 8 sum wts 1.93301 sum Cer.wts 0.936958
+PMT# 4 #hits= 16 #Cer.hits= 10 sum wts 2.27106 sum Cer.wts 1.01583
+PMT# 100 #hits= 43 #Cer.hits= 32 sum wts 7.6492 sum Cer.wts 5.36143
+PMT# 101 #hits= 63 #Cer.hits= 22 sum wts 10.4774 sum Cer.wts 1.93984
+PMT# 102 #hits= 5 #Cer.hits= 5 sum wts 0.302354 sum Cer.wts 0.302354
+PMT# 103 #hits= 9 #Cer.hits= 6 sum wts 1.82386 sum Cer.wts 1.23997
+PMT# 104 #hits= 7 #Cer.hits= 3 sum wts 1.57502 sum Cer.wts 0.637571
+ Number of Scintillation Photons in previous event: 32638
+ Number of Cerenkov Photons in previous event: 78924
+Number of Scintillation photons produced in this event : 29315 killed: 0 propagated (fraction): 29315(1)
+Number of Cerenkov photons produced in this event : 72611 killed: 0 propagated (fraction): 72611(1)
+---> end of event: 14
+PMT# 0 #hits= 14 #Cer.hits= 9 sum wts 2.32158 sum Cer.wts 1.18551
+PMT# 1 #hits= 6 #Cer.hits= 3 sum wts 1.32664 sum Cer.wts 0.644848
+PMT# 2 #hits= 351 #Cer.hits= 324 sum wts 40.6578 sum Cer.wts 35.2308
+PMT# 3 #hits= 9 #Cer.hits= 5 sum wts 1.9621 sum Cer.wts 1.02145
+PMT# 4 #hits= 7 #Cer.hits= 5 sum wts 0.788297 sum Cer.wts 0.460298
+PMT# 100 #hits= 27 #Cer.hits= 25 sum wts 4.09853 sum Cer.wts 3.79143
+PMT# 101 #hits= 21 #Cer.hits= 0 sum wts 3.7975 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.496466 sum Cer.wts 0.219685
+PMT# 103 #hits= 12 #Cer.hits= 8 sum wts 1.98222 sum Cer.wts 1.18282
+PMT# 104 #hits= 6 #Cer.hits= 4 sum wts 1.33271 sum Cer.wts 0.916165
+ Number of Scintillation Photons in previous event: 29315
+ Number of Cerenkov Photons in previous event: 72611
+Number of Scintillation photons produced in this event : 26146 killed: 0 propagated (fraction): 26146(1)
+Number of Cerenkov photons produced in this event : 68894 killed: 0 propagated (fraction): 68894(1)
+---> end of event: 15
+PMT# 0 #hits= 11 #Cer.hits= 8 sum wts 2.03337 sum Cer.wts 1.48172
+PMT# 1 #hits= 6 #Cer.hits= 2 sum wts 1.10488 sum Cer.wts 0.186143
+PMT# 2 #hits= 346 #Cer.hits= 323 sum wts 41.2055 sum Cer.wts 36.8978
+PMT# 3 #hits= 8 #Cer.hits= 4 sum wts 1.43303 sum Cer.wts 0.722954
+PMT# 4 #hits= 12 #Cer.hits= 10 sum wts 2.00516 sum Cer.wts 1.80678
+PMT# 100 #hits= 25 #Cer.hits= 20 sum wts 3.93593 sum Cer.wts 2.75742
+PMT# 101 #hits= 59 #Cer.hits= 22 sum wts 11.3739 sum Cer.wts 4.00143
+PMT# 102 #hits= 2 #Cer.hits= 1 sum wts 0.402328 sum Cer.wts 0.200982
+PMT# 103 #hits= 9 #Cer.hits= 6 sum wts 1.5566 sum Cer.wts 0.902238
+PMT# 104 #hits= 12 #Cer.hits= 7 sum wts 2.08654 sum Cer.wts 1.15323
+ Number of Scintillation Photons in previous event: 26146
+ Number of Cerenkov Photons in previous event: 68894
+Number of Scintillation photons produced in this event : 30001 killed: 0 propagated (fraction): 30001(1)
+Number of Cerenkov photons produced in this event : 82944 killed: 0 propagated (fraction): 82944(1)
+---> end of event: 16
+PMT# 0 #hits= 8 #Cer.hits= 4 sum wts 1.57469 sum Cer.wts 0.754294
+PMT# 1 #hits= 9 #Cer.hits= 7 sum wts 1.94123 sum Cer.wts 1.43325
+PMT# 2 #hits= 882 #Cer.hits= 854 sum wts 88.101 sum Cer.wts 82.0885
+PMT# 3 #hits= 17 #Cer.hits= 11 sum wts 2.51806 sum Cer.wts 1.17346
+PMT# 4 #hits= 12 #Cer.hits= 8 sum wts 2.06461 sum Cer.wts 1.1929
+PMT# 100 #hits= 23 #Cer.hits= 20 sum wts 3.40407 sum Cer.wts 2.66029
+PMT# 101 #hits= 27 #Cer.hits= 2 sum wts 5.04169 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 5 sum wts 0.483734 sum Cer.wts 0.23375
+PMT# 103 #hits= 17 #Cer.hits= 11 sum wts 3.29311 sum Cer.wts 2.33004
+PMT# 104 #hits= 6 #Cer.hits= 3 sum wts 0.808694 sum Cer.wts 0.499108
+ Number of Scintillation Photons in previous event: 30001
+ Number of Cerenkov Photons in previous event: 82944
+Number of Scintillation photons produced in this event : 29324 killed: 0 propagated (fraction): 29324(1)
+Number of Cerenkov photons produced in this event : 83693 killed: 0 propagated (fraction): 83693(1)
+---> end of event: 17
+PMT# 0 #hits= 14 #Cer.hits= 7 sum wts 3.10105 sum Cer.wts 1.47935
+PMT# 1 #hits= 11 #Cer.hits= 7 sum wts 2.19886 sum Cer.wts 1.40281
+PMT# 2 #hits= 1158 #Cer.hits= 1109 sum wts 104.519 sum Cer.wts 95.9804
+PMT# 3 #hits= 12 #Cer.hits= 7 sum wts 1.95693 sum Cer.wts 0.832803
+PMT# 4 #hits= 13 #Cer.hits= 10 sum wts 2.55614 sum Cer.wts 1.82103
+PMT# 100 #hits= 33 #Cer.hits= 28 sum wts 5.44822 sum Cer.wts 4.55306
+PMT# 101 #hits= 17 #Cer.hits= 3 sum wts 3.36836 sum Cer.wts 0.471013
+PMT# 102 #hits= 11 #Cer.hits= 7 sum wts 1.39705 sum Cer.wts 0.536075
+PMT# 103 #hits= 7 #Cer.hits= 5 sum wts 1.56626 sum Cer.wts 1.12547
+PMT# 104 #hits= 15 #Cer.hits= 10 sum wts 2.70422 sum Cer.wts 2.05952
+ Number of Scintillation Photons in previous event: 29324
+ Number of Cerenkov Photons in previous event: 83693
+Number of Scintillation photons produced in this event : 61036 killed: 0 propagated (fraction): 61036(1)
+Number of Cerenkov photons produced in this event : 140014 killed: 0 propagated (fraction): 140014(1)
+---> end of event: 18
+PMT# 0 #hits= 56 #Cer.hits= 29 sum wts 10.5766 sum Cer.wts 4.99386
+PMT# 1 #hits= 21 #Cer.hits= 12 sum wts 4.12445 sum Cer.wts 2.69464
+PMT# 2 #hits= 327 #Cer.hits= 297 sum wts 42.9622 sum Cer.wts 36.5931
+PMT# 3 #hits= 43 #Cer.hits= 32 sum wts 8.07845 sum Cer.wts 5.77106
+PMT# 4 #hits= 61 #Cer.hits= 43 sum wts 11.1403 sum Cer.wts 7.90778
+PMT# 100 #hits= 32 #Cer.hits= 28 sum wts 5.32323 sum Cer.wts 4.4228
+PMT# 101 #hits= 15 #Cer.hits= 3 sum wts 2.32849 sum Cer.wts 0
+PMT# 102 #hits= 8 #Cer.hits= 7 sum wts 0.485668 sum Cer.wts 0.2267
+PMT# 103 #hits= 19 #Cer.hits= 14 sum wts 3.00474 sum Cer.wts 1.95376
+PMT# 104 #hits= 14 #Cer.hits= 8 sum wts 2.55232 sum Cer.wts 1.4622
+ Number of Scintillation Photons in previous event: 61036
+ Number of Cerenkov Photons in previous event: 140014
+Number of Scintillation photons produced in this event : 38989 killed: 0 propagated (fraction): 38989(1)
+Number of Cerenkov photons produced in this event : 98210 killed: 0 propagated (fraction): 98210(1)
+---> end of event: 19
+PMT# 0 #hits= 18 #Cer.hits= 11 sum wts 3.41559 sum Cer.wts 2.02013
+PMT# 1 #hits= 11 #Cer.hits= 5 sum wts 2.44139 sum Cer.wts 1.12072
+PMT# 2 #hits= 2887 #Cer.hits= 2853 sum wts 146.132 sum Cer.wts 140.026
+PMT# 3 #hits= 12 #Cer.hits= 9 sum wts 2.22785 sum Cer.wts 1.64686
+PMT# 4 #hits= 9 #Cer.hits= 7 sum wts 1.26036 sum Cer.wts 0.906766
+PMT# 100 #hits= 37 #Cer.hits= 29 sum wts 5.01775 sum Cer.wts 3.68709
+PMT# 101 #hits= 32 #Cer.hits= 4 sum wts 5.92995 sum Cer.wts 0.133705
+PMT# 102 #hits= 4 #Cer.hits= 4 sum wts 0.408085 sum Cer.wts 0.408085
+PMT# 103 #hits= 12 #Cer.hits= 7 sum wts 2.14555 sum Cer.wts 1.03889
+PMT# 104 #hits= 8 #Cer.hits= 6 sum wts 1.73885 sum Cer.wts 1.31984
+ Number of Scintillation Photons in previous event: 38989
+ Number of Cerenkov Photons in previous event: 98210
+Number of Scintillation photons produced in this event : 27361 killed: 0 propagated (fraction): 27361(1)
+Number of Cerenkov photons produced in this event : 70533 killed: 0 propagated (fraction): 70533(1)
+---> end of event: 20
+PMT# 0 #hits= 12 #Cer.hits= 6 sum wts 2.60826 sum Cer.wts 1.37654
+PMT# 1 #hits= 2 #Cer.hits= 0 sum wts 0.301288 sum Cer.wts 0
+PMT# 2 #hits= 247 #Cer.hits= 222 sum wts 28.8402 sum Cer.wts 24.3558
+PMT# 3 #hits= 17 #Cer.hits= 12 sum wts 3.13453 sum Cer.wts 1.94397
+PMT# 4 #hits= 14 #Cer.hits= 10 sum wts 2.11985 sum Cer.wts 1.35378
+PMT# 100 #hits= 27 #Cer.hits= 24 sum wts 3.59785 sum Cer.wts 2.90949
+PMT# 101 #hits= 19 #Cer.hits= 2 sum wts 3.19854 sum Cer.wts 0
+PMT# 102 #hits= 10 #Cer.hits= 8 sum wts 1.08474 sum Cer.wts 0.78083
+PMT# 103 #hits= 8 #Cer.hits= 5 sum wts 1.78384 sum Cer.wts 1.08551
+PMT# 104 #hits= 6 #Cer.hits= 6 sum wts 1.04286 sum Cer.wts 1.04286
+ Number of Scintillation Photons in previous event: 27361
+ Number of Cerenkov Photons in previous event: 70533
+Number of Scintillation photons produced in this event : 30129 killed: 0 propagated (fraction): 30129(1)
+Number of Cerenkov photons produced in this event : 78936 killed: 0 propagated (fraction): 78936(1)
+---> end of event: 21
+PMT# 0 #hits= 11 #Cer.hits= 6 sum wts 2.40602 sum Cer.wts 1.4196
+PMT# 1 #hits= 6 #Cer.hits= 4 sum wts 1.13006 sum Cer.wts 0.734187
+PMT# 2 #hits= 337 #Cer.hits= 306 sum wts 40.796 sum Cer.wts 34.9673
+PMT# 3 #hits= 10 #Cer.hits= 7 sum wts 1.49219 sum Cer.wts 0.995104
+PMT# 4 #hits= 14 #Cer.hits= 11 sum wts 2.49809 sum Cer.wts 1.98518
+PMT# 100 #hits= 37 #Cer.hits= 33 sum wts 5.28323 sum Cer.wts 4.70129
+PMT# 101 #hits= 58 #Cer.hits= 16 sum wts 9.9448 sum Cer.wts 1.72389
+PMT# 102 #hits= 14 #Cer.hits= 9 sum wts 2.43043 sum Cer.wts 1.2536
+PMT# 103 #hits= 9 #Cer.hits= 8 sum wts 1.0677 sum Cer.wts 0.811042
+PMT# 104 #hits= 17 #Cer.hits= 10 sum wts 2.99487 sum Cer.wts 1.53818
+ Number of Scintillation Photons in previous event: 30129
+ Number of Cerenkov Photons in previous event: 78936
+Number of Scintillation photons produced in this event : 30431 killed: 0 propagated (fraction): 30431(1)
+Number of Cerenkov photons produced in this event : 85994 killed: 0 propagated (fraction): 85994(1)
+---> end of event: 22
+PMT# 0 #hits= 13 #Cer.hits= 9 sum wts 2.43046 sum Cer.wts 1.52974
+PMT# 1 #hits= 9 #Cer.hits= 7 sum wts 1.59969 sum Cer.wts 1.23138
+PMT# 2 #hits= 466 #Cer.hits= 420 sum wts 59.9396 sum Cer.wts 51.3439
+PMT# 3 #hits= 13 #Cer.hits= 10 sum wts 1.9278 sum Cer.wts 1.35113
+PMT# 4 #hits= 14 #Cer.hits= 10 sum wts 2.02573 sum Cer.wts 1.06924
+PMT# 100 #hits= 35 #Cer.hits= 29 sum wts 5.32788 sum Cer.wts 4.36845
+PMT# 101 #hits= 34 #Cer.hits= 2 sum wts 6.62002 sum Cer.wts 0.250178
+PMT# 102 #hits= 8 #Cer.hits= 6 sum wts 1.15407 sum Cer.wts 0.688017
+PMT# 103 #hits= 13 #Cer.hits= 6 sum wts 2.39906 sum Cer.wts 0.912081
+PMT# 104 #hits= 15 #Cer.hits= 6 sum wts 2.8795 sum Cer.wts 0.923199
+ Number of Scintillation Photons in previous event: 30431
+ Number of Cerenkov Photons in previous event: 85994
+Number of Scintillation photons produced in this event : 27243 killed: 0 propagated (fraction): 27243(1)
+Number of Cerenkov photons produced in this event : 72940 killed: 0 propagated (fraction): 72940(1)
+---> end of event: 23
+PMT# 0 #hits= 9 #Cer.hits= 6 sum wts 1.58832 sum Cer.wts 1.23407
+PMT# 1 #hits= 7 #Cer.hits= 6 sum wts 1.36095 sum Cer.wts 1.28241
+PMT# 2 #hits= 2421 #Cer.hits= 2391 sum wts 131.812 sum Cer.wts 125.768
+PMT# 3 #hits= 17 #Cer.hits= 9 sum wts 3.0737 sum Cer.wts 1.58468
+PMT# 4 #hits= 13 #Cer.hits= 11 sum wts 2.15376 sum Cer.wts 1.71151
+PMT# 100 #hits= 30 #Cer.hits= 25 sum wts 4.45832 sum Cer.wts 3.46245
+PMT# 101 #hits= 30 #Cer.hits= 4 sum wts 4.58519 sum Cer.wts 0.144313
+PMT# 102 #hits= 2 #Cer.hits= 1 sum wts 0.189708 sum Cer.wts 0
+PMT# 103 #hits= 10 #Cer.hits= 5 sum wts 2.24409 sum Cer.wts 1.02062
+PMT# 104 #hits= 9 #Cer.hits= 6 sum wts 1.31032 sum Cer.wts 0.699929
+ Number of Scintillation Photons in previous event: 27243
+ Number of Cerenkov Photons in previous event: 72940
+Number of Scintillation photons produced in this event : 28534 killed: 0 propagated (fraction): 28534(1)
+Number of Cerenkov photons produced in this event : 79035 killed: 0 propagated (fraction): 79035(1)
+---> end of event: 24
+PMT# 0 #hits= 14 #Cer.hits= 9 sum wts 2.61935 sum Cer.wts 1.45528
+PMT# 1 #hits= 6 #Cer.hits= 2 sum wts 1.23254 sum Cer.wts 0.483366
+PMT# 2 #hits= 357 #Cer.hits= 345 sum wts 37.2709 sum Cer.wts 35.1942
+PMT# 3 #hits= 9 #Cer.hits= 5 sum wts 1.29802 sum Cer.wts 0.717498
+PMT# 4 #hits= 9 #Cer.hits= 6 sum wts 1.44874 sum Cer.wts 0.818021
+PMT# 100 #hits= 38 #Cer.hits= 31 sum wts 6.5477 sum Cer.wts 5.07049
+PMT# 101 #hits= 65 #Cer.hits= 10 sum wts 12.8162 sum Cer.wts 1.47147
+PMT# 102 #hits= 13 #Cer.hits= 8 sum wts 1.67106 sum Cer.wts 0.619015
+PMT# 103 #hits= 13 #Cer.hits= 9 sum wts 1.89205 sum Cer.wts 1.1815
+PMT# 104 #hits= 14 #Cer.hits= 9 sum wts 2.61741 sum Cer.wts 1.70627
+ Number of Scintillation Photons in previous event: 28534
+ Number of Cerenkov Photons in previous event: 79035
+Number of Scintillation photons produced in this event : 37265 killed: 0 propagated (fraction): 37265(1)
+Number of Cerenkov photons produced in this event : 89745 killed: 0 propagated (fraction): 89745(1)
+---> end of event: 25
+PMT# 0 #hits= 13 #Cer.hits= 11 sum wts 2.32355 sum Cer.wts 1.92803
+PMT# 1 #hits= 12 #Cer.hits= 9 sum wts 2.41495 sum Cer.wts 1.84999
+PMT# 2 #hits= 481 #Cer.hits= 461 sum wts 54.6015 sum Cer.wts 50.6762
+PMT# 3 #hits= 13 #Cer.hits= 7 sum wts 2.58542 sum Cer.wts 1.33268
+PMT# 4 #hits= 10 #Cer.hits= 9 sum wts 1.52589 sum Cer.wts 1.45968
+PMT# 100 #hits= 26 #Cer.hits= 22 sum wts 4.50018 sum Cer.wts 3.80745
+PMT# 101 #hits= 25 #Cer.hits= 4 sum wts 4.99139 sum Cer.wts 0.434378
+PMT# 102 #hits= 8 #Cer.hits= 8 sum wts 0.458348 sum Cer.wts 0.458348
+PMT# 103 #hits= 14 #Cer.hits= 8 sum wts 3.13848 sum Cer.wts 1.62696
+PMT# 104 #hits= 11 #Cer.hits= 5 sum wts 1.86987 sum Cer.wts 0.748619
+ Number of Scintillation Photons in previous event: 37265
+ Number of Cerenkov Photons in previous event: 89745
+Number of Scintillation photons produced in this event : 28086 killed: 0 propagated (fraction): 28086(1)
+Number of Cerenkov photons produced in this event : 74601 killed: 0 propagated (fraction): 74601(1)
+---> end of event: 26
+PMT# 0 #hits= 20 #Cer.hits= 15 sum wts 4.62943 sum Cer.wts 3.41279
+PMT# 1 #hits= 5 #Cer.hits= 2 sum wts 0.856714 sum Cer.wts 0.259775
+PMT# 2 #hits= 2506 #Cer.hits= 2489 sum wts 137.155 sum Cer.wts 133.879
+PMT# 3 #hits= 17 #Cer.hits= 13 sum wts 2.6608 sum Cer.wts 1.99547
+PMT# 4 #hits= 13 #Cer.hits= 9 sum wts 2.77136 sum Cer.wts 1.83493
+PMT# 100 #hits= 23 #Cer.hits= 21 sum wts 4.81293 sum Cer.wts 4.3448
+PMT# 101 #hits= 25 #Cer.hits= 3 sum wts 4.71695 sum Cer.wts 0
+PMT# 102 #hits= 10 #Cer.hits= 7 sum wts 0.879245 sum Cer.wts 0.326683
+PMT# 103 #hits= 9 #Cer.hits= 5 sum wts 1.55125 sum Cer.wts 0.809895
+PMT# 104 #hits= 22 #Cer.hits= 18 sum wts 3.74423 sum Cer.wts 2.95801
+ Number of Scintillation Photons in previous event: 28086
+ Number of Cerenkov Photons in previous event: 74601
+Number of Scintillation photons produced in this event : 27701 killed: 0 propagated (fraction): 27701(1)
+Number of Cerenkov photons produced in this event : 71109 killed: 0 propagated (fraction): 71109(1)
+---> end of event: 27
+PMT# 0 #hits= 11 #Cer.hits= 7 sum wts 2.44982 sum Cer.wts 1.47067
+PMT# 1 #hits= 6 #Cer.hits= 5 sum wts 1.24585 sum Cer.wts 0.995003
+PMT# 2 #hits= 202 #Cer.hits= 176 sum wts 27.9074 sum Cer.wts 22.9058
+PMT# 3 #hits= 9 #Cer.hits= 5 sum wts 1.56638 sum Cer.wts 0.7312
+PMT# 4 #hits= 8 #Cer.hits= 5 sum wts 1.25257 sum Cer.wts 0.907785
+PMT# 100 #hits= 28 #Cer.hits= 26 sum wts 4.2972 sum Cer.wts 3.84496
+PMT# 101 #hits= 25 #Cer.hits= 1 sum wts 5.01538 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.623278 sum Cer.wts 0.123743
+PMT# 103 #hits= 14 #Cer.hits= 9 sum wts 2.90052 sum Cer.wts 1.89999
+PMT# 104 #hits= 12 #Cer.hits= 9 sum wts 2.67446 sum Cer.wts 1.96282
+ Number of Scintillation Photons in previous event: 27701
+ Number of Cerenkov Photons in previous event: 71109
+Number of Scintillation photons produced in this event : 26678 killed: 0 propagated (fraction): 26678(1)
+Number of Cerenkov photons produced in this event : 68914 killed: 0 propagated (fraction): 68914(1)
+---> end of event: 28
+PMT# 0 #hits= 12 #Cer.hits= 7 sum wts 2.51678 sum Cer.wts 1.31344
+PMT# 1 #hits= 4 #Cer.hits= 3 sum wts 0.832473 sum Cer.wts 0.585544
+PMT# 2 #hits= 505 #Cer.hits= 480 sum wts 54.247 sum Cer.wts 49.5228
+PMT# 3 #hits= 10 #Cer.hits= 7 sum wts 2.20232 sum Cer.wts 1.45404
+PMT# 4 #hits= 14 #Cer.hits= 9 sum wts 2.31558 sum Cer.wts 1.43511
+PMT# 100 #hits= 31 #Cer.hits= 26 sum wts 5.01203 sum Cer.wts 4.11055
+PMT# 101 #hits= 33 #Cer.hits= 3 sum wts 6.05718 sum Cer.wts 0.244365
+PMT# 102 #hits= 4 #Cer.hits= 3 sum wts 0.461564 sum Cer.wts 0.211078
+PMT# 103 #hits= 13 #Cer.hits= 7 sum wts 2.81029 sum Cer.wts 1.49154
+PMT# 104 #hits= 9 #Cer.hits= 5 sum wts 1.38744 sum Cer.wts 0.670055
+ Number of Scintillation Photons in previous event: 26678
+ Number of Cerenkov Photons in previous event: 68914
+Number of Scintillation photons produced in this event : 31005 killed: 0 propagated (fraction): 31005(1)
+Number of Cerenkov photons produced in this event : 78797 killed: 0 propagated (fraction): 78797(1)
+---> end of event: 29
+PMT# 0 #hits= 10 #Cer.hits= 3 sum wts 2.08215 sum Cer.wts 0.619713
+PMT# 1 #hits= 7 #Cer.hits= 3 sum wts 1.38586 sum Cer.wts 0.5852
+PMT# 2 #hits= 523 #Cer.hits= 499 sum wts 63.388 sum Cer.wts 58.2983
+PMT# 3 #hits= 11 #Cer.hits= 7 sum wts 1.50259 sum Cer.wts 0.837407
+PMT# 4 #hits= 14 #Cer.hits= 7 sum wts 2.43626 sum Cer.wts 0.989046
+PMT# 100 #hits= 32 #Cer.hits= 29 sum wts 4.72774 sum Cer.wts 4.03595
+PMT# 101 #hits= 15 #Cer.hits= 3 sum wts 2.13633 sum Cer.wts 0.294234
+PMT# 102 #hits= 8 #Cer.hits= 3 sum wts 0.617121 sum Cer.wts 0.04016
+PMT# 103 #hits= 14 #Cer.hits= 8 sum wts 2.03754 sum Cer.wts 1.18385
+PMT# 104 #hits= 12 #Cer.hits= 4 sum wts 2.15805 sum Cer.wts 0.536107
+ Number of Scintillation Photons in previous event: 31005
+ Number of Cerenkov Photons in previous event: 78797
+Number of Scintillation photons produced in this event : 42908 killed: 0 propagated (fraction): 42908(1)
+Number of Cerenkov photons produced in this event : 99348 killed: 0 propagated (fraction): 99348(1)
+---> end of event: 30
+PMT# 0 #hits= 23 #Cer.hits= 19 sum wts 4.27822 sum Cer.wts 3.40102
+PMT# 1 #hits= 14 #Cer.hits= 9 sum wts 2.77454 sum Cer.wts 1.75961
+PMT# 2 #hits= 2510 #Cer.hits= 2477 sum wts 136.447 sum Cer.wts 130.159
+PMT# 3 #hits= 23 #Cer.hits= 17 sum wts 4.36882 sum Cer.wts 3.17199
+PMT# 4 #hits= 19 #Cer.hits= 13 sum wts 3.46103 sum Cer.wts 2.28678
+PMT# 100 #hits= 38 #Cer.hits= 28 sum wts 5.61939 sum Cer.wts 3.78584
+PMT# 101 #hits= 24 #Cer.hits= 3 sum wts 4.42453 sum Cer.wts 0.00688702
+PMT# 102 #hits= 10 #Cer.hits= 8 sum wts 0.598498 sum Cer.wts 0.194105
+PMT# 103 #hits= 15 #Cer.hits= 8 sum wts 2.61153 sum Cer.wts 1.17177
+PMT# 104 #hits= 10 #Cer.hits= 7 sum wts 2.00472 sum Cer.wts 1.42257
+ Number of Scintillation Photons in previous event: 42908
+ Number of Cerenkov Photons in previous event: 99348
+Number of Scintillation photons produced in this event : 27084 killed: 0 propagated (fraction): 27084(1)
+Number of Cerenkov photons produced in this event : 69331 killed: 0 propagated (fraction): 69331(1)
+---> end of event: 31
+PMT# 0 #hits= 13 #Cer.hits= 6 sum wts 2.84747 sum Cer.wts 1.41993
+PMT# 1 #hits= 7 #Cer.hits= 4 sum wts 0.756775 sum Cer.wts 0.323848
+PMT# 2 #hits= 307 #Cer.hits= 283 sum wts 38.4955 sum Cer.wts 33.9232
+PMT# 3 #hits= 12 #Cer.hits= 10 sum wts 1.24932 sum Cer.wts 1.17542
+PMT# 4 #hits= 9 #Cer.hits= 9 sum wts 1.62362 sum Cer.wts 1.62362
+PMT# 100 #hits= 33 #Cer.hits= 30 sum wts 5.01474 sum Cer.wts 4.55118
+PMT# 101 #hits= 14 #Cer.hits= 1 sum wts 2.30796 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 3 sum wts 0.428004 sum Cer.wts 0.055347
+PMT# 103 #hits= 8 #Cer.hits= 4 sum wts 1.37493 sum Cer.wts 0.597827
+PMT# 104 #hits= 14 #Cer.hits= 8 sum wts 2.79652 sum Cer.wts 1.53649
+ Number of Scintillation Photons in previous event: 27084
+ Number of Cerenkov Photons in previous event: 69331
+Number of Scintillation photons produced in this event : 28274 killed: 0 propagated (fraction): 28274(1)
+Number of Cerenkov photons produced in this event : 70473 killed: 0 propagated (fraction): 70473(1)
+---> end of event: 32
+PMT# 0 #hits= 12 #Cer.hits= 6 sum wts 2.09655 sum Cer.wts 1.02585
+PMT# 1 #hits= 2 #Cer.hits= 1 sum wts 0.46573 sum Cer.wts 0.253682
+PMT# 2 #hits= 140 #Cer.hits= 112 sum wts 23.4416 sum Cer.wts 17.8227
+PMT# 3 #hits= 17 #Cer.hits= 9 sum wts 2.69757 sum Cer.wts 1.32583
+PMT# 4 #hits= 11 #Cer.hits= 8 sum wts 1.85205 sum Cer.wts 1.17358
+PMT# 100 #hits= 27 #Cer.hits= 22 sum wts 4.77386 sum Cer.wts 3.6494
+PMT# 101 #hits= 19 #Cer.hits= 1 sum wts 3.9496 sum Cer.wts 0
+PMT# 102 #hits= 14 #Cer.hits= 9 sum wts 1.18348 sum Cer.wts 0.122467
+PMT# 103 #hits= 16 #Cer.hits= 9 sum wts 3.05811 sum Cer.wts 1.64216
+PMT# 104 #hits= 12 #Cer.hits= 8 sum wts 2.08229 sum Cer.wts 1.32577
+ Number of Scintillation Photons in previous event: 28274
+ Number of Cerenkov Photons in previous event: 70473
+Number of Scintillation photons produced in this event : 30337 killed: 0 propagated (fraction): 30337(1)
+Number of Cerenkov photons produced in this event : 77556 killed: 0 propagated (fraction): 77556(1)
+---> end of event: 33
+PMT# 0 #hits= 13 #Cer.hits= 8 sum wts 2.70445 sum Cer.wts 1.62678
+PMT# 1 #hits= 9 #Cer.hits= 6 sum wts 1.63379 sum Cer.wts 1.1151
+PMT# 2 #hits= 762 #Cer.hits= 735 sum wts 73.4814 sum Cer.wts 67.7603
+PMT# 3 #hits= 8 #Cer.hits= 6 sum wts 1.30969 sum Cer.wts 0.877281
+PMT# 4 #hits= 9 #Cer.hits= 7 sum wts 1.4457 sum Cer.wts 0.969122
+PMT# 100 #hits= 31 #Cer.hits= 25 sum wts 3.54473 sum Cer.wts 2.61996
+PMT# 101 #hits= 23 #Cer.hits= 1 sum wts 4.75215 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 6 sum wts 1.06262 sum Cer.wts 0.838835
+PMT# 103 #hits= 10 #Cer.hits= 7 sum wts 1.87889 sum Cer.wts 1.17748
+PMT# 104 #hits= 7 #Cer.hits= 4 sum wts 1.42413 sum Cer.wts 0.834078
+ Number of Scintillation Photons in previous event: 30337
+ Number of Cerenkov Photons in previous event: 77556
+Number of Scintillation photons produced in this event : 28354 killed: 0 propagated (fraction): 28354(1)
+Number of Cerenkov photons produced in this event : 75932 killed: 0 propagated (fraction): 75932(1)
+---> end of event: 34
+PMT# 0 #hits= 6 #Cer.hits= 4 sum wts 1.2763 sum Cer.wts 0.805348
+PMT# 1 #hits= 5 #Cer.hits= 2 sum wts 0.807126 sum Cer.wts 0.232179
+PMT# 2 #hits= 175 #Cer.hits= 165 sum wts 26.4423 sum Cer.wts 24.4294
+PMT# 3 #hits= 5 #Cer.hits= 2 sum wts 0.863097 sum Cer.wts 0.375072
+PMT# 4 #hits= 17 #Cer.hits= 11 sum wts 3.26787 sum Cer.wts 2.13003
+PMT# 100 #hits= 27 #Cer.hits= 20 sum wts 4.80053 sum Cer.wts 3.24945
+PMT# 101 #hits= 30 #Cer.hits= 6 sum wts 4.26998 sum Cer.wts 0.186705
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.933493 sum Cer.wts 0.451427
+PMT# 103 #hits= 12 #Cer.hits= 8 sum wts 1.78583 sum Cer.wts 1.02951
+PMT# 104 #hits= 9 #Cer.hits= 5 sum wts 1.59216 sum Cer.wts 0.788867
+ Number of Scintillation Photons in previous event: 28354
+ Number of Cerenkov Photons in previous event: 75932
+Number of Scintillation photons produced in this event : 28366 killed: 0 propagated (fraction): 28366(1)
+Number of Cerenkov photons produced in this event : 71295 killed: 0 propagated (fraction): 71295(1)
+---> end of event: 35
+PMT# 0 #hits= 15 #Cer.hits= 10 sum wts 3.25161 sum Cer.wts 2.37768
+PMT# 1 #hits= 13 #Cer.hits= 9 sum wts 2.86397 sum Cer.wts 1.91861
+PMT# 2 #hits= 384 #Cer.hits= 362 sum wts 48.2722 sum Cer.wts 43.646
+PMT# 3 #hits= 9 #Cer.hits= 6 sum wts 1.77669 sum Cer.wts 1.34844
+PMT# 4 #hits= 25 #Cer.hits= 19 sum wts 4.47677 sum Cer.wts 3.32479
+PMT# 100 #hits= 28 #Cer.hits= 22 sum wts 4.61109 sum Cer.wts 3.19399
+PMT# 101 #hits= 33 #Cer.hits= 5 sum wts 6.54639 sum Cer.wts 0.396876
+PMT# 102 #hits= 8 #Cer.hits= 5 sum wts 0.912202 sum Cer.wts 0.16932
+PMT# 103 #hits= 14 #Cer.hits= 13 sum wts 2.47836 sum Cer.wts 2.285
+PMT# 104 #hits= 12 #Cer.hits= 9 sum wts 2.25996 sum Cer.wts 1.74204
+ Number of Scintillation Photons in previous event: 28366
+ Number of Cerenkov Photons in previous event: 71295
+Number of Scintillation photons produced in this event : 30988 killed: 0 propagated (fraction): 30988(1)
+Number of Cerenkov photons produced in this event : 76003 killed: 0 propagated (fraction): 76003(1)
+---> end of event: 36
+PMT# 0 #hits= 11 #Cer.hits= 7 sum wts 2.03012 sum Cer.wts 1.22713
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.39138 sum Cer.wts 0.598262
+PMT# 2 #hits= 464 #Cer.hits= 442 sum wts 48.0453 sum Cer.wts 43.6597
+PMT# 3 #hits= 11 #Cer.hits= 7 sum wts 1.7531 sum Cer.wts 0.950204
+PMT# 4 #hits= 9 #Cer.hits= 7 sum wts 1.63764 sum Cer.wts 1.33786
+PMT# 100 #hits= 40 #Cer.hits= 35 sum wts 6.61966 sum Cer.wts 5.41635
+PMT# 101 #hits= 23 #Cer.hits= 1 sum wts 4.76968 sum Cer.wts 0
+PMT# 102 #hits= 10 #Cer.hits= 7 sum wts 1.08936 sum Cer.wts 0.462174
+PMT# 103 #hits= 17 #Cer.hits= 10 sum wts 3.08058 sum Cer.wts 1.58837
+PMT# 104 #hits= 9 #Cer.hits= 5 sum wts 1.25124 sum Cer.wts 0.700363
+ Number of Scintillation Photons in previous event: 30988
+ Number of Cerenkov Photons in previous event: 76003
+Number of Scintillation photons produced in this event : 30814 killed: 0 propagated (fraction): 30814(1)
+Number of Cerenkov photons produced in this event : 75905 killed: 0 propagated (fraction): 75905(1)
+---> end of event: 37
+PMT# 0 #hits= 18 #Cer.hits= 9 sum wts 3.33769 sum Cer.wts 1.61639
+PMT# 1 #hits= 6 #Cer.hits= 3 sum wts 1.36823 sum Cer.wts 0.664301
+PMT# 2 #hits= 308 #Cer.hits= 282 sum wts 36.8686 sum Cer.wts 31.4293
+PMT# 3 #hits= 13 #Cer.hits= 10 sum wts 2.32791 sum Cer.wts 1.63858
+PMT# 4 #hits= 12 #Cer.hits= 9 sum wts 1.6683 sum Cer.wts 1.40456
+PMT# 100 #hits= 32 #Cer.hits= 22 sum wts 5.47919 sum Cer.wts 3.62679
+PMT# 101 #hits= 22 #Cer.hits= 2 sum wts 4.31547 sum Cer.wts 0.388542
+PMT# 102 #hits= 9 #Cer.hits= 7 sum wts 0.644625 sum Cer.wts 0.462373
+PMT# 103 #hits= 13 #Cer.hits= 9 sum wts 2.73852 sum Cer.wts 1.78507
+PMT# 104 #hits= 7 #Cer.hits= 5 sum wts 0.954293 sum Cer.wts 0.530784
+ Number of Scintillation Photons in previous event: 30814
+ Number of Cerenkov Photons in previous event: 75905
+Number of Scintillation photons produced in this event : 25492 killed: 0 propagated (fraction): 25492(1)
+Number of Cerenkov photons produced in this event : 66208 killed: 0 propagated (fraction): 66208(1)
+---> end of event: 38
+PMT# 0 #hits= 12 #Cer.hits= 6 sum wts 1.83314 sum Cer.wts 0.944929
+PMT# 1 #hits= 7 #Cer.hits= 3 sum wts 1.48827 sum Cer.wts 0.530071
+PMT# 2 #hits= 347 #Cer.hits= 333 sum wts 41.0196 sum Cer.wts 38.4287
+PMT# 3 #hits= 11 #Cer.hits= 4 sum wts 2.05702 sum Cer.wts 0.645189
+PMT# 4 #hits= 12 #Cer.hits= 7 sum wts 2.18661 sum Cer.wts 1.33476
+PMT# 100 #hits= 31 #Cer.hits= 25 sum wts 4.20692 sum Cer.wts 2.92777
+PMT# 101 #hits= 20 #Cer.hits= 1 sum wts 3.70756 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 3 sum wts 0.879982 sum Cer.wts 0.162809
+PMT# 103 #hits= 10 #Cer.hits= 5 sum wts 1.85574 sum Cer.wts 0.70541
+PMT# 104 #hits= 11 #Cer.hits= 7 sum wts 1.80944 sum Cer.wts 1.22112
+ Number of Scintillation Photons in previous event: 25492
+ Number of Cerenkov Photons in previous event: 66208
+Number of Scintillation photons produced in this event : 29397 killed: 0 propagated (fraction): 29397(1)
+Number of Cerenkov photons produced in this event : 75787 killed: 0 propagated (fraction): 75787(1)
+---> end of event: 39
+PMT# 0 #hits= 14 #Cer.hits= 5 sum wts 2.65376 sum Cer.wts 0.943946
+PMT# 1 #hits= 4 #Cer.hits= 4 sum wts 0.912134 sum Cer.wts 0.912134
+PMT# 2 #hits= 805 #Cer.hits= 779 sum wts 71.9364 sum Cer.wts 66.7868
+PMT# 3 #hits= 12 #Cer.hits= 8 sum wts 2.73847 sum Cer.wts 1.89535
+PMT# 4 #hits= 11 #Cer.hits= 7 sum wts 2.09246 sum Cer.wts 1.30998
+PMT# 100 #hits= 36 #Cer.hits= 32 sum wts 4.55414 sum Cer.wts 3.82462
+PMT# 101 #hits= 42 #Cer.hits= 23 sum wts 5.76401 sum Cer.wts 2.41043
+PMT# 102 #hits= 11 #Cer.hits= 9 sum wts 1.20102 sum Cer.wts 0.697289
+PMT# 103 #hits= 10 #Cer.hits= 5 sum wts 2.35846 sum Cer.wts 1.15007
+PMT# 104 #hits= 11 #Cer.hits= 7 sum wts 1.80557 sum Cer.wts 1.11191
+ Number of Scintillation Photons in previous event: 29397
+ Number of Cerenkov Photons in previous event: 75787
+Number of Scintillation photons produced in this event : 26083 killed: 0 propagated (fraction): 26083(1)
+Number of Cerenkov photons produced in this event : 68897 killed: 0 propagated (fraction): 68897(1)
+---> end of event: 40
+PMT# 0 #hits= 11 #Cer.hits= 5 sum wts 1.64207 sum Cer.wts 0.604656
+PMT# 1 #hits= 11 #Cer.hits= 5 sum wts 2.21013 sum Cer.wts 1.01075
+PMT# 2 #hits= 108 #Cer.hits= 92 sum wts 18.5148 sum Cer.wts 15.1823
+PMT# 3 #hits= 7 #Cer.hits= 6 sum wts 0.92001 sum Cer.wts 0.660903
+PMT# 4 #hits= 8 #Cer.hits= 6 sum wts 0.691105 sum Cer.wts 0.398853
+PMT# 100 #hits= 25 #Cer.hits= 21 sum wts 4.64921 sum Cer.wts 3.9937
+PMT# 101 #hits= 26 #Cer.hits= 3 sum wts 4.79074 sum Cer.wts 0.216388
+PMT# 102 #hits= 9 #Cer.hits= 5 sum wts 1.10895 sum Cer.wts 0.36818
+PMT# 103 #hits= 12 #Cer.hits= 6 sum wts 2.44316 sum Cer.wts 1.16131
+PMT# 104 #hits= 16 #Cer.hits= 13 sum wts 3.13444 sum Cer.wts 2.5785
+ Number of Scintillation Photons in previous event: 26083
+ Number of Cerenkov Photons in previous event: 68897
+Number of Scintillation photons produced in this event : 34858 killed: 0 propagated (fraction): 34858(1)
+Number of Cerenkov photons produced in this event : 84568 killed: 0 propagated (fraction): 84568(1)
+---> end of event: 41
+PMT# 0 #hits= 18 #Cer.hits= 12 sum wts 3.92516 sum Cer.wts 2.63659
+PMT# 1 #hits= 4 #Cer.hits= 2 sum wts 0.939632 sum Cer.wts 0.441481
+PMT# 2 #hits= 265 #Cer.hits= 238 sum wts 33.0777 sum Cer.wts 28.6132
+PMT# 3 #hits= 20 #Cer.hits= 17 sum wts 3.62109 sum Cer.wts 2.91267
+PMT# 4 #hits= 22 #Cer.hits= 18 sum wts 3.7728 sum Cer.wts 3.09679
+PMT# 100 #hits= 30 #Cer.hits= 21 sum wts 4.28377 sum Cer.wts 2.54802
+PMT# 101 #hits= 33 #Cer.hits= 1 sum wts 7.01339 sum Cer.wts 0.25722
+PMT# 102 #hits= 10 #Cer.hits= 5 sum wts 1.39991 sum Cer.wts 0.419943
+PMT# 103 #hits= 13 #Cer.hits= 9 sum wts 2.50041 sum Cer.wts 1.63127
+PMT# 104 #hits= 7 #Cer.hits= 6 sum wts 1.51199 sum Cer.wts 1.25651
+ Number of Scintillation Photons in previous event: 34858
+ Number of Cerenkov Photons in previous event: 84568
+Number of Scintillation photons produced in this event : 28000 killed: 0 propagated (fraction): 28000(1)
+Number of Cerenkov photons produced in this event : 78046 killed: 0 propagated (fraction): 78046(1)
+---> end of event: 42
+PMT# 0 #hits= 7 #Cer.hits= 3 sum wts 1.6596 sum Cer.wts 0.712151
+PMT# 1 #hits= 7 #Cer.hits= 5 sum wts 1.42511 sum Cer.wts 1.21201
+PMT# 2 #hits= 625 #Cer.hits= 601 sum wts 71.3939 sum Cer.wts 66.9252
+PMT# 3 #hits= 15 #Cer.hits= 12 sum wts 2.75498 sum Cer.wts 2.01608
+PMT# 4 #hits= 9 #Cer.hits= 5 sum wts 1.24159 sum Cer.wts 0.763024
+PMT# 100 #hits= 29 #Cer.hits= 24 sum wts 4.48347 sum Cer.wts 3.4694
+PMT# 101 #hits= 29 #Cer.hits= 3 sum wts 5.73138 sum Cer.wts 0
+PMT# 102 #hits= 6 #Cer.hits= 1 sum wts 0.953479 sum Cer.wts 0
+PMT# 103 #hits= 13 #Cer.hits= 10 sum wts 2.6517 sum Cer.wts 1.99607
+PMT# 104 #hits= 11 #Cer.hits= 10 sum wts 1.76435 sum Cer.wts 1.5179
+ Number of Scintillation Photons in previous event: 28000
+ Number of Cerenkov Photons in previous event: 78046
+Number of Scintillation photons produced in this event : 28456 killed: 0 propagated (fraction): 28456(1)
+Number of Cerenkov photons produced in this event : 75613 killed: 0 propagated (fraction): 75613(1)
+---> end of event: 43
+PMT# 0 #hits= 8 #Cer.hits= 4 sum wts 1.70066 sum Cer.wts 0.93814
+PMT# 1 #hits= 7 #Cer.hits= 5 sum wts 1.30572 sum Cer.wts 0.81027
+PMT# 2 #hits= 208 #Cer.hits= 187 sum wts 29.9925 sum Cer.wts 25.6416
+PMT# 3 #hits= 16 #Cer.hits= 12 sum wts 2.04315 sum Cer.wts 1.43756
+PMT# 4 #hits= 12 #Cer.hits= 7 sum wts 1.95951 sum Cer.wts 1.003
+PMT# 100 #hits= 29 #Cer.hits= 21 sum wts 4.70625 sum Cer.wts 3.18856
+PMT# 101 #hits= 24 #Cer.hits= 1 sum wts 4.47579 sum Cer.wts 0
+PMT# 102 #hits= 11 #Cer.hits= 9 sum wts 0.659145 sum Cer.wts 0.171016
+PMT# 103 #hits= 7 #Cer.hits= 5 sum wts 0.943782 sum Cer.wts 0.501972
+PMT# 104 #hits= 15 #Cer.hits= 8 sum wts 2.58392 sum Cer.wts 1.03113
+ Number of Scintillation Photons in previous event: 28456
+ Number of Cerenkov Photons in previous event: 75613
+Number of Scintillation photons produced in this event : 27122 killed: 0 propagated (fraction): 27122(1)
+Number of Cerenkov photons produced in this event : 71425 killed: 0 propagated (fraction): 71425(1)
+---> end of event: 44
+PMT# 0 #hits= 7 #Cer.hits= 2 sum wts 1.74001 sum Cer.wts 0.504586
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.64122 sum Cer.wts 0.801875
+PMT# 2 #hits= 2485 #Cer.hits= 2462 sum wts 142.329 sum Cer.wts 138.201
+PMT# 3 #hits= 13 #Cer.hits= 10 sum wts 2.47355 sum Cer.wts 1.92617
+PMT# 4 #hits= 10 #Cer.hits= 9 sum wts 1.29276 sum Cer.wts 1.26291
+PMT# 100 #hits= 31 #Cer.hits= 29 sum wts 5.33882 sum Cer.wts 4.88066
+PMT# 101 #hits= 18 #Cer.hits= 0 sum wts 3.7325 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 4 sum wts 0.75081 sum Cer.wts 0.242347
+PMT# 103 #hits= 7 #Cer.hits= 5 sum wts 1.3346 sum Cer.wts 0.876289
+PMT# 104 #hits= 13 #Cer.hits= 11 sum wts 2.51123 sum Cer.wts 2.14105
+ Number of Scintillation Photons in previous event: 27122
+ Number of Cerenkov Photons in previous event: 71425
+Number of Scintillation photons produced in this event : 28195 killed: 0 propagated (fraction): 28195(1)
+Number of Cerenkov photons produced in this event : 72094 killed: 0 propagated (fraction): 72094(1)
+---> end of event: 45
+PMT# 0 #hits= 17 #Cer.hits= 8 sum wts 2.41506 sum Cer.wts 1.18465
+PMT# 1 #hits= 10 #Cer.hits= 7 sum wts 2.02396 sum Cer.wts 1.31583
+PMT# 2 #hits= 864 #Cer.hits= 838 sum wts 71.1961 sum Cer.wts 65.9474
+PMT# 3 #hits= 13 #Cer.hits= 9 sum wts 2.56791 sum Cer.wts 1.74053
+PMT# 4 #hits= 12 #Cer.hits= 7 sum wts 1.83327 sum Cer.wts 0.858566
+PMT# 100 #hits= 29 #Cer.hits= 24 sum wts 4.85602 sum Cer.wts 4.01837
+PMT# 101 #hits= 38 #Cer.hits= 4 sum wts 6.43259 sum Cer.wts 0.602877
+PMT# 102 #hits= 13 #Cer.hits= 8 sum wts 1.40455 sum Cer.wts 0.36919
+PMT# 103 #hits= 9 #Cer.hits= 4 sum wts 2.19795 sum Cer.wts 0.95735
+PMT# 104 #hits= 7 #Cer.hits= 4 sum wts 1.16003 sum Cer.wts 0.51075
+ Number of Scintillation Photons in previous event: 28195
+ Number of Cerenkov Photons in previous event: 72094
+Number of Scintillation photons produced in this event : 31882 killed: 0 propagated (fraction): 31882(1)
+Number of Cerenkov photons produced in this event : 78900 killed: 0 propagated (fraction): 78900(1)
+---> end of event: 46
+PMT# 0 #hits= 22 #Cer.hits= 14 sum wts 3.71792 sum Cer.wts 2.11263
+PMT# 1 #hits= 6 #Cer.hits= 4 sum wts 1.08488 sum Cer.wts 0.840701
+PMT# 2 #hits= 800 #Cer.hits= 770 sum wts 72.2388 sum Cer.wts 66.2719
+PMT# 3 #hits= 8 #Cer.hits= 5 sum wts 1.59592 sum Cer.wts 1.10251
+PMT# 4 #hits= 6 #Cer.hits= 4 sum wts 1.02348 sum Cer.wts 0.740753
+PMT# 100 #hits= 32 #Cer.hits= 24 sum wts 6.15866 sum Cer.wts 4.48223
+PMT# 101 #hits= 25 #Cer.hits= 5 sum wts 4.3644 sum Cer.wts 0.654756
+PMT# 102 #hits= 10 #Cer.hits= 5 sum wts 1.37634 sum Cer.wts 0.22433
+PMT# 103 #hits= 14 #Cer.hits= 5 sum wts 2.45504 sum Cer.wts 0.965833
+PMT# 104 #hits= 13 #Cer.hits= 8 sum wts 2.79046 sum Cer.wts 1.73257
+ Number of Scintillation Photons in previous event: 31882
+ Number of Cerenkov Photons in previous event: 78900
+Number of Scintillation photons produced in this event : 28711 killed: 0 propagated (fraction): 28711(1)
+Number of Cerenkov photons produced in this event : 74809 killed: 0 propagated (fraction): 74809(1)
+---> end of event: 47
+PMT# 0 #hits= 18 #Cer.hits= 8 sum wts 3.39151 sum Cer.wts 1.68644
+PMT# 1 #hits= 6 #Cer.hits= 4 sum wts 1.14284 sum Cer.wts 0.686773
+PMT# 2 #hits= 3509 #Cer.hits= 3500 sum wts 168.309 sum Cer.wts 166.52
+PMT# 3 #hits= 10 #Cer.hits= 6 sum wts 1.64718 sum Cer.wts 1.08217
+PMT# 4 #hits= 5 #Cer.hits= 2 sum wts 0.934306 sum Cer.wts 0.242038
+PMT# 100 #hits= 30 #Cer.hits= 24 sum wts 4.8758 sum Cer.wts 3.55996
+PMT# 101 #hits= 21 #Cer.hits= 1 sum wts 4.01234 sum Cer.wts 0
+PMT# 102 #hits= 8 #Cer.hits= 6 sum wts 0.800531 sum Cer.wts 0.512695
+PMT# 103 #hits= 9 #Cer.hits= 5 sum wts 1.68064 sum Cer.wts 1.07758
+PMT# 104 #hits= 18 #Cer.hits= 13 sum wts 3.50471 sum Cer.wts 2.52203
+ Number of Scintillation Photons in previous event: 28711
+ Number of Cerenkov Photons in previous event: 74809
+Number of Scintillation photons produced in this event : 26930 killed: 0 propagated (fraction): 26930(1)
+Number of Cerenkov photons produced in this event : 68406 killed: 0 propagated (fraction): 68406(1)
+---> end of event: 48
+PMT# 0 #hits= 8 #Cer.hits= 4 sum wts 1.68315 sum Cer.wts 0.889553
+PMT# 1 #hits= 8 #Cer.hits= 7 sum wts 1.63873 sum Cer.wts 1.46853
+PMT# 2 #hits= 229 #Cer.hits= 206 sum wts 27.8827 sum Cer.wts 23.3725
+PMT# 3 #hits= 6 #Cer.hits= 3 sum wts 1.06114 sum Cer.wts 0.551531
+PMT# 4 #hits= 10 #Cer.hits= 5 sum wts 1.92523 sum Cer.wts 0.808787
+PMT# 100 #hits= 26 #Cer.hits= 19 sum wts 5.37663 sum Cer.wts 3.72483
+PMT# 101 #hits= 23 #Cer.hits= 1 sum wts 4.40346 sum Cer.wts 0.128036
+PMT# 102 #hits= 7 #Cer.hits= 4 sum wts 0.983316 sum Cer.wts 0.257936
+PMT# 103 #hits= 6 #Cer.hits= 5 sum wts 1.23134 sum Cer.wts 0.978969
+PMT# 104 #hits= 10 #Cer.hits= 4 sum wts 1.59753 sum Cer.wts 0.530662
+ Number of Scintillation Photons in previous event: 26930
+ Number of Cerenkov Photons in previous event: 68406
+Number of Scintillation photons produced in this event : 29907 killed: 0 propagated (fraction): 29907(1)
+Number of Cerenkov photons produced in this event : 74761 killed: 0 propagated (fraction): 74761(1)
+---> end of event: 49
+PMT# 0 #hits= 12 #Cer.hits= 8 sum wts 2.34566 sum Cer.wts 1.54303
+PMT# 1 #hits= 7 #Cer.hits= 5 sum wts 1.55186 sum Cer.wts 1.05831
+PMT# 2 #hits= 487 #Cer.hits= 436 sum wts 60.0786 sum Cer.wts 50.2508
+PMT# 3 #hits= 11 #Cer.hits= 9 sum wts 1.58234 sum Cer.wts 1.32896
+PMT# 4 #hits= 17 #Cer.hits= 11 sum wts 2.87747 sum Cer.wts 1.8795
+PMT# 100 #hits= 35 #Cer.hits= 28 sum wts 5.32398 sum Cer.wts 3.8275
+PMT# 101 #hits= 24 #Cer.hits= 3 sum wts 4.45021 sum Cer.wts 0
+PMT# 102 #hits= 14 #Cer.hits= 11 sum wts 2.40417 sum Cer.wts 1.64597
+PMT# 103 #hits= 13 #Cer.hits= 7 sum wts 3.03203 sum Cer.wts 1.7329
+PMT# 104 #hits= 10 #Cer.hits= 5 sum wts 1.63076 sum Cer.wts 0.671711
+ Number of Scintillation Photons in previous event: 29907
+ Number of Cerenkov Photons in previous event: 74761
+Number of Scintillation photons produced in this event : 38098 killed: 0 propagated (fraction): 38098(1)
+Number of Cerenkov photons produced in this event : 88828 killed: 0 propagated (fraction): 88828(1)
+---> end of event: 50
+PMT# 0 #hits= 15 #Cer.hits= 11 sum wts 2.90175 sum Cer.wts 2.11145
+PMT# 1 #hits= 5 #Cer.hits= 3 sum wts 1.06869 sum Cer.wts 0.596264
+PMT# 2 #hits= 162 #Cer.hits= 146 sum wts 21.0228 sum Cer.wts 17.8546
+PMT# 3 #hits= 10 #Cer.hits= 7 sum wts 1.99315 sum Cer.wts 1.29986
+PMT# 4 #hits= 8 #Cer.hits= 5 sum wts 1.10114 sum Cer.wts 0.647414
+PMT# 100 #hits= 44 #Cer.hits= 29 sum wts 7.99294 sum Cer.wts 4.77838
+PMT# 101 #hits= 51 #Cer.hits= 1 sum wts 10.9328 sum Cer.wts 0
+PMT# 102 #hits= 17 #Cer.hits= 9 sum wts 1.58564 sum Cer.wts 0.0590897
+PMT# 103 #hits= 18 #Cer.hits= 8 sum wts 3.55825 sum Cer.wts 1.40803
+PMT# 104 #hits= 12 #Cer.hits= 4 sum wts 2.01622 sum Cer.wts 0.822278
+ Number of Scintillation Photons in previous event: 38098
+ Number of Cerenkov Photons in previous event: 88828
+Number of Scintillation photons produced in this event : 36887 killed: 0 propagated (fraction): 36887(1)
+Number of Cerenkov photons produced in this event : 86903 killed: 0 propagated (fraction): 86903(1)
+---> end of event: 51
+PMT# 0 #hits= 19 #Cer.hits= 13 sum wts 3.96354 sum Cer.wts 2.62408
+PMT# 1 #hits= 14 #Cer.hits= 7 sum wts 2.85162 sum Cer.wts 1.20733
+PMT# 2 #hits= 317 #Cer.hits= 287 sum wts 41.2057 sum Cer.wts 34.9562
+PMT# 3 #hits= 27 #Cer.hits= 18 sum wts 4.87289 sum Cer.wts 3.10943
+PMT# 4 #hits= 16 #Cer.hits= 11 sum wts 3.10483 sum Cer.wts 2.19528
+PMT# 100 #hits= 28 #Cer.hits= 25 sum wts 5.42793 sum Cer.wts 4.96075
+PMT# 101 #hits= 22 #Cer.hits= 2 sum wts 4.55579 sum Cer.wts 0.184452
+PMT# 102 #hits= 14 #Cer.hits= 7 sum wts 1.728 sum Cer.wts 0.540226
+PMT# 103 #hits= 18 #Cer.hits= 10 sum wts 3.35085 sum Cer.wts 2.13347
+PMT# 104 #hits= 12 #Cer.hits= 6 sum wts 2.17068 sum Cer.wts 1.05509
+ Number of Scintillation Photons in previous event: 36887
+ Number of Cerenkov Photons in previous event: 86903
+Number of Scintillation photons produced in this event : 27710 killed: 0 propagated (fraction): 27710(1)
+Number of Cerenkov photons produced in this event : 75829 killed: 0 propagated (fraction): 75829(1)
+---> end of event: 52
+PMT# 0 #hits= 6 #Cer.hits= 4 sum wts 1.38782 sum Cer.wts 0.89644
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.45871 sum Cer.wts 0.72453
+PMT# 2 #hits= 2444 #Cer.hits= 2409 sum wts 136.686 sum Cer.wts 129.142
+PMT# 3 #hits= 7 #Cer.hits= 2 sum wts 1.38095 sum Cer.wts 0.495544
+PMT# 4 #hits= 6 #Cer.hits= 3 sum wts 1.23664 sum Cer.wts 0.667023
+PMT# 100 #hits= 27 #Cer.hits= 23 sum wts 4.56305 sum Cer.wts 3.65032
+PMT# 101 #hits= 45 #Cer.hits= 24 sum wts 5.89994 sum Cer.wts 1.91396
+PMT# 102 #hits= 8 #Cer.hits= 5 sum wts 1.14383 sum Cer.wts 0.635525
+PMT# 103 #hits= 14 #Cer.hits= 11 sum wts 2.45603 sum Cer.wts 1.97598
+PMT# 104 #hits= 13 #Cer.hits= 7 sum wts 1.81592 sum Cer.wts 0.527534
+ Number of Scintillation Photons in previous event: 27710
+ Number of Cerenkov Photons in previous event: 75829
+Number of Scintillation photons produced in this event : 40778 killed: 0 propagated (fraction): 40778(1)
+Number of Cerenkov photons produced in this event : 93730 killed: 0 propagated (fraction): 93730(1)
+---> end of event: 53
+PMT# 0 #hits= 26 #Cer.hits= 21 sum wts 5.5878 sum Cer.wts 4.40635
+PMT# 1 #hits= 10 #Cer.hits= 5 sum wts 1.95738 sum Cer.wts 1.13479
+PMT# 2 #hits= 556 #Cer.hits= 524 sum wts 68.6049 sum Cer.wts 62.1676
+PMT# 3 #hits= 15 #Cer.hits= 9 sum wts 3.19794 sum Cer.wts 1.75559
+PMT# 4 #hits= 30 #Cer.hits= 26 sum wts 5.7325 sum Cer.wts 5.02195
+PMT# 100 #hits= 37 #Cer.hits= 30 sum wts 6.0705 sum Cer.wts 4.42038
+PMT# 101 #hits= 26 #Cer.hits= 4 sum wts 5.1707 sum Cer.wts 0.956911
+PMT# 102 #hits= 10 #Cer.hits= 7 sum wts 0.719698 sum Cer.wts 0.289626
+PMT# 103 #hits= 9 #Cer.hits= 6 sum wts 1.89996 sum Cer.wts 1.39758
+PMT# 104 #hits= 17 #Cer.hits= 11 sum wts 3.34919 sum Cer.wts 1.95756
+ Number of Scintillation Photons in previous event: 40778
+ Number of Cerenkov Photons in previous event: 93730
+Number of Scintillation photons produced in this event : 31302 killed: 0 propagated (fraction): 31302(1)
+Number of Cerenkov photons produced in this event : 77830 killed: 0 propagated (fraction): 77830(1)
+---> end of event: 54
+PMT# 0 #hits= 15 #Cer.hits= 8 sum wts 2.91826 sum Cer.wts 1.61337
+PMT# 1 #hits= 9 #Cer.hits= 5 sum wts 1.77792 sum Cer.wts 0.910525
+PMT# 2 #hits= 502 #Cer.hits= 457 sum wts 60.3634 sum Cer.wts 51.9072
+PMT# 3 #hits= 8 #Cer.hits= 5 sum wts 1.71962 sum Cer.wts 0.989504
+PMT# 4 #hits= 13 #Cer.hits= 6 sum wts 2.02553 sum Cer.wts 0.752923
+PMT# 100 #hits= 25 #Cer.hits= 20 sum wts 4.28755 sum Cer.wts 3.19655
+PMT# 101 #hits= 20 #Cer.hits= 1 sum wts 4.23159 sum Cer.wts 0
+PMT# 102 #hits= 13 #Cer.hits= 8 sum wts 1.40765 sum Cer.wts 0.607055
+PMT# 103 #hits= 10 #Cer.hits= 7 sum wts 1.90607 sum Cer.wts 1.44428
+PMT# 104 #hits= 14 #Cer.hits= 8 sum wts 2.26522 sum Cer.wts 1.19643
+ Number of Scintillation Photons in previous event: 31302
+ Number of Cerenkov Photons in previous event: 77830
+Number of Scintillation photons produced in this event : 40016 killed: 0 propagated (fraction): 40016(1)
+Number of Cerenkov photons produced in this event : 103193 killed: 0 propagated (fraction): 103193(1)
+---> end of event: 55
+PMT# 0 #hits= 27 #Cer.hits= 16 sum wts 5.26434 sum Cer.wts 2.86965
+PMT# 1 #hits= 10 #Cer.hits= 3 sum wts 2.2002 sum Cer.wts 0.544651
+PMT# 2 #hits= 357 #Cer.hits= 321 sum wts 49.7569 sum Cer.wts 42.5093
+PMT# 3 #hits= 20 #Cer.hits= 15 sum wts 3.22332 sum Cer.wts 2.32601
+PMT# 4 #hits= 28 #Cer.hits= 17 sum wts 5.01904 sum Cer.wts 2.65522
+PMT# 100 #hits= 19 #Cer.hits= 18 sum wts 3.07478 sum Cer.wts 2.9422
+PMT# 101 #hits= 12 #Cer.hits= 1 sum wts 2.04024 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 4 sum wts 0.705776 sum Cer.wts 0.0274205
+PMT# 103 #hits= 13 #Cer.hits= 7 sum wts 1.89686 sum Cer.wts 0.953801
+PMT# 104 #hits= 13 #Cer.hits= 6 sum wts 2.6629 sum Cer.wts 1.26957
+ Number of Scintillation Photons in previous event: 40016
+ Number of Cerenkov Photons in previous event: 103193
+Number of Scintillation photons produced in this event : 28438 killed: 0 propagated (fraction): 28438(1)
+Number of Cerenkov photons produced in this event : 70132 killed: 0 propagated (fraction): 70132(1)
+---> end of event: 56
+PMT# 0 #hits= 11 #Cer.hits= 8 sum wts 2.59282 sum Cer.wts 1.85543
+PMT# 1 #hits= 6 #Cer.hits= 6 sum wts 1.07414 sum Cer.wts 1.07414
+PMT# 2 #hits= 138 #Cer.hits= 115 sum wts 20.2753 sum Cer.wts 15.8354
+PMT# 3 #hits= 10 #Cer.hits= 7 sum wts 1.96009 sum Cer.wts 1.40213
+PMT# 4 #hits= 13 #Cer.hits= 12 sum wts 1.51975 sum Cer.wts 1.3588
+PMT# 100 #hits= 36 #Cer.hits= 33 sum wts 5.89044 sum Cer.wts 5.15407
+PMT# 101 #hits= 25 #Cer.hits= 3 sum wts 4.49442 sum Cer.wts 0.246531
+PMT# 102 #hits= 7 #Cer.hits= 4 sum wts 0.945193 sum Cer.wts 0.220122
+PMT# 103 #hits= 11 #Cer.hits= 7 sum wts 1.7047 sum Cer.wts 0.79742
+PMT# 104 #hits= 9 #Cer.hits= 8 sum wts 1.22809 sum Cer.wts 1.05031
+ Number of Scintillation Photons in previous event: 28438
+ Number of Cerenkov Photons in previous event: 70132
+Number of Scintillation photons produced in this event : 28053 killed: 0 propagated (fraction): 28053(1)
+Number of Cerenkov photons produced in this event : 73719 killed: 0 propagated (fraction): 73719(1)
+---> end of event: 57
+PMT# 0 #hits= 12 #Cer.hits= 5 sum wts 2.24584 sum Cer.wts 1.08878
+PMT# 1 #hits= 4 #Cer.hits= 1 sum wts 0.789271 sum Cer.wts 0.248589
+PMT# 2 #hits= 2315 #Cer.hits= 2300 sum wts 126.033 sum Cer.wts 123.452
+PMT# 3 #hits= 11 #Cer.hits= 8 sum wts 2.07204 sum Cer.wts 1.40129
+PMT# 4 #hits= 11 #Cer.hits= 8 sum wts 1.99773 sum Cer.wts 1.37585
+PMT# 100 #hits= 29 #Cer.hits= 25 sum wts 3.5152 sum Cer.wts 2.76765
+PMT# 101 #hits= 21 #Cer.hits= 2 sum wts 3.83881 sum Cer.wts 0
+PMT# 102 #hits= 10 #Cer.hits= 7 sum wts 1.17266 sum Cer.wts 0.471073
+PMT# 103 #hits= 9 #Cer.hits= 6 sum wts 1.53045 sum Cer.wts 1.21124
+PMT# 104 #hits= 5 #Cer.hits= 4 sum wts 1.26455 sum Cer.wts 1.02063
+ Number of Scintillation Photons in previous event: 28053
+ Number of Cerenkov Photons in previous event: 73719
+Number of Scintillation photons produced in this event : 36692 killed: 0 propagated (fraction): 36692(1)
+Number of Cerenkov photons produced in this event : 89484 killed: 0 propagated (fraction): 89484(1)
+---> end of event: 58
+PMT# 0 #hits= 16 #Cer.hits= 11 sum wts 3.22649 sum Cer.wts 2.35056
+PMT# 1 #hits= 11 #Cer.hits= 8 sum wts 2.12973 sum Cer.wts 1.7346
+PMT# 2 #hits= 2470 #Cer.hits= 2428 sum wts 136.833 sum Cer.wts 128.539
+PMT# 3 #hits= 11 #Cer.hits= 8 sum wts 2.0605 sum Cer.wts 1.34054
+PMT# 4 #hits= 19 #Cer.hits= 10 sum wts 3.89849 sum Cer.wts 1.86403
+PMT# 100 #hits= 28 #Cer.hits= 22 sum wts 3.88286 sum Cer.wts 2.55643
+PMT# 101 #hits= 23 #Cer.hits= 2 sum wts 4.63379 sum Cer.wts 0.0201904
+PMT# 102 #hits= 13 #Cer.hits= 7 sum wts 1.59592 sum Cer.wts 0.272064
+PMT# 103 #hits= 14 #Cer.hits= 11 sum wts 2.64158 sum Cer.wts 2.0283
+PMT# 104 #hits= 11 #Cer.hits= 6 sum wts 2.09186 sum Cer.wts 1.23478
+ Number of Scintillation Photons in previous event: 36692
+ Number of Cerenkov Photons in previous event: 89484
+Number of Scintillation photons produced in this event : 26027 killed: 0 propagated (fraction): 26027(1)
+Number of Cerenkov photons produced in this event : 67918 killed: 0 propagated (fraction): 67918(1)
+---> end of event: 59
+PMT# 0 #hits= 10 #Cer.hits= 6 sum wts 2.17342 sum Cer.wts 1.15685
+PMT# 1 #hits= 6 #Cer.hits= 3 sum wts 1.32712 sum Cer.wts 0.700704
+PMT# 2 #hits= 428 #Cer.hits= 410 sum wts 47.1181 sum Cer.wts 43.8752
+PMT# 3 #hits= 10 #Cer.hits= 6 sum wts 1.47088 sum Cer.wts 0.786085
+PMT# 4 #hits= 7 #Cer.hits= 6 sum wts 1.42403 sum Cer.wts 1.39941
+PMT# 100 #hits= 23 #Cer.hits= 19 sum wts 3.70062 sum Cer.wts 2.89769
+PMT# 101 #hits= 25 #Cer.hits= 2 sum wts 4.35073 sum Cer.wts 0.183031
+PMT# 102 #hits= 8 #Cer.hits= 5 sum wts 1.15133 sum Cer.wts 0.570801
+PMT# 103 #hits= 12 #Cer.hits= 7 sum wts 2.27362 sum Cer.wts 1.06867
+PMT# 104 #hits= 11 #Cer.hits= 9 sum wts 1.68889 sum Cer.wts 1.27293
+ Number of Scintillation Photons in previous event: 26027
+ Number of Cerenkov Photons in previous event: 67918
+Number of Scintillation photons produced in this event : 32675 killed: 0 propagated (fraction): 32675(1)
+Number of Cerenkov photons produced in this event : 80176 killed: 0 propagated (fraction): 80176(1)
+---> end of event: 60
+PMT# 0 #hits= 12 #Cer.hits= 8 sum wts 2.76763 sum Cer.wts 1.89693
+PMT# 1 #hits= 4 #Cer.hits= 2 sum wts 0.733595 sum Cer.wts 0.2446
+PMT# 2 #hits= 194 #Cer.hits= 175 sum wts 26.3304 sum Cer.wts 22.8882
+PMT# 3 #hits= 7 #Cer.hits= 3 sum wts 1.04508 sum Cer.wts 0.384146
+PMT# 4 #hits= 6 #Cer.hits= 6 sum wts 0.846708 sum Cer.wts 0.846708
+PMT# 100 #hits= 33 #Cer.hits= 27 sum wts 5.05878 sum Cer.wts 3.83551
+PMT# 101 #hits= 37 #Cer.hits= 14 sum wts 6.58825 sum Cer.wts 1.83948
+PMT# 102 #hits= 6 #Cer.hits= 6 sum wts 0.286696 sum Cer.wts 0.286696
+PMT# 103 #hits= 7 #Cer.hits= 6 sum wts 1.3085 sum Cer.wts 1.11474
+PMT# 104 #hits= 13 #Cer.hits= 9 sum wts 2.08115 sum Cer.wts 1.31698
+ Number of Scintillation Photons in previous event: 32675
+ Number of Cerenkov Photons in previous event: 80176
+Number of Scintillation photons produced in this event : 26143 killed: 0 propagated (fraction): 26143(1)
+Number of Cerenkov photons produced in this event : 67651 killed: 0 propagated (fraction): 67651(1)
+---> end of event: 61
+PMT# 0 #hits= 16 #Cer.hits= 9 sum wts 3.14767 sum Cer.wts 1.71553
+PMT# 1 #hits= 8 #Cer.hits= 6 sum wts 1.89587 sum Cer.wts 1.42369
+PMT# 2 #hits= 155 #Cer.hits= 127 sum wts 22.5264 sum Cer.wts 16.737
+PMT# 3 #hits= 10 #Cer.hits= 7 sum wts 1.80009 sum Cer.wts 1.14051
+PMT# 4 #hits= 7 #Cer.hits= 7 sum wts 1.30445 sum Cer.wts 1.30445
+PMT# 100 #hits= 34 #Cer.hits= 27 sum wts 5.02966 sum Cer.wts 3.86505
+PMT# 101 #hits= 29 #Cer.hits= 10 sum wts 4.98455 sum Cer.wts 1.55581
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.707311 sum Cer.wts 0.218022
+PMT# 103 #hits= 10 #Cer.hits= 9 sum wts 2.09452 sum Cer.wts 1.84647
+PMT# 104 #hits= 9 #Cer.hits= 4 sum wts 1.5503 sum Cer.wts 0.639178
+ Number of Scintillation Photons in previous event: 26143
+ Number of Cerenkov Photons in previous event: 67651
+Number of Scintillation photons produced in this event : 27911 killed: 0 propagated (fraction): 27911(1)
+Number of Cerenkov photons produced in this event : 72068 killed: 0 propagated (fraction): 72068(1)
+---> end of event: 62
+PMT# 0 #hits= 7 #Cer.hits= 5 sum wts 1.45324 sum Cer.wts 0.967898
+PMT# 1 #hits= 5 #Cer.hits= 4 sum wts 1.12436 sum Cer.wts 0.930534
+PMT# 2 #hits= 391 #Cer.hits= 360 sum wts 45.5563 sum Cer.wts 38.9282
+PMT# 3 #hits= 11 #Cer.hits= 5 sum wts 2.20268 sum Cer.wts 0.892804
+PMT# 4 #hits= 18 #Cer.hits= 7 sum wts 3.66931 sum Cer.wts 1.31402
+PMT# 100 #hits= 29 #Cer.hits= 25 sum wts 4.55025 sum Cer.wts 3.79119
+PMT# 101 #hits= 66 #Cer.hits= 5 sum wts 11.3937 sum Cer.wts 0.280862
+PMT# 102 #hits= 10 #Cer.hits= 7 sum wts 0.878532 sum Cer.wts 0.245779
+PMT# 103 #hits= 11 #Cer.hits= 10 sum wts 2.56423 sum Cer.wts 2.35299
+PMT# 104 #hits= 16 #Cer.hits= 10 sum wts 2.83522 sum Cer.wts 1.64227
+ Number of Scintillation Photons in previous event: 27911
+ Number of Cerenkov Photons in previous event: 72068
+Number of Scintillation photons produced in this event : 29351 killed: 0 propagated (fraction): 29351(1)
+Number of Cerenkov photons produced in this event : 75207 killed: 0 propagated (fraction): 75207(1)
+---> end of event: 63
+PMT# 0 #hits= 11 #Cer.hits= 4 sum wts 2.19517 sum Cer.wts 0.74777
+PMT# 1 #hits= 11 #Cer.hits= 7 sum wts 2.10104 sum Cer.wts 1.4095
+PMT# 2 #hits= 294 #Cer.hits= 268 sum wts 37.1046 sum Cer.wts 31.7284
+PMT# 3 #hits= 15 #Cer.hits= 11 sum wts 2.19706 sum Cer.wts 1.73674
+PMT# 4 #hits= 19 #Cer.hits= 10 sum wts 3.63213 sum Cer.wts 1.89454
+PMT# 100 #hits= 27 #Cer.hits= 22 sum wts 4.79953 sum Cer.wts 3.72479
+PMT# 101 #hits= 35 #Cer.hits= 12 sum wts 5.90875 sum Cer.wts 1.2457
+PMT# 102 #hits= 7 #Cer.hits= 5 sum wts 0.824372 sum Cer.wts 0.360906
+PMT# 103 #hits= 3 #Cer.hits= 2 sum wts 0.482095 sum Cer.wts 0.235031
+PMT# 104 #hits= 8 #Cer.hits= 6 sum wts 1.55173 sum Cer.wts 1.10012
+ Number of Scintillation Photons in previous event: 29351
+ Number of Cerenkov Photons in previous event: 75207
+Number of Scintillation photons produced in this event : 32481 killed: 0 propagated (fraction): 32481(1)
+Number of Cerenkov photons produced in this event : 82531 killed: 0 propagated (fraction): 82531(1)
+---> end of event: 64
+PMT# 0 #hits= 7 #Cer.hits= 3 sum wts 1.26881 sum Cer.wts 0.542605
+PMT# 1 #hits= 12 #Cer.hits= 7 sum wts 2.11631 sum Cer.wts 1.23762
+PMT# 2 #hits= 2150 #Cer.hits= 2118 sum wts 123.668 sum Cer.wts 117.828
+PMT# 3 #hits= 9 #Cer.hits= 7 sum wts 1.43268 sum Cer.wts 1.06618
+PMT# 4 #hits= 14 #Cer.hits= 10 sum wts 2.50749 sum Cer.wts 1.82489
+PMT# 100 #hits= 28 #Cer.hits= 23 sum wts 5.08069 sum Cer.wts 3.91566
+PMT# 101 #hits= 28 #Cer.hits= 8 sum wts 5.25309 sum Cer.wts 1.58185
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.997456 sum Cer.wts 0.525165
+PMT# 103 #hits= 12 #Cer.hits= 5 sum wts 2.70659 sum Cer.wts 1.19952
+PMT# 104 #hits= 17 #Cer.hits= 12 sum wts 3.14115 sum Cer.wts 2.17306
+ Number of Scintillation Photons in previous event: 32481
+ Number of Cerenkov Photons in previous event: 82531
+Number of Scintillation photons produced in this event : 33061 killed: 0 propagated (fraction): 33061(1)
+Number of Cerenkov photons produced in this event : 84196 killed: 0 propagated (fraction): 84196(1)
+---> end of event: 65
+PMT# 0 #hits= 19 #Cer.hits= 11 sum wts 3.7846 sum Cer.wts 2.06346
+PMT# 1 #hits= 10 #Cer.hits= 7 sum wts 2.08297 sum Cer.wts 1.417
+PMT# 2 #hits= 154 #Cer.hits= 127 sum wts 22.4992 sum Cer.wts 17.1186
+PMT# 3 #hits= 16 #Cer.hits= 13 sum wts 2.7494 sum Cer.wts 2.02581
+PMT# 4 #hits= 17 #Cer.hits= 13 sum wts 2.38101 sum Cer.wts 1.65578
+PMT# 100 #hits= 22 #Cer.hits= 18 sum wts 2.96761 sum Cer.wts 2.2301
+PMT# 101 #hits= 26 #Cer.hits= 2 sum wts 4.27553 sum Cer.wts 0
+PMT# 102 #hits= 5 #Cer.hits= 4 sum wts 0.462788 sum Cer.wts 0.226071
+PMT# 103 #hits= 11 #Cer.hits= 8 sum wts 1.43555 sum Cer.wts 0.908502
+PMT# 104 #hits= 12 #Cer.hits= 8 sum wts 2.60064 sum Cer.wts 1.68852
+ Number of Scintillation Photons in previous event: 33061
+ Number of Cerenkov Photons in previous event: 84196
+Number of Scintillation photons produced in this event : 35288 killed: 0 propagated (fraction): 35288(1)
+Number of Cerenkov photons produced in this event : 85730 killed: 0 propagated (fraction): 85730(1)
+---> end of event: 66
+PMT# 0 #hits= 11 #Cer.hits= 6 sum wts 2.45112 sum Cer.wts 1.37512
+PMT# 1 #hits= 6 #Cer.hits= 2 sum wts 1.19587 sum Cer.wts 0.469185
+PMT# 2 #hits= 3178 #Cer.hits= 3155 sum wts 158.67 sum Cer.wts 154.302
+PMT# 3 #hits= 17 #Cer.hits= 12 sum wts 3.28711 sum Cer.wts 2.23635
+PMT# 4 #hits= 17 #Cer.hits= 14 sum wts 3.3525 sum Cer.wts 2.62422
+PMT# 100 #hits= 44 #Cer.hits= 39 sum wts 8.6798 sum Cer.wts 7.47754
+PMT# 101 #hits= 31 #Cer.hits= 8 sum wts 6.15308 sum Cer.wts 1.48392
+PMT# 102 #hits= 12 #Cer.hits= 7 sum wts 1.05671 sum Cer.wts 0.46413
+PMT# 103 #hits= 16 #Cer.hits= 11 sum wts 2.42428 sum Cer.wts 1.52046
+PMT# 104 #hits= 15 #Cer.hits= 9 sum wts 2.82257 sum Cer.wts 1.69017
+ Number of Scintillation Photons in previous event: 35288
+ Number of Cerenkov Photons in previous event: 85730
+Number of Scintillation photons produced in this event : 27521 killed: 0 propagated (fraction): 27521(1)
+Number of Cerenkov photons produced in this event : 72106 killed: 0 propagated (fraction): 72106(1)
+---> end of event: 67
+PMT# 0 #hits= 10 #Cer.hits= 4 sum wts 2.21148 sum Cer.wts 0.798472
+PMT# 1 #hits= 7 #Cer.hits= 5 sum wts 1.30326 sum Cer.wts 0.981812
+PMT# 2 #hits= 1181 #Cer.hits= 1163 sum wts 83.7647 sum Cer.wts 80.0986
+PMT# 3 #hits= 14 #Cer.hits= 8 sum wts 2.65017 sum Cer.wts 1.6734
+PMT# 4 #hits= 10 #Cer.hits= 7 sum wts 1.83227 sum Cer.wts 1.08954
+PMT# 100 #hits= 23 #Cer.hits= 21 sum wts 3.08674 sum Cer.wts 2.62617
+PMT# 101 #hits= 49 #Cer.hits= 24 sum wts 7.42176 sum Cer.wts 2.47494
+PMT# 102 #hits= 16 #Cer.hits= 12 sum wts 1.68409 sum Cer.wts 0.875378
+PMT# 103 #hits= 8 #Cer.hits= 7 sum wts 1.30354 sum Cer.wts 1.12738
+PMT# 104 #hits= 14 #Cer.hits= 10 sum wts 2.69208 sum Cer.wts 1.8171
+ Number of Scintillation Photons in previous event: 27521
+ Number of Cerenkov Photons in previous event: 72106
+Number of Scintillation photons produced in this event : 26472 killed: 0 propagated (fraction): 26472(1)
+Number of Cerenkov photons produced in this event : 71590 killed: 0 propagated (fraction): 71590(1)
+---> end of event: 68
+PMT# 0 #hits= 15 #Cer.hits= 7 sum wts 3.02148 sum Cer.wts 1.4274
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.8343 sum Cer.wts 0.865567
+PMT# 2 #hits= 329 #Cer.hits= 306 sum wts 43.7779 sum Cer.wts 39.5229
+PMT# 3 #hits= 8 #Cer.hits= 5 sum wts 1.22285 sum Cer.wts 0.775713
+PMT# 4 #hits= 9 #Cer.hits= 6 sum wts 1.13513 sum Cer.wts 0.506919
+PMT# 100 #hits= 29 #Cer.hits= 26 sum wts 4.32934 sum Cer.wts 3.60881
+PMT# 101 #hits= 23 #Cer.hits= 7 sum wts 3.74131 sum Cer.wts 0.526223
+PMT# 102 #hits= 9 #Cer.hits= 3 sum wts 1.4224 sum Cer.wts 0.113489
+PMT# 103 #hits= 9 #Cer.hits= 6 sum wts 1.57402 sum Cer.wts 0.910643
+PMT# 104 #hits= 9 #Cer.hits= 6 sum wts 1.53089 sum Cer.wts 0.84551
+ Number of Scintillation Photons in previous event: 26472
+ Number of Cerenkov Photons in previous event: 71590
+Number of Scintillation photons produced in this event : 27730 killed: 0 propagated (fraction): 27730(1)
+Number of Cerenkov photons produced in this event : 78171 killed: 0 propagated (fraction): 78171(1)
+---> end of event: 69
+PMT# 0 #hits= 15 #Cer.hits= 8 sum wts 3.01502 sum Cer.wts 1.58397
+PMT# 1 #hits= 5 #Cer.hits= 5 sum wts 0.876387 sum Cer.wts 0.876387
+PMT# 2 #hits= 852 #Cer.hits= 803 sum wts 95.1943 sum Cer.wts 86.0311
+PMT# 3 #hits= 12 #Cer.hits= 8 sum wts 1.85094 sum Cer.wts 1.40929
+PMT# 4 #hits= 10 #Cer.hits= 6 sum wts 1.95344 sum Cer.wts 1.34415
+PMT# 100 #hits= 34 #Cer.hits= 31 sum wts 5.30366 sum Cer.wts 4.56013
+PMT# 101 #hits= 19 #Cer.hits= 1 sum wts 3.84062 sum Cer.wts 0.231917
+PMT# 102 #hits= 12 #Cer.hits= 8 sum wts 1.39759 sum Cer.wts 0.548532
+PMT# 103 #hits= 12 #Cer.hits= 7 sum wts 2.24933 sum Cer.wts 1.33033
+PMT# 104 #hits= 10 #Cer.hits= 6 sum wts 1.43172 sum Cer.wts 0.524115
+ Number of Scintillation Photons in previous event: 27730
+ Number of Cerenkov Photons in previous event: 78171
+Number of Scintillation photons produced in this event : 27881 killed: 0 propagated (fraction): 27881(1)
+Number of Cerenkov photons produced in this event : 70854 killed: 0 propagated (fraction): 70854(1)
+---> end of event: 70
+PMT# 0 #hits= 8 #Cer.hits= 5 sum wts 1.37644 sum Cer.wts 0.925527
+PMT# 1 #hits= 11 #Cer.hits= 7 sum wts 1.79603 sum Cer.wts 1.44962
+PMT# 2 #hits= 238 #Cer.hits= 217 sum wts 31.8636 sum Cer.wts 27.1291
+PMT# 3 #hits= 13 #Cer.hits= 8 sum wts 2.25452 sum Cer.wts 1.19781
+PMT# 4 #hits= 17 #Cer.hits= 14 sum wts 2.31246 sum Cer.wts 1.85299
+PMT# 100 #hits= 23 #Cer.hits= 21 sum wts 3.86493 sum Cer.wts 3.36557
+PMT# 101 #hits= 32 #Cer.hits= 3 sum wts 4.95142 sum Cer.wts 0.0605901
+PMT# 102 #hits= 8 #Cer.hits= 7 sum wts 0.653167 sum Cer.wts 0.49765
+PMT# 103 #hits= 14 #Cer.hits= 7 sum wts 2.96226 sum Cer.wts 1.45084
+PMT# 104 #hits= 18 #Cer.hits= 12 sum wts 3.1268 sum Cer.wts 2.06782
+ Number of Scintillation Photons in previous event: 27881
+ Number of Cerenkov Photons in previous event: 70854
+Number of Scintillation photons produced in this event : 29124 killed: 0 propagated (fraction): 29124(1)
+Number of Cerenkov photons produced in this event : 75527 killed: 0 propagated (fraction): 75527(1)
+---> end of event: 71
+PMT# 0 #hits= 10 #Cer.hits= 5 sum wts 2.11115 sum Cer.wts 1.01102
+PMT# 1 #hits= 5 #Cer.hits= 3 sum wts 1.03543 sum Cer.wts 0.752491
+PMT# 2 #hits= 349 #Cer.hits= 336 sum wts 37.2844 sum Cer.wts 34.7549
+PMT# 3 #hits= 16 #Cer.hits= 12 sum wts 3.04283 sum Cer.wts 2.37363
+PMT# 4 #hits= 17 #Cer.hits= 11 sum wts 3.29372 sum Cer.wts 1.82357
+PMT# 100 #hits= 26 #Cer.hits= 22 sum wts 4.50731 sum Cer.wts 3.71102
+PMT# 101 #hits= 24 #Cer.hits= 3 sum wts 4.0519 sum Cer.wts 0.405814
+PMT# 102 #hits= 5 #Cer.hits= 4 sum wts 0.294683 sum Cer.wts 0.036933
+PMT# 103 #hits= 11 #Cer.hits= 5 sum wts 1.64001 sum Cer.wts 0.49435
+PMT# 104 #hits= 15 #Cer.hits= 8 sum wts 3.2203 sum Cer.wts 1.67289
+ Number of Scintillation Photons in previous event: 29124
+ Number of Cerenkov Photons in previous event: 75527
+Number of Scintillation photons produced in this event : 26568 killed: 0 propagated (fraction): 26568(1)
+Number of Cerenkov photons produced in this event : 69774 killed: 0 propagated (fraction): 69774(1)
+---> end of event: 72
+PMT# 0 #hits= 10 #Cer.hits= 7 sum wts 1.78004 sum Cer.wts 1.16167
+PMT# 1 #hits= 5 #Cer.hits= 3 sum wts 1.0257 sum Cer.wts 0.67966
+PMT# 2 #hits= 311 #Cer.hits= 283 sum wts 44.9268 sum Cer.wts 39.1135
+PMT# 3 #hits= 10 #Cer.hits= 5 sum wts 1.51399 sum Cer.wts 1.02307
+PMT# 4 #hits= 13 #Cer.hits= 11 sum wts 1.99522 sum Cer.wts 1.5714
+PMT# 100 #hits= 19 #Cer.hits= 19 sum wts 2.2863 sum Cer.wts 2.2863
+PMT# 101 #hits= 28 #Cer.hits= 2 sum wts 5.3435 sum Cer.wts 0.056408
+PMT# 102 #hits= 7 #Cer.hits= 5 sum wts 0.714439 sum Cer.wts 0.416157
+PMT# 103 #hits= 7 #Cer.hits= 7 sum wts 0.991885 sum Cer.wts 0.991885
+PMT# 104 #hits= 15 #Cer.hits= 7 sum wts 3.25127 sum Cer.wts 1.51477
+ Number of Scintillation Photons in previous event: 26568
+ Number of Cerenkov Photons in previous event: 69774
+Number of Scintillation photons produced in this event : 33753 killed: 0 propagated (fraction): 33753(1)
+Number of Cerenkov photons produced in this event : 83884 killed: 0 propagated (fraction): 83884(1)
+---> end of event: 73
+PMT# 0 #hits= 13 #Cer.hits= 5 sum wts 2.41394 sum Cer.wts 0.769717
+PMT# 1 #hits= 3 #Cer.hits= 2 sum wts 0.572481 sum Cer.wts 0.484627
+PMT# 2 #hits= 293 #Cer.hits= 273 sum wts 36.68 sum Cer.wts 33.0918
+PMT# 3 #hits= 14 #Cer.hits= 11 sum wts 2.75065 sum Cer.wts 2.10839
+PMT# 4 #hits= 9 #Cer.hits= 5 sum wts 0.891799 sum Cer.wts 0.280833
+PMT# 100 #hits= 39 #Cer.hits= 30 sum wts 6.53527 sum Cer.wts 4.44057
+PMT# 101 #hits= 112 #Cer.hits= 86 sum wts 13.3428 sum Cer.wts 8.27348
+PMT# 102 #hits= 9 #Cer.hits= 7 sum wts 1.07358 sum Cer.wts 0.577135
+PMT# 103 #hits= 12 #Cer.hits= 7 sum wts 2.10614 sum Cer.wts 1.156
+PMT# 104 #hits= 13 #Cer.hits= 8 sum wts 1.43018 sum Cer.wts 0.558368
+ Number of Scintillation Photons in previous event: 33753
+ Number of Cerenkov Photons in previous event: 83884
+Number of Scintillation photons produced in this event : 30242 killed: 0 propagated (fraction): 30242(1)
+Number of Cerenkov photons produced in this event : 76976 killed: 0 propagated (fraction): 76976(1)
+---> end of event: 74
+PMT# 0 #hits= 10 #Cer.hits= 4 sum wts 1.98146 sum Cer.wts 0.763419
+PMT# 1 #hits= 9 #Cer.hits= 4 sum wts 1.53247 sum Cer.wts 0.596701
+PMT# 2 #hits= 302 #Cer.hits= 290 sum wts 37.7264 sum Cer.wts 35.4083
+PMT# 3 #hits= 13 #Cer.hits= 11 sum wts 1.91771 sum Cer.wts 1.45292
+PMT# 4 #hits= 8 #Cer.hits= 5 sum wts 1.68839 sum Cer.wts 0.929052
+PMT# 100 #hits= 34 #Cer.hits= 24 sum wts 5.18341 sum Cer.wts 3.30203
+PMT# 101 #hits= 37 #Cer.hits= 3 sum wts 7.27111 sum Cer.wts 0.256545
+PMT# 102 #hits= 9 #Cer.hits= 7 sum wts 1.10064 sum Cer.wts 0.63915
+PMT# 103 #hits= 14 #Cer.hits= 8 sum wts 2.60843 sum Cer.wts 1.55499
+PMT# 104 #hits= 12 #Cer.hits= 5 sum wts 2.2388 sum Cer.wts 0.780686
+ Number of Scintillation Photons in previous event: 30242
+ Number of Cerenkov Photons in previous event: 76976
+Number of Scintillation photons produced in this event : 30542 killed: 0 propagated (fraction): 30542(1)
+Number of Cerenkov photons produced in this event : 104087 killed: 0 propagated (fraction): 104087(1)
+---> end of event: 75
+PMT# 0 #hits= 17 #Cer.hits= 10 sum wts 3.42273 sum Cer.wts 2.18131
+PMT# 1 #hits= 7 #Cer.hits= 4 sum wts 1.55941 sum Cer.wts 0.8849
+PMT# 2 #hits= 3574 #Cer.hits= 3504 sum wts 249.762 sum Cer.wts 236.583
+PMT# 3 #hits= 15 #Cer.hits= 11 sum wts 2.20589 sum Cer.wts 1.44402
+PMT# 4 #hits= 18 #Cer.hits= 12 sum wts 3.34735 sum Cer.wts 2.15319
+PMT# 100 #hits= 19 #Cer.hits= 13 sum wts 3.43026 sum Cer.wts 2.36131
+PMT# 101 #hits= 139 #Cer.hits= 119 sum wts 17.6571 sum Cer.wts 13.5827
+PMT# 102 #hits= 13 #Cer.hits= 9 sum wts 1.50484 sum Cer.wts 0.534329
+PMT# 103 #hits= 6 #Cer.hits= 5 sum wts 1.17034 sum Cer.wts 0.911739
+PMT# 104 #hits= 8 #Cer.hits= 4 sum wts 1.29603 sum Cer.wts 0.463901
+ Number of Scintillation Photons in previous event: 30542
+ Number of Cerenkov Photons in previous event: 104087
+Number of Scintillation photons produced in this event : 28818 killed: 0 propagated (fraction): 28818(1)
+Number of Cerenkov photons produced in this event : 70622 killed: 0 propagated (fraction): 70622(1)
+---> end of event: 76
+PMT# 0 #hits= 23 #Cer.hits= 17 sum wts 4.77304 sum Cer.wts 3.37601
+PMT# 1 #hits= 4 #Cer.hits= 3 sum wts 0.922735 sum Cer.wts 0.714461
+PMT# 2 #hits= 303 #Cer.hits= 287 sum wts 34.4911 sum Cer.wts 31.1459
+PMT# 3 #hits= 13 #Cer.hits= 11 sum wts 2.10526 sum Cer.wts 1.78793
+PMT# 4 #hits= 11 #Cer.hits= 8 sum wts 1.83689 sum Cer.wts 1.09249
+PMT# 100 #hits= 24 #Cer.hits= 19 sum wts 3.58503 sum Cer.wts 2.65003
+PMT# 101 #hits= 37 #Cer.hits= 4 sum wts 6.5898 sum Cer.wts 0
+PMT# 102 #hits= 1 #Cer.hits= 0 sum wts 0.167459 sum Cer.wts 0
+PMT# 103 #hits= 9 #Cer.hits= 4 sum wts 1.89403 sum Cer.wts 0.928048
+PMT# 104 #hits= 12 #Cer.hits= 4 sum wts 2.69604 sum Cer.wts 0.792098
+ Number of Scintillation Photons in previous event: 28818
+ Number of Cerenkov Photons in previous event: 70622
+Number of Scintillation photons produced in this event : 27080 killed: 0 propagated (fraction): 27080(1)
+Number of Cerenkov photons produced in this event : 69533 killed: 0 propagated (fraction): 69533(1)
+---> end of event: 77
+PMT# 0 #hits= 12 #Cer.hits= 5 sum wts 2.40217 sum Cer.wts 1.02557
+PMT# 1 #hits= 9 #Cer.hits= 5 sum wts 1.81697 sum Cer.wts 0.920565
+PMT# 2 #hits= 598 #Cer.hits= 582 sum wts 56.255 sum Cer.wts 52.9479
+PMT# 3 #hits= 5 #Cer.hits= 4 sum wts 0.947877 sum Cer.wts 0.701137
+PMT# 4 #hits= 17 #Cer.hits= 13 sum wts 3.04659 sum Cer.wts 2.32242
+PMT# 100 #hits= 34 #Cer.hits= 29 sum wts 5.60067 sum Cer.wts 4.58595
+PMT# 101 #hits= 17 #Cer.hits= 0 sum wts 3.72255 sum Cer.wts 0
+PMT# 102 #hits= 12 #Cer.hits= 9 sum wts 1.32814 sum Cer.wts 0.77516
+PMT# 103 #hits= 12 #Cer.hits= 9 sum wts 2.22961 sum Cer.wts 1.5072
+PMT# 104 #hits= 13 #Cer.hits= 6 sum wts 2.41684 sum Cer.wts 1.06284
+ Number of Scintillation Photons in previous event: 27080
+ Number of Cerenkov Photons in previous event: 69533
+Number of Scintillation photons produced in this event : 28076 killed: 0 propagated (fraction): 28076(1)
+Number of Cerenkov photons produced in this event : 72307 killed: 0 propagated (fraction): 72307(1)
+---> end of event: 78
+PMT# 0 #hits= 11 #Cer.hits= 5 sum wts 2.40076 sum Cer.wts 1.06253
+PMT# 1 #hits= 5 #Cer.hits= 2 sum wts 0.816932 sum Cer.wts 0.287021
+PMT# 2 #hits= 946 #Cer.hits= 918 sum wts 78.2737 sum Cer.wts 72.724
+PMT# 3 #hits= 6 #Cer.hits= 5 sum wts 1.26488 sum Cer.wts 1.00817
+PMT# 4 #hits= 14 #Cer.hits= 6 sum wts 2.67819 sum Cer.wts 0.976893
+PMT# 100 #hits= 38 #Cer.hits= 30 sum wts 6.8811 sum Cer.wts 5.22713
+PMT# 101 #hits= 36 #Cer.hits= 5 sum wts 6.85165 sum Cer.wts 0.475135
+PMT# 102 #hits= 11 #Cer.hits= 8 sum wts 0.831297 sum Cer.wts 0.177585
+PMT# 103 #hits= 8 #Cer.hits= 4 sum wts 1.61991 sum Cer.wts 0.913224
+PMT# 104 #hits= 7 #Cer.hits= 5 sum wts 1.59776 sum Cer.wts 1.17658
+ Number of Scintillation Photons in previous event: 28076
+ Number of Cerenkov Photons in previous event: 72307
+Number of Scintillation photons produced in this event : 28361 killed: 0 propagated (fraction): 28361(1)
+Number of Cerenkov photons produced in this event : 75534 killed: 0 propagated (fraction): 75534(1)
+---> end of event: 79
+PMT# 0 #hits= 13 #Cer.hits= 9 sum wts 2.22264 sum Cer.wts 1.5317
+PMT# 1 #hits= 4 #Cer.hits= 1 sum wts 0.859547 sum Cer.wts 0.16711
+PMT# 2 #hits= 114 #Cer.hits= 94 sum wts 16.2687 sum Cer.wts 12.4084
+PMT# 3 #hits= 9 #Cer.hits= 7 sum wts 1.84577 sum Cer.wts 1.36152
+PMT# 4 #hits= 14 #Cer.hits= 13 sum wts 1.29143 sum Cer.wts 1.24655
+PMT# 100 #hits= 24 #Cer.hits= 21 sum wts 4.6377 sum Cer.wts 4.06543
+PMT# 101 #hits= 71 #Cer.hits= 16 sum wts 12.7683 sum Cer.wts 1.52446
+PMT# 102 #hits= 15 #Cer.hits= 13 sum wts 1.17216 sum Cer.wts 0.848589
+PMT# 103 #hits= 8 #Cer.hits= 6 sum wts 1.6364 sum Cer.wts 1.2538
+PMT# 104 #hits= 14 #Cer.hits= 8 sum wts 2.71134 sum Cer.wts 1.53647
+ Number of Scintillation Photons in previous event: 28361
+ Number of Cerenkov Photons in previous event: 75534
+Number of Scintillation photons produced in this event : 30910 killed: 0 propagated (fraction): 30910(1)
+Number of Cerenkov photons produced in this event : 78041 killed: 0 propagated (fraction): 78041(1)
+---> end of event: 80
+PMT# 0 #hits= 9 #Cer.hits= 8 sum wts 1.84811 sum Cer.wts 1.59942
+PMT# 1 #hits= 6 #Cer.hits= 5 sum wts 1.31299 sum Cer.wts 1.06752
+PMT# 2 #hits= 1026 #Cer.hits= 999 sum wts 78.4383 sum Cer.wts 73.2525
+PMT# 3 #hits= 9 #Cer.hits= 6 sum wts 1.58319 sum Cer.wts 0.959228
+PMT# 4 #hits= 11 #Cer.hits= 9 sum wts 1.58022 sum Cer.wts 1.3882
+PMT# 100 #hits= 40 #Cer.hits= 33 sum wts 5.26535 sum Cer.wts 3.84167
+PMT# 101 #hits= 32 #Cer.hits= 0 sum wts 6.86704 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 5 sum wts 0.48215 sum Cer.wts 0.0500294
+PMT# 103 #hits= 16 #Cer.hits= 11 sum wts 2.85046 sum Cer.wts 1.86287
+PMT# 104 #hits= 13 #Cer.hits= 5 sum wts 2.56619 sum Cer.wts 1.02829
+ Number of Scintillation Photons in previous event: 30910
+ Number of Cerenkov Photons in previous event: 78041
+Number of Scintillation photons produced in this event : 32169 killed: 0 propagated (fraction): 32169(1)
+Number of Cerenkov photons produced in this event : 103559 killed: 0 propagated (fraction): 103559(1)
+---> end of event: 81
+PMT# 0 #hits= 12 #Cer.hits= 8 sum wts 2.08595 sum Cer.wts 1.43611
+PMT# 1 #hits= 7 #Cer.hits= 5 sum wts 1.28263 sum Cer.wts 0.770121
+PMT# 2 #hits= 283 #Cer.hits= 244 sum wts 43.1553 sum Cer.wts 34.5619
+PMT# 3 #hits= 10 #Cer.hits= 10 sum wts 1.88353 sum Cer.wts 1.88353
+PMT# 4 #hits= 16 #Cer.hits= 10 sum wts 2.45507 sum Cer.wts 1.28454
+PMT# 100 #hits= 27 #Cer.hits= 22 sum wts 5.28845 sum Cer.wts 4.206
+PMT# 101 #hits= 31 #Cer.hits= 1 sum wts 6.14445 sum Cer.wts 0
+PMT# 102 #hits= 4 #Cer.hits= 2 sum wts 0.504892 sum Cer.wts 0.0952866
+PMT# 103 #hits= 9 #Cer.hits= 5 sum wts 1.48322 sum Cer.wts 0.742199
+PMT# 104 #hits= 11 #Cer.hits= 8 sum wts 1.93793 sum Cer.wts 1.35535
+ Number of Scintillation Photons in previous event: 32169
+ Number of Cerenkov Photons in previous event: 103559
+Number of Scintillation photons produced in this event : 27595 killed: 0 propagated (fraction): 27595(1)
+Number of Cerenkov photons produced in this event : 68960 killed: 0 propagated (fraction): 68960(1)
+---> end of event: 82
+PMT# 0 #hits= 7 #Cer.hits= 5 sum wts 1.38528 sum Cer.wts 1.16262
+PMT# 1 #hits= 8 #Cer.hits= 5 sum wts 1.48092 sum Cer.wts 1.0893
+PMT# 2 #hits= 159 #Cer.hits= 133 sum wts 23.9226 sum Cer.wts 18.4433
+PMT# 3 #hits= 8 #Cer.hits= 6 sum wts 1.00508 sum Cer.wts 0.534361
+PMT# 4 #hits= 14 #Cer.hits= 8 sum wts 2.22511 sum Cer.wts 1.14413
+PMT# 100 #hits= 22 #Cer.hits= 21 sum wts 3.33629 sum Cer.wts 3.26726
+PMT# 101 #hits= 27 #Cer.hits= 3 sum wts 5.49169 sum Cer.wts 0.31157
+PMT# 102 #hits= 10 #Cer.hits= 8 sum wts 0.881883 sum Cer.wts 0.458839
+PMT# 103 #hits= 8 #Cer.hits= 7 sum wts 1.64897 sum Cer.wts 1.39024
+PMT# 104 #hits= 7 #Cer.hits= 5 sum wts 1.4108 sum Cer.wts 0.915872
+ Number of Scintillation Photons in previous event: 27595
+ Number of Cerenkov Photons in previous event: 68960
+Number of Scintillation photons produced in this event : 28942 killed: 0 propagated (fraction): 28942(1)
+Number of Cerenkov photons produced in this event : 71215 killed: 0 propagated (fraction): 71215(1)
+---> end of event: 83
+PMT# 0 #hits= 14 #Cer.hits= 9 sum wts 2.90138 sum Cer.wts 1.87361
+PMT# 1 #hits= 8 #Cer.hits= 3 sum wts 1.48157 sum Cer.wts 0.589274
+PMT# 2 #hits= 448 #Cer.hits= 408 sum wts 58.2011 sum Cer.wts 49.9084
+PMT# 3 #hits= 13 #Cer.hits= 10 sum wts 2.62331 sum Cer.wts 1.93991
+PMT# 4 #hits= 11 #Cer.hits= 6 sum wts 1.78727 sum Cer.wts 0.976248
+PMT# 100 #hits= 28 #Cer.hits= 22 sum wts 4.65566 sum Cer.wts 3.38659
+PMT# 101 #hits= 35 #Cer.hits= 1 sum wts 6.73753 sum Cer.wts 0.0691303
+PMT# 102 #hits= 12 #Cer.hits= 9 sum wts 0.930588 sum Cer.wts 0.481749
+PMT# 103 #hits= 12 #Cer.hits= 6 sum wts 2.47066 sum Cer.wts 1.11589
+PMT# 104 #hits= 16 #Cer.hits= 11 sum wts 2.86593 sum Cer.wts 2.02449
+ Number of Scintillation Photons in previous event: 28942
+ Number of Cerenkov Photons in previous event: 71215
+Number of Scintillation photons produced in this event : 26714 killed: 0 propagated (fraction): 26714(1)
+Number of Cerenkov photons produced in this event : 70450 killed: 0 propagated (fraction): 70450(1)
+---> end of event: 84
+PMT# 0 #hits= 12 #Cer.hits= 8 sum wts 2.30002 sum Cer.wts 1.47495
+PMT# 1 #hits= 7 #Cer.hits= 3 sum wts 1.68018 sum Cer.wts 0.727016
+PMT# 2 #hits= 2508 #Cer.hits= 2495 sum wts 138.27 sum Cer.wts 136.271
+PMT# 3 #hits= 16 #Cer.hits= 11 sum wts 2.92246 sum Cer.wts 1.95384
+PMT# 4 #hits= 8 #Cer.hits= 5 sum wts 1.4411 sum Cer.wts 0.890403
+PMT# 100 #hits= 43 #Cer.hits= 36 sum wts 7.17363 sum Cer.wts 5.62944
+PMT# 101 #hits= 21 #Cer.hits= 0 sum wts 4.08411 sum Cer.wts 0
+PMT# 102 #hits= 12 #Cer.hits= 7 sum wts 1.42201 sum Cer.wts 0.490157
+PMT# 103 #hits= 8 #Cer.hits= 3 sum wts 1.07273 sum Cer.wts 0.326157
+PMT# 104 #hits= 17 #Cer.hits= 13 sum wts 2.99225 sum Cer.wts 2.19658
+ Number of Scintillation Photons in previous event: 26714
+ Number of Cerenkov Photons in previous event: 70450
+Number of Scintillation photons produced in this event : 28900 killed: 0 propagated (fraction): 28900(1)
+Number of Cerenkov photons produced in this event : 73313 killed: 0 propagated (fraction): 73313(1)
+---> end of event: 85
+PMT# 0 #hits= 15 #Cer.hits= 10 sum wts 3.05337 sum Cer.wts 2.10399
+PMT# 1 #hits= 4 #Cer.hits= 4 sum wts 0.70992 sum Cer.wts 0.70992
+PMT# 2 #hits= 319 #Cer.hits= 299 sum wts 37.3685 sum Cer.wts 32.8324
+PMT# 3 #hits= 16 #Cer.hits= 11 sum wts 2.73843 sum Cer.wts 1.5144
+PMT# 4 #hits= 6 #Cer.hits= 5 sum wts 1.42107 sum Cer.wts 1.18329
+PMT# 100 #hits= 24 #Cer.hits= 23 sum wts 3.02856 sum Cer.wts 2.81967
+PMT# 101 #hits= 18 #Cer.hits= 1 sum wts 3.7581 sum Cer.wts 0.22582
+PMT# 102 #hits= 8 #Cer.hits= 4 sum wts 0.536496 sum Cer.wts 0.0363109
+PMT# 103 #hits= 7 #Cer.hits= 3 sum wts 1.29516 sum Cer.wts 0.424772
+PMT# 104 #hits= 17 #Cer.hits= 14 sum wts 2.84167 sum Cer.wts 2.09534
+ Number of Scintillation Photons in previous event: 28900
+ Number of Cerenkov Photons in previous event: 73313
+Number of Scintillation photons produced in this event : 26103 killed: 0 propagated (fraction): 26103(1)
+Number of Cerenkov photons produced in this event : 74507 killed: 0 propagated (fraction): 74507(1)
+---> end of event: 86
+PMT# 0 #hits= 8 #Cer.hits= 4 sum wts 1.42773 sum Cer.wts 0.651287
+PMT# 1 #hits= 2 #Cer.hits= 2 sum wts 0.407518 sum Cer.wts 0.407518
+PMT# 2 #hits= 174 #Cer.hits= 146 sum wts 25.8742 sum Cer.wts 19.8399
+PMT# 3 #hits= 10 #Cer.hits= 6 sum wts 1.73892 sum Cer.wts 0.871734
+PMT# 4 #hits= 6 #Cer.hits= 5 sum wts 0.872214 sum Cer.wts 0.762537
+PMT# 100 #hits= 39 #Cer.hits= 35 sum wts 6.82361 sum Cer.wts 6.0558
+PMT# 101 #hits= 20 #Cer.hits= 4 sum wts 4.13222 sum Cer.wts 0.925988
+PMT# 102 #hits= 15 #Cer.hits= 11 sum wts 1.41945 sum Cer.wts 0.768272
+PMT# 103 #hits= 12 #Cer.hits= 8 sum wts 2.15715 sum Cer.wts 1.33137
+PMT# 104 #hits= 13 #Cer.hits= 11 sum wts 2.4189 sum Cer.wts 2.03373
+ Number of Scintillation Photons in previous event: 26103
+ Number of Cerenkov Photons in previous event: 74507
+Number of Scintillation photons produced in this event : 38812 killed: 0 propagated (fraction): 38812(1)
+Number of Cerenkov photons produced in this event : 96197 killed: 0 propagated (fraction): 96197(1)
+---> end of event: 87
+PMT# 0 #hits= 20 #Cer.hits= 13 sum wts 3.67766 sum Cer.wts 2.33347
+PMT# 1 #hits= 13 #Cer.hits= 9 sum wts 2.46214 sum Cer.wts 1.71798
+PMT# 2 #hits= 2762 #Cer.hits= 2744 sum wts 161.214 sum Cer.wts 157.549
+PMT# 3 #hits= 7 #Cer.hits= 3 sum wts 1.01861 sum Cer.wts 0.43578
+PMT# 4 #hits= 13 #Cer.hits= 9 sum wts 2.32975 sum Cer.wts 1.43521
+PMT# 100 #hits= 28 #Cer.hits= 22 sum wts 4.67082 sum Cer.wts 3.46995
+PMT# 101 #hits= 24 #Cer.hits= 0 sum wts 4.54464 sum Cer.wts 0
+PMT# 102 #hits= 9 #Cer.hits= 6 sum wts 0.478886 sum Cer.wts 0.00420214
+PMT# 103 #hits= 10 #Cer.hits= 5 sum wts 1.98928 sum Cer.wts 1.15728
+PMT# 104 #hits= 16 #Cer.hits= 6 sum wts 3.31704 sum Cer.wts 1.21174
+ Number of Scintillation Photons in previous event: 38812
+ Number of Cerenkov Photons in previous event: 96197
+Number of Scintillation photons produced in this event : 26841 killed: 0 propagated (fraction): 26841(1)
+Number of Cerenkov photons produced in this event : 76499 killed: 0 propagated (fraction): 76499(1)
+---> end of event: 88
+PMT# 0 #hits= 11 #Cer.hits= 5 sum wts 1.59673 sum Cer.wts 0.389444
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.51266 sum Cer.wts 0.542348
+PMT# 2 #hits= 180 #Cer.hits= 150 sum wts 26.4699 sum Cer.wts 20.2021
+PMT# 3 #hits= 23 #Cer.hits= 18 sum wts 2.16607 sum Cer.wts 1.19735
+PMT# 4 #hits= 14 #Cer.hits= 11 sum wts 2.02423 sum Cer.wts 1.38004
+PMT# 100 #hits= 32 #Cer.hits= 25 sum wts 5.1602 sum Cer.wts 3.7605
+PMT# 101 #hits= 24 #Cer.hits= 0 sum wts 4.56483 sum Cer.wts 0
+PMT# 102 #hits= 8 #Cer.hits= 5 sum wts 0.683431 sum Cer.wts 0.0600261
+PMT# 103 #hits= 8 #Cer.hits= 5 sum wts 1.74016 sum Cer.wts 1.05762
+PMT# 104 #hits= 9 #Cer.hits= 5 sum wts 1.83407 sum Cer.wts 0.900392
+ Number of Scintillation Photons in previous event: 26841
+ Number of Cerenkov Photons in previous event: 76499
+Number of Scintillation photons produced in this event : 29343 killed: 0 propagated (fraction): 29343(1)
+Number of Cerenkov photons produced in this event : 73121 killed: 0 propagated (fraction): 73121(1)
+---> end of event: 89
+PMT# 0 #hits= 15 #Cer.hits= 10 sum wts 2.96788 sum Cer.wts 1.77422
+PMT# 1 #hits= 11 #Cer.hits= 6 sum wts 1.91132 sum Cer.wts 1.05137
+PMT# 2 #hits= 140 #Cer.hits= 112 sum wts 23.5809 sum Cer.wts 17.7883
+PMT# 3 #hits= 12 #Cer.hits= 6 sum wts 1.99624 sum Cer.wts 0.826249
+PMT# 4 #hits= 11 #Cer.hits= 7 sum wts 2.01341 sum Cer.wts 1.18868
+PMT# 100 #hits= 29 #Cer.hits= 25 sum wts 4.89291 sum Cer.wts 4.01665
+PMT# 101 #hits= 23 #Cer.hits= 1 sum wts 4.01646 sum Cer.wts 0
+PMT# 102 #hits= 9 #Cer.hits= 7 sum wts 0.87519 sum Cer.wts 0.452548
+PMT# 103 #hits= 15 #Cer.hits= 8 sum wts 2.76428 sum Cer.wts 1.37697
+PMT# 104 #hits= 6 #Cer.hits= 3 sum wts 1.23507 sum Cer.wts 0.552396
+ Number of Scintillation Photons in previous event: 29343
+ Number of Cerenkov Photons in previous event: 73121
+Number of Scintillation photons produced in this event : 30514 killed: 0 propagated (fraction): 30514(1)
+Number of Cerenkov photons produced in this event : 75263 killed: 0 propagated (fraction): 75263(1)
+---> end of event: 90
+PMT# 0 #hits= 16 #Cer.hits= 7 sum wts 2.72119 sum Cer.wts 1.22238
+PMT# 1 #hits= 8 #Cer.hits= 4 sum wts 1.58251 sum Cer.wts 0.912686
+PMT# 2 #hits= 126 #Cer.hits= 107 sum wts 19.7081 sum Cer.wts 15.3881
+PMT# 3 #hits= 10 #Cer.hits= 7 sum wts 1.36247 sum Cer.wts 0.834641
+PMT# 4 #hits= 12 #Cer.hits= 8 sum wts 2.33664 sum Cer.wts 1.56589
+PMT# 100 #hits= 31 #Cer.hits= 25 sum wts 5.91372 sum Cer.wts 4.81685
+PMT# 101 #hits= 23 #Cer.hits= 2 sum wts 4.23914 sum Cer.wts 0.071692
+PMT# 102 #hits= 8 #Cer.hits= 7 sum wts 0.718153 sum Cer.wts 0.46598
+PMT# 103 #hits= 11 #Cer.hits= 7 sum wts 1.77235 sum Cer.wts 0.893729
+PMT# 104 #hits= 16 #Cer.hits= 11 sum wts 2.48762 sum Cer.wts 1.82332
+ Number of Scintillation Photons in previous event: 30514
+ Number of Cerenkov Photons in previous event: 75263
+Number of Scintillation photons produced in this event : 28171 killed: 0 propagated (fraction): 28171(1)
+Number of Cerenkov photons produced in this event : 75535 killed: 0 propagated (fraction): 75535(1)
+---> end of event: 91
+PMT# 0 #hits= 8 #Cer.hits= 5 sum wts 1.68302 sum Cer.wts 1.0366
+PMT# 1 #hits= 10 #Cer.hits= 4 sum wts 2.35126 sum Cer.wts 1.00068
+PMT# 2 #hits= 1054 #Cer.hits= 1010 sum wts 97.8411 sum Cer.wts 88.8628
+PMT# 3 #hits= 21 #Cer.hits= 14 sum wts 3.54658 sum Cer.wts 2.37267
+PMT# 4 #hits= 11 #Cer.hits= 6 sum wts 2.37259 sum Cer.wts 1.34077
+PMT# 100 #hits= 34 #Cer.hits= 27 sum wts 4.93077 sum Cer.wts 3.50407
+PMT# 101 #hits= 28 #Cer.hits= 3 sum wts 5.30934 sum Cer.wts 0.302079
+PMT# 102 #hits= 6 #Cer.hits= 5 sum wts 0.278594 sum Cer.wts 0.0507854
+PMT# 103 #hits= 12 #Cer.hits= 6 sum wts 2.26964 sum Cer.wts 1.09892
+PMT# 104 #hits= 6 #Cer.hits= 5 sum wts 1.06688 sum Cer.wts 0.869454
+ Number of Scintillation Photons in previous event: 28171
+ Number of Cerenkov Photons in previous event: 75535
+Number of Scintillation photons produced in this event : 27324 killed: 0 propagated (fraction): 27324(1)
+Number of Cerenkov photons produced in this event : 72484 killed: 0 propagated (fraction): 72484(1)
+---> end of event: 92
+PMT# 0 #hits= 17 #Cer.hits= 11 sum wts 3.46914 sum Cer.wts 2.11331
+PMT# 1 #hits= 3 #Cer.hits= 1 sum wts 0.596864 sum Cer.wts 0.108045
+PMT# 2 #hits= 286 #Cer.hits= 246 sum wts 37.9941 sum Cer.wts 30.5825
+PMT# 3 #hits= 19 #Cer.hits= 17 sum wts 3.07348 sum Cer.wts 2.776
+PMT# 4 #hits= 13 #Cer.hits= 6 sum wts 2.22342 sum Cer.wts 0.872256
+PMT# 100 #hits= 34 #Cer.hits= 29 sum wts 5.67133 sum Cer.wts 4.68646
+PMT# 101 #hits= 22 #Cer.hits= 2 sum wts 4.54313 sum Cer.wts 0.241569
+PMT# 102 #hits= 6 #Cer.hits= 4 sum wts 0.515138 sum Cer.wts 0.0213814
+PMT# 103 #hits= 7 #Cer.hits= 6 sum wts 1.49763 sum Cer.wts 1.2625
+PMT# 104 #hits= 16 #Cer.hits= 10 sum wts 2.80599 sum Cer.wts 1.6851
+ Number of Scintillation Photons in previous event: 27324
+ Number of Cerenkov Photons in previous event: 72484
+Number of Scintillation photons produced in this event : 25189 killed: 0 propagated (fraction): 25189(1)
+Number of Cerenkov photons produced in this event : 66755 killed: 0 propagated (fraction): 66755(1)
+---> end of event: 93
+PMT# 0 #hits= 5 #Cer.hits= 3 sum wts 0.980983 sum Cer.wts 0.655816
+PMT# 1 #hits= 5 #Cer.hits= 4 sum wts 0.896616 sum Cer.wts 0.640801
+PMT# 2 #hits= 183 #Cer.hits= 158 sum wts 28.4981 sum Cer.wts 23.5431
+PMT# 3 #hits= 4 #Cer.hits= 1 sum wts 0.875161 sum Cer.wts 0.244343
+PMT# 4 #hits= 9 #Cer.hits= 8 sum wts 0.89376 sum Cer.wts 0.673031
+PMT# 100 #hits= 29 #Cer.hits= 20 sum wts 3.94901 sum Cer.wts 2.29039
+PMT# 101 #hits= 28 #Cer.hits= 4 sum wts 4.53344 sum Cer.wts 0.0550877
+PMT# 102 #hits= 7 #Cer.hits= 5 sum wts 0.543842 sum Cer.wts 0.0638056
+PMT# 103 #hits= 12 #Cer.hits= 9 sum wts 2.15944 sum Cer.wts 1.42866
+PMT# 104 #hits= 11 #Cer.hits= 6 sum wts 1.79449 sum Cer.wts 0.816046
+ Number of Scintillation Photons in previous event: 25189
+ Number of Cerenkov Photons in previous event: 66755
+Number of Scintillation photons produced in this event : 27448 killed: 0 propagated (fraction): 27448(1)
+Number of Cerenkov photons produced in this event : 73461 killed: 0 propagated (fraction): 73461(1)
+---> end of event: 94
+PMT# 0 #hits= 9 #Cer.hits= 2 sum wts 1.63437 sum Cer.wts 0.277952
+PMT# 1 #hits= 7 #Cer.hits= 5 sum wts 1.52044 sum Cer.wts 1.03868
+PMT# 2 #hits= 2423 #Cer.hits= 2396 sum wts 132.45 sum Cer.wts 127.373
+PMT# 3 #hits= 8 #Cer.hits= 5 sum wts 1.14178 sum Cer.wts 0.658665
+PMT# 4 #hits= 4 #Cer.hits= 4 sum wts 0.742075 sum Cer.wts 0.742075
+PMT# 100 #hits= 27 #Cer.hits= 18 sum wts 3.65675 sum Cer.wts 1.98389
+PMT# 101 #hits= 28 #Cer.hits= 0 sum wts 5.37248 sum Cer.wts 0
+PMT# 102 #hits= 5 #Cer.hits= 4 sum wts 0.219258 sum Cer.wts 0.00781497
+PMT# 103 #hits= 11 #Cer.hits= 5 sum wts 2.2988 sum Cer.wts 1.07934
+PMT# 104 #hits= 9 #Cer.hits= 5 sum wts 2.02819 sum Cer.wts 1.23349
+ Number of Scintillation Photons in previous event: 27448
+ Number of Cerenkov Photons in previous event: 73461
+Number of Scintillation photons produced in this event : 32850 killed: 0 propagated (fraction): 32850(1)
+Number of Cerenkov photons produced in this event : 82263 killed: 0 propagated (fraction): 82263(1)
+---> end of event: 95
+PMT# 0 #hits= 22 #Cer.hits= 12 sum wts 4.41448 sum Cer.wts 2.34611
+PMT# 1 #hits= 7 #Cer.hits= 1 sum wts 1.22373 sum Cer.wts 0.237492
+PMT# 2 #hits= 2598 #Cer.hits= 2569 sum wts 145.459 sum Cer.wts 139.652
+PMT# 3 #hits= 16 #Cer.hits= 9 sum wts 3.13381 sum Cer.wts 1.95191
+PMT# 4 #hits= 9 #Cer.hits= 7 sum wts 1.91938 sum Cer.wts 1.43966
+PMT# 100 #hits= 39 #Cer.hits= 33 sum wts 5.87395 sum Cer.wts 4.39935
+PMT# 101 #hits= 17 #Cer.hits= 0 sum wts 3.26839 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 5 sum wts 0.559584 sum Cer.wts 0.0940943
+PMT# 103 #hits= 10 #Cer.hits= 6 sum wts 1.22675 sum Cer.wts 0.58138
+PMT# 104 #hits= 9 #Cer.hits= 7 sum wts 1.87857 sum Cer.wts 1.40755
+ Number of Scintillation Photons in previous event: 32850
+ Number of Cerenkov Photons in previous event: 82263
+Number of Scintillation photons produced in this event : 26587 killed: 0 propagated (fraction): 26587(1)
+Number of Cerenkov photons produced in this event : 69559 killed: 0 propagated (fraction): 69559(1)
+---> end of event: 96
+PMT# 0 #hits= 8 #Cer.hits= 5 sum wts 1.25116 sum Cer.wts 0.753204
+PMT# 1 #hits= 6 #Cer.hits= 4 sum wts 1.27164 sum Cer.wts 0.869292
+PMT# 2 #hits= 483 #Cer.hits= 471 sum wts 54.0794 sum Cer.wts 51.567
+PMT# 3 #hits= 9 #Cer.hits= 5 sum wts 1.16758 sum Cer.wts 0.607459
+PMT# 4 #hits= 16 #Cer.hits= 7 sum wts 3.13864 sum Cer.wts 1.46471
+PMT# 100 #hits= 19 #Cer.hits= 15 sum wts 2.5979 sum Cer.wts 1.87917
+PMT# 101 #hits= 32 #Cer.hits= 2 sum wts 5.22116 sum Cer.wts 0
+PMT# 102 #hits= 7 #Cer.hits= 7 sum wts 0.632528 sum Cer.wts 0.632528
+PMT# 103 #hits= 12 #Cer.hits= 7 sum wts 2.21304 sum Cer.wts 1.3122
+PMT# 104 #hits= 19 #Cer.hits= 11 sum wts 3.88851 sum Cer.wts 2.47841
+ Number of Scintillation Photons in previous event: 26587
+ Number of Cerenkov Photons in previous event: 69559
+Number of Scintillation photons produced in this event : 26753 killed: 0 propagated (fraction): 26753(1)
+Number of Cerenkov photons produced in this event : 69627 killed: 0 propagated (fraction): 69627(1)
+---> end of event: 97
+PMT# 0 #hits= 7 #Cer.hits= 5 sum wts 1.44718 sum Cer.wts 1.1398
+PMT# 1 #hits= 3 #Cer.hits= 3 sum wts 0.167291 sum Cer.wts 0.167291
+PMT# 2 #hits= 198 #Cer.hits= 179 sum wts 26.0699 sum Cer.wts 22.1713
+PMT# 3 #hits= 7 #Cer.hits= 5 sum wts 1.21947 sum Cer.wts 0.863859
+PMT# 4 #hits= 9 #Cer.hits= 8 sum wts 1.80786 sum Cer.wts 1.56114
+PMT# 100 #hits= 30 #Cer.hits= 24 sum wts 4.93444 sum Cer.wts 3.71264
+PMT# 101 #hits= 38 #Cer.hits= 5 sum wts 7.26516 sum Cer.wts 0.396949
+PMT# 102 #hits= 7 #Cer.hits= 5 sum wts 0.561324 sum Cer.wts 0.111923
+PMT# 103 #hits= 15 #Cer.hits= 7 sum wts 2.96239 sum Cer.wts 1.36554
+PMT# 104 #hits= 5 #Cer.hits= 3 sum wts 0.953272 sum Cer.wts 0.473255
+ Number of Scintillation Photons in previous event: 26753
+ Number of Cerenkov Photons in previous event: 69627
+Number of Scintillation photons produced in this event : 29623 killed: 0 propagated (fraction): 29623(1)
+Number of Cerenkov photons produced in this event : 73042 killed: 0 propagated (fraction): 73042(1)
+---> end of event: 98
+PMT# 0 #hits= 18 #Cer.hits= 10 sum wts 3.76588 sum Cer.wts 2.25666
+PMT# 1 #hits= 6 #Cer.hits= 5 sum wts 1.1987 sum Cer.wts 1.04628
+PMT# 2 #hits= 282 #Cer.hits= 253 sum wts 33.2646 sum Cer.wts 27.6334
+PMT# 3 #hits= 17 #Cer.hits= 14 sum wts 1.99389 sum Cer.wts 1.32844
+PMT# 4 #hits= 8 #Cer.hits= 5 sum wts 1.7936 sum Cer.wts 1.08687
+PMT# 100 #hits= 21 #Cer.hits= 20 sum wts 2.53138 sum Cer.wts 2.27278
+PMT# 101 #hits= 30 #Cer.hits= 4 sum wts 6.20249 sum Cer.wts 0.752663
+PMT# 102 #hits= 8 #Cer.hits= 6 sum wts 0.42716 sum Cer.wts 0.0577988
+PMT# 103 #hits= 12 #Cer.hits= 8 sum wts 2.65513 sum Cer.wts 1.82587
+PMT# 104 #hits= 14 #Cer.hits= 7 sum wts 2.59586 sum Cer.wts 1.4551
+ Number of Scintillation Photons in previous event: 29623
+ Number of Cerenkov Photons in previous event: 73042
+Number of Scintillation photons produced in this event : 27270 killed: 0 propagated (fraction): 27270(1)
+Number of Cerenkov photons produced in this event : 70578 killed: 0 propagated (fraction): 70578(1)
+---> end of event: 99
+PMT# 0 #hits= 13 #Cer.hits= 5 sum wts 2.13855 sum Cer.wts 0.776551
+PMT# 1 #hits= 7 #Cer.hits= 4 sum wts 1.32261 sum Cer.wts 0.840674
+PMT# 2 #hits= 168 #Cer.hits= 146 sum wts 23.4862 sum Cer.wts 19.0683
+PMT# 3 #hits= 13 #Cer.hits= 10 sum wts 2.18261 sum Cer.wts 1.63666
+PMT# 4 #hits= 12 #Cer.hits= 9 sum wts 1.52602 sum Cer.wts 1.21299
+PMT# 100 #hits= 30 #Cer.hits= 26 sum wts 4.61682 sum Cer.wts 3.77599
+PMT# 101 #hits= 32 #Cer.hits= 8 sum wts 5.10653 sum Cer.wts 0.988088
+PMT# 102 #hits= 13 #Cer.hits= 10 sum wts 1.04971 sum Cer.wts 0.623603
+PMT# 103 #hits= 18 #Cer.hits= 16 sum wts 3.17124 sum Cer.wts 2.82358
+PMT# 104 #hits= 11 #Cer.hits= 6 sum wts 1.96322 sum Cer.wts 0.875673
+
+--------------------End of Global Run-----------------------
+  The run was 100 events with 0 good events 
+
+ End of run info 
+PMT# 0 #hits= 9 9 13 11 12 19 13 12 7 15 9 14 11 10 14 11 8 14 56 18 12 11 13 9 14 13 20 11 12 10 23 13 12 13 6 15 11 18 12 14 11 18 7 8 7 17 22 18 8 12 15 19 6 26 15 27 11 12 16 10 12 16 7 11 7 19 11 10 15 15 8 10 10 13 10 17 23 12 11 13 9 12 7 14 12 15 8 20 11 15 16 8 17 5 9 22 8 7 18 13 
+PMT# 1 #hits= 6 3 4 4 9 9 10 4 9 8 3 3 6 8 6 6 9 11 21 11 2 6 9 7 6 12 5 6 4 7 14 7 2 9 5 13 8 6 7 4 11 4 7 7 8 10 6 6 8 7 5 14 8 10 9 10 6 4 11 6 4 8 5 11 12 10 6 7 8 5 11 5 5 3 9 7 4 9 5 4 6 7 8 8 7 4 2 13 8 11 8 10 3 5 7 7 6 3 6 7 
+PMT# 2 #hits= 343 268 271 5446 196 253 970 117 280 742 411 269 192 120 351 346 882 1158 327 2887 247 337 466 2421 357 481 2506 202 505 523 2510 307 140 762 175 384 464 308 347 805 108 265 625 208 2485 864 800 3509 229 487 162 317 2444 556 502 357 138 2315 2470 428 194 155 391 294 2150 154 3178 1181 329 852 238 349 311 293 302 3574 303 598 946 114 1026 283 159 448 2508 319 174 2762 180 140 126 1054 286 183 2423 2598 483 198 282 168 
+PMT# 3 #hits= 8 5 8 14 24 22 11 14 20 13 13 11 14 13 9 8 17 12 43 12 17 10 13 17 9 13 17 9 10 11 23 12 17 8 5 9 11 13 11 12 7 20 15 16 13 13 8 10 6 11 10 27 7 15 8 20 10 11 11 10 7 10 11 15 9 16 17 14 8 12 13 16 10 14 13 15 13 5 6 9 9 10 8 13 16 16 10 7 23 12 10 21 19 4 8 16 9 7 17 13 
+PMT# 4 #hits= 31 14 12 12 10 18 14 13 4 13 8 12 15 16 7 12 12 13 61 9 14 14 14 13 9 10 13 8 14 14 19 9 11 9 17 25 9 12 12 11 8 22 9 12 10 12 6 5 10 17 8 16 6 30 13 28 13 11 19 7 6 7 18 19 14 17 17 10 9 10 17 17 13 9 8 18 11 17 14 14 11 16 14 11 8 6 6 13 14 11 12 11 13 9 4 9 16 9 8 12 
+PMT# 100 #hits= 34 34 33 34 29 26 26 41 33 25 38 29 34 43 27 25 23 33 32 37 27 37 35 30 38 26 23 28 31 32 38 33 27 31 27 28 40 32 31 36 25 30 29 29 31 29 32 30 26 35 44 28 27 37 25 19 36 29 28 23 33 34 29 27 28 22 44 23 29 34 23 26 19 39 34 19 24 34 38 24 40 27 22 28 43 24 39 28 32 29 31 34 34 29 27 39 19 30 21 30 
+PMT# 101 #hits= 32 19 55 35 87 27 71 76 32 43 26 19 26 63 21 59 27 17 15 32 19 58 34 30 65 25 25 25 33 15 24 14 19 23 30 33 23 22 20 42 26 33 29 24 18 38 25 21 23 24 51 22 45 26 20 12 25 21 23 25 37 29 66 35 28 26 31 49 23 19 32 24 28 112 37 139 37 17 36 71 32 31 27 35 21 18 20 24 24 23 23 28 22 28 28 17 32 38 30 32 
+PMT# 102 #hits= 6 9 6 8 13 5 5 6 10 5 3 7 6 5 6 2 6 11 8 4 10 14 8 2 13 8 10 6 4 8 10 6 14 7 6 8 10 9 6 11 9 10 6 11 7 13 10 8 7 14 17 14 8 10 13 7 7 10 13 8 6 6 10 7 6 5 12 16 9 12 8 5 7 9 9 13 1 12 11 15 7 4 10 12 12 8 15 9 8 9 8 6 6 7 5 7 7 7 8 13 
+PMT# 103 #hits= 23 5 13 16 13 16 14 12 6 9 9 12 15 9 12 9 17 7 19 12 8 9 13 10 13 14 9 14 13 14 15 8 16 10 12 14 17 13 10 10 12 13 13 7 7 9 14 9 6 13 18 18 14 9 10 13 11 9 14 12 7 10 11 3 12 11 16 8 9 12 14 11 7 12 14 6 9 12 8 8 16 9 8 12 8 7 12 10 8 15 11 12 7 12 11 10 12 15 12 18 
+PMT# 104 #hits= 14 7 10 14 19 9 13 10 6 15 14 12 12 7 6 12 6 15 14 8 6 17 15 9 14 11 22 12 9 12 10 14 12 7 9 12 9 7 11 11 16 7 11 15 13 7 13 18 10 10 12 12 13 17 14 13 9 5 11 11 13 9 16 8 17 12 15 14 9 10 18 15 15 13 12 8 12 13 7 14 13 11 7 16 17 17 13 16 9 6 16 6 16 11 9 9 19 5 14 11 
+PMT# 0 wts= 1.62786 1.90567 2.64368 2.06382 2.09025 3.49853 2.28258 2.13666 1.46292 2.84246 1.42012 2.58164 1.47589 2.33665 2.32158 2.03337 1.57469 3.10105 10.5766 3.41559 2.60826 2.40602 2.43046 1.58832 2.61935 2.32355 4.62943 2.44982 2.51678 2.08215 4.27822 2.84747 2.09655 2.70445 1.2763 3.25161 2.03012 3.33769 1.83314 2.65376 1.64207 3.92516 1.6596 1.70066 1.74001 2.41506 3.71792 3.39151 1.68315 2.34566 2.90175 3.96354 1.38782 5.5878 2.91826 5.26434 2.59282 2.24584 3.22649 2.17342 2.76763 3.14767 1.45324 2.19517 1.26881 3.7846 2.45112 2.21148 3.02148 3.01502 1.37644 2.11115 1.78004 2.41394 1.98146 3.42273 4.77304 2.40217 2.40076 2.22264 1.84811 2.08595 1.38528 2.90138 2.30002 3.05337 1.42773 3.67766 1.59673 2.96788 2.72119 1.68302 3.46914 0.980983 1.63437 4.41448 1.25116 1.44718 3.76588 2.13855 
+PMT# 1 wts= 1.26178 0.680098 0.918556 0.769621 1.88389 1.57175 1.54445 0.906488 2.03466 1.55536 0.544407 0.692873 1.14719 1.8672 1.32664 1.10488 1.94123 2.19886 4.12445 2.44139 0.301288 1.13006 1.59969 1.36095 1.23254 2.41495 0.856714 1.24585 0.832473 1.38586 2.77454 0.756775 0.46573 1.63379 0.807126 2.86397 1.39138 1.36823 1.48827 0.912134 2.21013 0.939632 1.42511 1.30572 1.64122 2.02396 1.08488 1.14284 1.63873 1.55186 1.06869 2.85162 1.45871 1.95738 1.77792 2.2002 1.07414 0.789271 2.12973 1.32712 0.733595 1.89587 1.12436 2.10104 2.11631 2.08297 1.19587 1.30326 1.8343 0.876387 1.79603 1.03543 1.0257 0.572481 1.53247 1.55941 0.922735 1.81697 0.816932 0.859547 1.31299 1.28263 1.48092 1.48157 1.68018 0.70992 0.407518 2.46214 1.51266 1.91132 1.58251 2.35126 0.596864 0.896616 1.52044 1.22373 1.27164 0.167291 1.1987 1.32261 
+PMT# 2 wts= 39.2451 33.7874 36.6021 249.683 25.0619 33.6018 92.3356 20.1058 36.5487 66.3065 53.7861 34.9484 25.132 17.1219 40.6578 41.2055 88.101 104.519 42.9622 146.132 28.8402 40.796 59.9396 131.812 37.2709 54.6015 137.155 27.9074 54.247 63.388 136.447 38.4955 23.4416 73.4814 26.4423 48.2722 48.0453 36.8686 41.0196 71.9364 18.5148 33.0777 71.3939 29.9925 142.329 71.1961 72.2388 168.309 27.8827 60.0786 21.0228 41.2057 136.686 68.6049 60.3634 49.7569 20.2753 126.033 136.833 47.1181 26.3304 22.5264 45.5563 37.1046 123.668 22.4992 158.67 83.7647 43.7779 95.1943 31.8636 37.2844 44.9268 36.68 37.7264 249.762 34.4911 56.255 78.2737 16.2687 78.4383 43.1553 23.9226 58.2011 138.27 37.3685 25.8742 161.214 26.4699 23.5809 19.7081 97.8411 37.9941 28.4981 132.45 145.459 54.0794 26.0699 33.2646 23.4862 
+PMT# 3 wts= 1.12439 0.951975 1.5914 2.74196 2.87556 3.75077 2.3868 2.58727 3.65925 2.34304 2.68231 2.3142 2.94758 1.93301 1.9621 1.43303 2.51806 1.95693 8.07845 2.22785 3.13453 1.49219 1.9278 3.0737 1.29802 2.58542 2.6608 1.56638 2.20232 1.50259 4.36882 1.24932 2.69757 1.30969 0.863097 1.77669 1.7531 2.32791 2.05702 2.73847 0.92001 3.62109 2.75498 2.04315 2.47355 2.56791 1.59592 1.64718 1.06114 1.58234 1.99315 4.87289 1.38095 3.19794 1.71962 3.22332 1.96009 2.07204 2.0605 1.47088 1.04508 1.80009 2.20268 2.19706 1.43268 2.7494 3.28711 2.65017 1.22285 1.85094 2.25452 3.04283 1.51399 2.75065 1.91771 2.20589 2.10526 0.947877 1.26488 1.84577 1.58319 1.88353 1.00508 2.62331 2.92246 2.73843 1.73892 1.01861 2.16607 1.99624 1.36247 3.54658 3.07348 0.875161 1.14178 3.13381 1.16758 1.21947 1.99389 2.18261 
+PMT# 4 wts= 5.70149 2.3018 2.25778 1.88265 1.17007 2.60964 2.69592 2.08961 0.7657 2.44884 1.5231 2.18706 3.07078 2.27106 0.788297 2.00516 2.06461 2.55614 11.1403 1.26036 2.11985 2.49809 2.02573 2.15376 1.44874 1.52589 2.77136 1.25257 2.31558 2.43626 3.46103 1.62362 1.85205 1.4457 3.26787 4.47677 1.63764 1.6683 2.18661 2.09246 0.691105 3.7728 1.24159 1.95951 1.29276 1.83327 1.02348 0.934306 1.92523 2.87747 1.10114 3.10483 1.23664 5.7325 2.02553 5.01904 1.51975 1.99773 3.89849 1.42403 0.846708 1.30445 3.66931 3.63213 2.50749 2.38101 3.3525 1.83227 1.13513 1.95344 2.31246 3.29372 1.99522 0.891799 1.68839 3.34735 1.83689 3.04659 2.67819 1.29143 1.58022 2.45507 2.22511 1.78727 1.4411 1.42107 0.872214 2.32975 2.02423 2.01341 2.33664 2.37259 2.22342 0.89376 0.742075 1.91938 3.13864 1.80786 1.7936 1.52602 
+PMT# 100 wts= 6.011 6.01993 5.08789 5.95959 3.79408 3.97381 4.10215 6.54151 4.68538 3.81531 7.1136 4.03004 5.51084 7.6492 4.09853 3.93593 3.40407 5.44822 5.32323 5.01775 3.59785 5.28323 5.32788 4.45832 6.5477 4.50018 4.81293 4.2972 5.01203 4.72774 5.61939 5.01474 4.77386 3.54473 4.80053 4.61109 6.61966 5.47919 4.20692 4.55414 4.64921 4.28377 4.48347 4.70625 5.33882 4.85602 6.15866 4.8758 5.37663 5.32398 7.99294 5.42793 4.56305 6.0705 4.28755 3.07478 5.89044 3.5152 3.88286 3.70062 5.05878 5.02966 4.55025 4.79953 5.08069 2.96761 8.6798 3.08674 4.32934 5.30366 3.86493 4.50731 2.2863 6.53527 5.18341 3.43026 3.58503 5.60067 6.8811 4.6377 5.26535 5.28845 3.33629 4.65566 7.17363 3.02856 6.82361 4.67082 5.1602 4.89291 5.91372 4.93077 5.67133 3.94901 3.65675 5.87395 2.5979 4.93444 2.53138 4.61682 
+PMT# 101 wts= 4.81726 3.71829 10.1268 5.535 11.245 5.62247 12.6578 9.70453 5.73733 7.02124 4.74134 3.49137 4.66679 10.4774 3.7975 11.3739 5.04169 3.36836 2.32849 5.92995 3.19854 9.9448 6.62002 4.58519 12.8162 4.99139 4.71695 5.01538 6.05718 2.13633 4.42453 2.30796 3.9496 4.75215 4.26998 6.54639 4.76968 4.31547 3.70756 5.76401 4.79074 7.01339 5.73138 4.47579 3.7325 6.43259 4.3644 4.01234 4.40346 4.45021 10.9328 4.55579 5.89994 5.1707 4.23159 2.04024 4.49442 3.83881 4.63379 4.35073 6.58825 4.98455 11.3937 5.90875 5.25309 4.27553 6.15308 7.42176 3.74131 3.84062 4.95142 4.0519 5.3435 13.3428 7.27111 17.6571 6.5898 3.72255 6.85165 12.7683 6.86704 6.14445 5.49169 6.73753 4.08411 3.7581 4.13222 4.54464 4.56483 4.01646 4.23914 5.30934 4.54313 4.53344 5.37248 3.26839 5.22116 7.26516 6.20249 5.10653 
+PMT# 102 wts= 1.07587 0.794295 0.48923 0.676095 1.36906 0.40377 0.472721 0.78875 1.60404 0.404442 0.394229 0.587319 0.410885 0.302354 0.496466 0.402328 0.483734 1.39705 0.485668 0.408085 1.08474 2.43043 1.15407 0.189708 1.67106 0.458348 0.879245 0.623278 0.461564 0.617121 0.598498 0.428004 1.18348 1.06262 0.933493 0.912202 1.08936 0.644625 0.879982 1.20102 1.10895 1.39991 0.953479 0.659145 0.75081 1.40455 1.37634 0.800531 0.983316 2.40417 1.58564 1.728 1.14383 0.719698 1.40765 0.705776 0.945193 1.17266 1.59592 1.15133 0.286696 0.707311 0.878532 0.824372 0.997456 0.462788 1.05671 1.68409 1.4224 1.39759 0.653167 0.294683 0.714439 1.07358 1.10064 1.50484 0.167459 1.32814 0.831297 1.17216 0.48215 0.504892 0.881883 0.930588 1.42201 0.536496 1.41945 0.478886 0.683431 0.87519 0.718153 0.278594 0.515138 0.543842 0.219258 0.559584 0.632528 0.561324 0.42716 1.04971 
+PMT# 103 wts= 3.43801 1.12248 2.54974 2.82446 2.32144 2.735 3.03388 2.02458 1.07423 1.63042 1.39918 1.86406 2.71378 1.82386 1.98222 1.5566 3.29311 1.56626 3.00474 2.14555 1.78384 1.0677 2.39906 2.24409 1.89205 3.13848 1.55125 2.90052 2.81029 2.03754 2.61153 1.37493 3.05811 1.87889 1.78583 2.47836 3.08058 2.73852 1.85574 2.35846 2.44316 2.50041 2.6517 0.943782 1.3346 2.19795 2.45504 1.68064 1.23134 3.03203 3.55825 3.35085 2.45603 1.89996 1.90607 1.89686 1.7047 1.53045 2.64158 2.27362 1.3085 2.09452 2.56423 0.482095 2.70659 1.43555 2.42428 1.30354 1.57402 2.24933 2.96226 1.64001 0.991885 2.10614 2.60843 1.17034 1.89403 2.22961 1.61991 1.6364 2.85046 1.48322 1.64897 2.47066 1.07273 1.29516 2.15715 1.98928 1.74016 2.76428 1.77235 2.26964 1.49763 2.15944 2.2988 1.22675 2.21304 2.96239 2.65513 3.17124 
+PMT# 104 wts= 2.43199 1.49157 2.46921 2.69051 3.15224 1.97219 1.76818 2.19277 1.15883 2.98544 2.6451 2.22563 2.11334 1.57502 1.33271 2.08654 0.808694 2.70422 2.55232 1.73885 1.04286 2.99487 2.8795 1.31032 2.61741 1.86987 3.74423 2.67446 1.38744 2.15805 2.00472 2.79652 2.08229 1.42413 1.59216 2.25996 1.25124 0.954293 1.80944 1.80557 3.13444 1.51199 1.76435 2.58392 2.51123 1.16003 2.79046 3.50471 1.59753 1.63076 2.01622 2.17068 1.81592 3.34919 2.26522 2.6629 1.22809 1.26455 2.09186 1.68889 2.08115 1.5503 2.83522 1.55173 3.14115 2.60064 2.82257 2.69208 1.53089 1.43172 3.1268 3.2203 3.25127 1.43018 2.2388 1.29603 2.69604 2.41684 1.59776 2.71134 2.56619 1.93793 1.4108 2.86593 2.99225 2.84167 2.4189 3.31704 1.83407 1.23507 2.48762 1.06688 2.80599 1.79449 2.02819 1.87857 3.88851 0.953272 2.59586 1.96322 
+PMT# 0 #Cer,hits= 5 6 8 4 7 15 7 8 3 8 4 8 10 5 9 8 4 7 29 11 6 6 9 6 9 11 15 7 7 3 19 6 6 8 4 10 7 9 6 5 5 12 3 4 2 8 14 8 4 8 11 13 4 21 8 16 8 5 11 6 8 9 5 4 3 11 6 4 7 8 5 5 7 5 4 10 17 5 5 9 8 8 5 9 8 10 4 13 5 10 7 5 11 3 2 12 5 5 10 5 
+PMT# 1 #Cer,hits= 3 1 2 2 2 4 6 2 6 5 1 1 4 4 3 2 7 7 12 5 0 4 7 6 2 9 2 5 3 3 9 4 1 6 2 9 4 3 3 4 5 2 5 5 4 7 4 4 7 5 3 7 4 5 5 3 6 1 8 3 2 6 4 7 7 7 2 5 4 5 7 3 3 2 4 4 3 5 2 1 5 5 5 3 3 4 2 9 4 6 4 4 1 4 5 1 4 3 5 4 
+PMT# 2 #Cer,hits= 319 243 254 5419 174 233 954 103 258 714 367 244 173 97 324 323 854 1109 297 2853 222 306 420 2391 345 461 2489 176 480 499 2477 283 112 735 165 362 442 282 333 779 92 238 601 187 2462 838 770 3500 206 436 146 287 2409 524 457 321 115 2300 2428 410 175 127 360 268 2118 127 3155 1163 306 803 217 336 283 273 290 3504 287 582 918 94 999 244 133 408 2495 299 146 2744 150 112 107 1010 246 158 2396 2569 471 179 253 146 
+PMT# 3 #Cer,hits= 6 3 6 9 20 16 11 10 14 8 9 7 9 8 5 4 11 7 32 9 12 7 10 9 5 7 13 5 7 7 17 10 9 6 2 6 7 10 4 8 6 17 12 12 10 9 5 6 3 9 7 18 2 9 5 15 7 8 8 6 3 7 5 11 7 13 12 8 5 8 8 12 5 11 11 11 11 4 5 7 6 10 6 10 11 11 6 3 18 6 7 14 17 1 5 9 5 5 14 10 
+PMT# 4 #Cer,hits= 22 8 9 7 6 12 10 10 2 9 5 8 11 10 5 10 8 10 43 7 10 11 10 11 6 9 9 5 9 7 13 9 8 7 11 19 7 9 7 7 6 18 5 7 9 7 4 2 5 11 5 11 3 26 6 17 12 8 10 6 6 7 7 10 10 13 14 7 6 6 14 11 11 5 5 12 8 13 6 13 9 10 8 6 5 5 5 9 11 7 8 6 6 8 4 7 7 8 5 9 
+PMT# 100 #Cer,hits= 24 28 28 25 23 23 20 37 26 20 30 23 30 32 25 20 20 28 28 29 24 33 29 25 31 22 21 26 26 29 28 30 22 25 20 22 35 22 25 32 21 21 24 21 29 24 24 24 19 28 29 25 23 30 20 18 33 25 22 19 27 27 25 22 23 18 39 21 26 31 21 22 19 30 24 13 19 29 30 21 33 22 21 22 36 23 35 22 25 25 25 27 29 20 18 33 15 24 20 26 
+PMT# 101 #Cer,hits= 12 1 0 19 48 1 37 43 15 16 4 1 6 22 0 22 2 3 3 4 2 16 2 4 10 4 3 1 3 3 3 1 1 1 6 5 1 2 1 23 3 1 3 1 0 4 5 1 1 3 1 2 24 4 1 1 3 2 2 2 14 10 5 12 8 2 8 24 7 1 3 3 2 86 3 119 4 0 5 16 0 1 3 1 0 1 4 0 0 1 2 3 2 4 0 0 2 5 4 8 
+PMT# 102 #Cer,hits= 3 8 3 5 9 4 4 4 6 3 1 6 4 5 4 1 5 7 7 4 8 9 6 1 8 8 7 4 3 3 8 3 9 6 4 5 7 7 3 9 5 5 1 9 4 8 5 6 4 11 9 7 5 7 8 4 4 7 7 5 6 4 7 5 4 4 7 12 3 8 7 4 5 7 7 9 0 9 8 13 5 2 8 9 7 4 11 6 5 7 7 5 4 5 4 5 7 5 6 10 
+PMT# 103 #Cer,hits= 15 3 8 7 12 11 10 5 4 5 5 9 10 6 8 6 11 5 14 7 5 8 6 5 9 8 5 9 7 8 8 4 9 7 8 13 10 9 5 5 6 9 10 5 5 4 5 5 5 7 8 10 11 6 7 7 7 6 11 7 6 9 10 2 5 8 11 7 6 7 7 5 7 7 8 5 4 9 4 6 11 5 7 6 3 3 8 5 5 8 7 6 6 9 5 6 7 7 8 16 
+PMT# 104 #Cer,hits= 7 5 5 7 14 4 10 9 4 13 9 8 6 3 4 7 3 10 8 6 6 10 6 6 9 5 18 9 5 4 7 8 8 4 5 9 5 5 7 7 13 6 10 8 11 4 8 13 4 5 4 6 7 11 8 6 8 4 6 9 9 4 10 6 12 8 9 10 6 6 12 8 7 8 5 4 4 6 5 8 5 8 5 11 13 14 11 6 5 3 11 5 10 6 5 7 11 3 7 6 
+PMT# 0 Cer.wts= 0.858969 1.14062 1.65873 0.820581 1.13167 2.54726 1.19518 1.33118 0.731484 1.35689 0.631733 1.51939 1.41345 1.18308 1.18551 1.48172 0.754294 1.47935 4.99386 2.02013 1.37654 1.4196 1.52974 1.23407 1.45528 1.92803 3.41279 1.47067 1.31344 0.619713 3.40102 1.41993 1.02585 1.62678 0.805348 2.37768 1.22713 1.61639 0.944929 0.943946 0.604656 2.63659 0.712151 0.93814 0.504586 1.18465 2.11263 1.68644 0.889553 1.54303 2.11145 2.62408 0.89644 4.40635 1.61337 2.86965 1.85543 1.08878 2.35056 1.15685 1.89693 1.71553 0.967898 0.74777 0.542605 2.06346 1.37512 0.798472 1.4274 1.58397 0.925527 1.01102 1.16167 0.769717 0.763419 2.18131 3.37601 1.02557 1.06253 1.5317 1.59942 1.43611 1.16262 1.87361 1.47495 2.10399 0.651287 2.33347 0.389444 1.77422 1.22238 1.0366 2.11331 0.655816 0.277952 2.34611 0.753204 1.1398 2.25666 0.776551 
+PMT# 1 Cer.wts= 0.56887 0.255252 0.471138 0.38469 0.46787 0.633026 0.89182 0.493987 1.32805 0.969701 0.255891 0.204586 0.886401 0.914571 0.644848 0.186143 1.43325 1.40281 2.69464 1.12072 0 0.734187 1.23138 1.28241 0.483366 1.84999 0.259775 0.995003 0.585544 0.5852 1.75961 0.323848 0.253682 1.1151 0.232179 1.91861 0.598262 0.664301 0.530071 0.912134 1.01075 0.441481 1.21201 0.81027 0.801875 1.31583 0.840701 0.686773 1.46853 1.05831 0.596264 1.20733 0.72453 1.13479 0.910525 0.544651 1.07414 0.248589 1.7346 0.700704 0.2446 1.42369 0.930534 1.4095 1.23762 1.417 0.469185 0.981812 0.865567 0.876387 1.44962 0.752491 0.67966 0.484627 0.596701 0.8849 0.714461 0.920565 0.287021 0.16711 1.06752 0.770121 1.0893 0.589274 0.727016 0.70992 0.407518 1.71798 0.542348 1.05137 0.912686 1.00068 0.108045 0.640801 1.03868 0.237492 0.869292 0.167291 1.04628 0.840674 
+PMT# 2 Cer.wts= 34.7663 29.2328 33.0868 245.198 20.8271 29.8371 88.9304 17.0221 32.0987 61.3647 44.9049 30.1558 21.2507 12.3987 35.2308 36.8978 82.0885 95.9804 36.5931 140.026 24.3558 34.9673 51.3439 125.768 35.1942 50.6762 133.879 22.9058 49.5228 58.2983 130.159 33.9232 17.8227 67.7603 24.4294 43.646 43.6597 31.4293 38.4287 66.7868 15.1823 28.6132 66.9252 25.6416 138.201 65.9474 66.2719 166.52 23.3725 50.2508 17.8546 34.9562 129.142 62.1676 51.9072 42.5093 15.8354 123.452 128.539 43.8752 22.8882 16.737 38.9282 31.7284 117.828 17.1186 154.302 80.0986 39.5229 86.0311 27.1291 34.7549 39.1135 33.0918 35.4083 236.583 31.1459 52.9479 72.724 12.4084 73.2525 34.5619 18.4433 49.9084 136.271 32.8324 19.8399 157.549 20.2021 17.7883 15.3881 88.8628 30.5825 23.5431 127.373 139.652 51.567 22.1713 27.6334 19.0683 
+PMT# 3 Cer.wts= 0.700961 0.487646 1.08122 1.7939 2.33176 2.47035 2.3868 1.84463 2.29936 1.32644 1.87548 1.53972 1.7941 0.936958 1.02145 0.722954 1.17346 0.832803 5.77106 1.64686 1.94397 0.995104 1.35113 1.58468 0.717498 1.33268 1.99547 0.7312 1.45404 0.837407 3.17199 1.17542 1.32583 0.877281 0.375072 1.34844 0.950204 1.63858 0.645189 1.89535 0.660903 2.91267 2.01608 1.43756 1.92617 1.74053 1.10251 1.08217 0.551531 1.32896 1.29986 3.10943 0.495544 1.75559 0.989504 2.32601 1.40213 1.40129 1.34054 0.786085 0.384146 1.14051 0.892804 1.73674 1.06618 2.02581 2.23635 1.6734 0.775713 1.40929 1.19781 2.37363 1.02307 2.10839 1.45292 1.44402 1.78793 0.701137 1.00817 1.36152 0.959228 1.88353 0.534361 1.93991 1.95384 1.5144 0.871734 0.43578 1.19735 0.826249 0.834641 2.37267 2.776 0.244343 0.658665 1.95191 0.607459 0.863859 1.32844 1.63666 
+PMT# 4 Cer.wts= 4.15215 1.11315 1.59675 1.06277 0.526275 1.57175 1.88397 1.41567 0.369957 1.65764 1.08574 1.29897 2.16206 1.01583 0.460298 1.80678 1.1929 1.82103 7.90778 0.906766 1.35378 1.98518 1.06924 1.71151 0.818021 1.45968 1.83493 0.907785 1.43511 0.989046 2.28678 1.62362 1.17358 0.969122 2.13003 3.32479 1.33786 1.40456 1.33476 1.30998 0.398853 3.09679 0.763024 1.003 1.26291 0.858566 0.740753 0.242038 0.808787 1.8795 0.647414 2.19528 0.667023 5.02195 0.752923 2.65522 1.3588 1.37585 1.86403 1.39941 0.846708 1.30445 1.31402 1.89454 1.82489 1.65578 2.62422 1.08954 0.506919 1.34415 1.85299 1.82357 1.5714 0.280833 0.929052 2.15319 1.09249 2.32242 0.976893 1.24655 1.3882 1.28454 1.14413 0.976248 0.890403 1.18329 0.762537 1.43521 1.38004 1.18868 1.56589 1.34077 0.872256 0.673031 0.742075 1.43966 1.46471 1.56114 1.08687 1.21299 
+PMT# 100 Cer.wts= 4.17573 4.75172 4.14992 4.05023 3.00117 3.54865 2.70226 5.85884 3.64533 2.78229 5.32015 3.13001 4.75496 5.36143 3.79143 2.75742 2.66029 4.55306 4.4228 3.68709 2.90949 4.70129 4.36845 3.46245 5.07049 3.80745 4.3448 3.84496 4.11055 4.03595 3.78584 4.55118 3.6494 2.61996 3.24945 3.19399 5.41635 3.62679 2.92777 3.82462 3.9937 2.54802 3.4694 3.18856 4.88066 4.01837 4.48223 3.55996 3.72483 3.8275 4.77838 4.96075 3.65032 4.42038 3.19655 2.9422 5.15407 2.76765 2.55643 2.89769 3.83551 3.86505 3.79119 3.72479 3.91566 2.2301 7.47754 2.62617 3.60881 4.56013 3.36557 3.71102 2.2863 4.44057 3.30203 2.36131 2.65003 4.58595 5.22713 4.06543 3.84167 4.206 3.26726 3.38659 5.62944 2.81967 6.0558 3.46995 3.7605 4.01665 4.81685 3.50407 4.68646 2.29039 1.98389 4.39935 1.87917 3.71264 2.27278 3.77599 
+PMT# 101 Cer.wts= 0.699948 0 0 2.35925 3.66323 0.193752 5.70937 3.59814 1.95328 1.25635 0.357946 0 0.642526 1.93984 0 4.00143 0 0.471013 0 0.133705 0 1.72389 0.250178 0.144313 1.47147 0.434378 0 0 0.244365 0.294234 0.00688702 0 0 0 0.186705 0.396876 0 0.388542 0 2.41043 0.216388 0.25722 0 0 0 0.602877 0.654756 0 0.128036 0 0 0.184452 1.91396 0.956911 0 0 0.246531 0 0.0201904 0.183031 1.83948 1.55581 0.280862 1.2457 1.58185 0 1.48392 2.47494 0.526223 0.231917 0.0605901 0.405814 0.056408 8.27348 0.256545 13.5827 0 0 0.475135 1.52446 0 0 0.31157 0.0691303 0 0.22582 0.925988 0 0 0 0.071692 0.302079 0.241569 0.0550877 0 0 0 0.396949 0.752663 0.988088 
+PMT# 102 Cer.wts= 0.428241 0.566349 0.000342244 0.0584298 0.785061 0.187072 0.356109 0.322647 0.640175 0.016152 0 0.330448 0.0157841 0.302354 0.219685 0.200982 0.23375 0.536075 0.2267 0.408085 0.78083 1.2536 0.688017 0 0.619015 0.458348 0.326683 0.123743 0.211078 0.04016 0.194105 0.055347 0.122467 0.838835 0.451427 0.16932 0.462174 0.462373 0.162809 0.697289 0.36818 0.419943 0 0.171016 0.242347 0.36919 0.22433 0.512695 0.257936 1.64597 0.0590897 0.540226 0.635525 0.289626 0.607055 0.0274205 0.220122 0.471073 0.272064 0.570801 0.286696 0.218022 0.245779 0.360906 0.525165 0.226071 0.46413 0.875378 0.113489 0.548532 0.49765 0.036933 0.416157 0.577135 0.63915 0.534329 0 0.77516 0.177585 0.848589 0.0500294 0.0952866 0.458839 0.481749 0.490157 0.0363109 0.768272 0.00420214 0.0600261 0.452548 0.46598 0.0507854 0.0213814 0.0638056 0.00781497 0.0940943 0.632528 0.111923 0.0577988 0.623603 
+PMT# 103 Cer.wts= 1.92989 0.68526 1.58719 1.0772 2.08372 1.97405 2.15177 0.891851 0.618118 0.987394 0.732983 1.40065 1.79904 1.23997 1.18282 0.902238 2.33004 1.12547 1.95376 1.03889 1.08551 0.811042 0.912081 1.02062 1.1815 1.62696 0.809895 1.89999 1.49154 1.18385 1.17177 0.597827 1.64216 1.17748 1.02951 2.285 1.58837 1.78507 0.70541 1.15007 1.16131 1.63127 1.99607 0.501972 0.876289 0.95735 0.965833 1.07758 0.978969 1.7329 1.40803 2.13347 1.97598 1.39758 1.44428 0.953801 0.79742 1.21124 2.0283 1.06867 1.11474 1.84647 2.35299 0.235031 1.19952 0.908502 1.52046 1.12738 0.910643 1.33033 1.45084 0.49435 0.991885 1.156 1.55499 0.911739 0.928048 1.5072 0.913224 1.2538 1.86287 0.742199 1.39024 1.11589 0.326157 0.424772 1.33137 1.15728 1.05762 1.37697 0.893729 1.09892 1.2625 1.42866 1.07934 0.58138 1.3122 1.36554 1.82587 2.82358 
+PMT# 104 Cer.wts= 1.13794 1.03145 1.23517 1.28908 2.06696 1.01726 1.24926 1.97254 0.648099 2.4945 1.38044 1.51204 1.1366 0.637571 0.916165 1.15323 0.499108 2.05952 1.4622 1.31984 1.04286 1.53818 0.923199 0.699929 1.70627 0.748619 2.95801 1.96282 0.670055 0.536107 1.42257 1.53649 1.32577 0.834078 0.788867 1.74204 0.700363 0.530784 1.22112 1.11191 2.5785 1.25651 1.5179 1.03113 2.14105 0.51075 1.73257 2.52203 0.530662 0.671711 0.822278 1.05509 0.527534 1.95756 1.19643 1.26957 1.05031 1.02063 1.23478 1.27293 1.31698 0.639178 1.64227 1.10012 2.17306 1.68852 1.69017 1.8171 0.84551 0.524115 2.06782 1.67289 1.51477 0.558368 0.780686 0.463901 0.792098 1.06284 1.17658 1.53647 1.02829 1.35535 0.915872 2.02449 2.19658 2.09534 2.03373 1.21174 0.900392 0.552396 1.82332 0.869454 1.6851 0.816046 1.23349 1.40755 2.47841 0.473255 1.4551 0.875673 
+
+ Summary data for 100 events 
+ PMT hits/evt  Wts/evt  Cer/evt CerW/evt  Sci/evt SciW/evt
+   0     13.3     2.59     7.78     1.49      5.5      1.1
+   1      7.2     1.43     4.22    0.834     2.98    0.591
+   2      811     63.1      784       58       26     5.12
+   3     12.7     2.19     8.77     1.43      3.9    0.753
+   4       13     2.24     9.01     1.47     4.02    0.769
+ 100     30.5     4.88     25.1     3.81     5.34     1.07
+ 101       33     5.79     7.88    0.805     25.1     4.99
+ 102      8.5    0.882     5.83    0.353     2.67     0.53
+ 103     11.5     2.12     7.21     1.27     4.25    0.842
+ 104     11.8     2.17     7.35     1.29     4.45     0.88
+Graphics systems deleted.
+Visualization Manager deleting...
+Total navigation history collections cleaned: 13

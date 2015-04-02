@@ -1,0 +1,19 @@
+/control/verbose 2
+/tracking/verbose 0
+# avoid all those annoying 'FresnelRefraction' messages
+/process/setVerbose 0 OpBoundary
+# avoid all other optical photon messages
+/process/setVerbose 0 Cerenkov
+/process/setVerbose 0 Scintillation
+/process/setVerbose 0 OpAbsorption
+/process/setVerbose 0 OpRayleigh
+#  I like this view
+/vis/viewer/set/viewpointThetaPhi 90. 0.
+#
+# cosmic muon
+/gun/particle mu+
+/gun/energy 5 GeV
+/gun/position 0 0 3.5 cm
+/gun/direction 0 0 -1
+#
+/run/beamOn 1
