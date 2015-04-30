@@ -36,7 +36,7 @@
 OnetonUserTrackInformation::OnetonUserTrackInformation()
   : fDirChanges(0), fCosIniFin(-2.), fBoundaryProc(-1) {
 
-  G4cout << " Hello from OnetonUserTrackInformation " << G4endl;
+  // G4cout << " Hello from OnetonUserTrackInformation " << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

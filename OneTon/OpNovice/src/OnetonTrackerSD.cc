@@ -38,6 +38,11 @@
 #include "G4ParticleTypes.hh"
 #include "G4ParticleDefinition.hh"
 #include "G4VProcess.hh"
+
+#include "G4UserRunAction.hh"
+#include "OpNoviceRunAction.hh"
+#include "G4RunManager.hh"
+
 //#include "G4Material.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -107,20 +112,35 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep,
   newHit->SetWeight( QE->Value(Eop) );
   newHit->SetTrackID(  TrackID );
   newHit->SetParentID( aStep->GetTrack()->GetParentID());
+
   newHit->SetPmtNb(aStep->GetPreStepPoint()->GetTouchableHandle()->GetReplicaNumber(1)); // use replica instead of copy number
   newHit->SetEop( Eop );
   newHit->SetTop(aStep->GetTrack()->GetGlobalTime() );
   newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
   // fun fact: if OP created with gun, then there is no creator process!
-  G4String ProcName = "NONE";
-  if (aStep->GetTrack()->GetCreatorProcess()) ProcName = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
+  std::string ProcName = "NONE";
+  G4int ProcSubType = -99;
+  if (aStep->GetTrack()->GetCreatorProcess()) {
+    ProcName = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
+    ProcSubType = aStep->GetTrack()->GetCreatorProcess()->GetProcessSubType();
+  }
   newHit->SetProc( ProcName );
+  newHit->SetProcessSubType( ProcSubType );
 
   fHitsCollection->insert( newHit );
 
   // debugging output
   if (debug) newHit->Print();
   if (debug) aStep->GetTrack()->GetDynamicParticle()->DumpInfo();
+
+  // fill tree
+  //get run action pointer
+  OpNoviceRunAction* myRunAction = (OpNoviceRunAction*)(G4RunManager::GetRunManager()->GetUserRunAction());
+  if (debug) G4cout << " add newHit to tree. myRunAction=" << myRunAction << G4endl;
+  if(myRunAction){
+    myRunAction->Tally( newHit);
+  }
+
 
   //   prevent this OP from propagating further and being double counted
   //aStep->GetTrack()->SetTrackStatus(fStopAndKill);

@@ -37,6 +37,16 @@
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh"
 
+#include "G4UserRunAction.hh"
+
+//#include "TH1.h"
+
+#include "TFile.h"
+#include <sstream>
+#include "TTree.h"
+#include "TROOT.h"
+
+
 #include <map>
 #include <vector>
 #include <iomanip>
@@ -68,14 +78,31 @@ void OpNoviceRunAction::BeginOfRunAction(const G4Run* run)
   
   //inform the runManager to save random number seed
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
+  rootFileName = "../output/runX.root";
+  rootFile = new TFile(rootFileName.c_str(),"RECREATE","Oneton Sim Output");
+  rootTree = new TTree("Results", "Tree of results from Oneton sim.");
+//  OnetonTrackerHit* aHit = new OnetonTrackerHit();
+
+
+  rootTree->Branch("newHit","OnetonTrackerHit", &newHit);
+
+
 }
 
+void OpNoviceRunAction::Tally( OnetonTrackerHit* aHit)
+{
+  newHit = aHit;
+  rootTree->Fill();
+}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void OpNoviceRunAction::EndOfRunAction(const G4Run* run)
 {
   G4int nofEvents = run->GetNumberOfEvent();
   if (nofEvents == 0) return;
+
+  rootFile->Write();
+  rootFile->Close();
   
   /*
   // Run conditions

@@ -80,10 +80,10 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
                                               GetCurrentEvent()->GetEventID();
 
   if (eventNumber != fEventNumber) {
-     G4cout << " Number of Scintillation Photons in previous event: "
-            << fScintillationCounter << G4endl;
-     G4cout << " Number of Cerenkov Photons in previous event: "
-            << fCerenkovCounter << G4endl;
+    if (false) {
+      G4cout << " Number of Scintillation Photons in previous event: "  << fScintillationCounter << G4endl;
+      G4cout << " Number of Cerenkov Photons in previous event: "       << fCerenkovCounter << G4endl;
+    }
      fEventNumber = eventNumber;
      fScintillationCounter = 0;
      fCerenkovCounter = 0;
@@ -109,6 +109,7 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
     G4ProcessManager* pm = step->GetTrack()->GetDefinition()->GetProcessManager();
     G4int nprocesses = pm->GetProcessListLength();
     G4ProcessVector* pv = pm->GetProcessList();
+    if (debug) G4cout << " processmanager " << pm << " #processes " << nprocesses << " processvector " << pv << G4endl;
     G4int i;
     for( i=0;i<nprocesses;i++){
       if (debug)  G4cout << "stepaction " << ParticleName << " process#,name " << i << ", " << (*pv)[i]->GetProcessName() << G4endl;
@@ -118,7 +119,10 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
       }
     }
   }
+  if (debug) G4cout << " boundary " << boundary << G4endl;
+  if (boundary) {
     boundaryStatus=boundary->GetStatus();
+    if (debug)  G4cout << " boundaryStatus " << boundaryStatus  << G4endl;
     G4String preProc = "NONE";
     if (preStep->GetProcessDefinedStep()) preProc = preStep->GetProcessDefinedStep()->GetProcessName();
     if (debug)  G4cout << " boundaryStatus " << boundaryStatus 
@@ -192,10 +196,10 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
         //trackInformation->IncReflections();
 	//        fExpectedNextStatus=StepTooSmall;
       default:
-	G4cout << " default boundaryStatus " << boundaryStatus << G4endl;
+	if (debug) G4cout << " default boundaryStatus " << boundaryStatus << G4endl;
         break;
       }
-
+  }
   // --- end lifted from...
 
 

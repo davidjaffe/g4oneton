@@ -53,9 +53,10 @@ void OnetonTrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 }
 void OnetonTrackingAction::PostUserTrackingAction(const G4Track* aTrack)
 {
+  G4bool debug = false;
   OnetonUserTrackInformation* info = (OnetonUserTrackInformation*)(aTrack->GetUserInformation());
-  G4cout << "aTrack " << aTrack << G4endl;
-  G4cout << "track info: trk# " << aTrack->GetTrackID() << " parent " << aTrack->GetParentID() 
+  if (debug) G4cout << "aTrack " << aTrack << G4endl;
+  if (debug) G4cout << "track info: trk# " << aTrack->GetTrackID() << " parent " << aTrack->GetParentID() 
 	 << " " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
 	 << " #DirChanges " << info->GetDirChangeCount() 
 	 << " cos(ini,fin) " << info->GetCosIniFin() 

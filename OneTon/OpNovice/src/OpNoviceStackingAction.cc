@@ -42,7 +42,7 @@
 
 OpNoviceStackingAction::OpNoviceStackingAction()
   : G4UserStackingAction(),
-    fprescaleFactor(100.), fthresFactor(-1.), // FIXME: OPTICAL PHOTON PRESCALE FACTOR SHOULD BE DYNAMIC 
+    fprescaleFactor(0.), fthresFactor(-1.), // FIXME: OPTICAL PHOTON PRESCALE FACTOR SHOULD BE DYNAMIC 
     fScintillationCounter(0), fkilledScintillationCounter(0), fCerenkovCounter(0),    fkilledCerenkovCounter(0)
 {
 
@@ -93,14 +93,14 @@ void OpNoviceStackingAction::NewStage()
 {
   G4double frac = -1.;
   if (fScintillationCounter>0) frac = float(fScintillationCounter-fkilledScintillationCounter)/float(fScintillationCounter);
-  G4cout << "Number of Scintillation photons produced in this event : "
+  G4cout << "Scint OP/evt= "
          << fScintillationCounter 
 	 << " killed: "<< fkilledScintillationCounter 
-	 << " propagated (fraction): " << fScintillationCounter-fkilledScintillationCounter << "("<< frac <<")"
-	 << G4endl;
+	 << " propagated (fraction): " << fScintillationCounter-fkilledScintillationCounter << "("<< frac <<")" ;
+    //	 << G4endl;
   frac = -1.;
   if (fCerenkovCounter>0) frac = float(fCerenkovCounter-fkilledCerenkovCounter)/float(fCerenkovCounter);
-  G4cout << "Number of Cerenkov photons produced in this event : "
+  G4cout << " Cer OP/evt= "
          << fCerenkovCounter 
 	 << " killed: "<< fkilledCerenkovCounter 
 	 << " propagated (fraction): " << fCerenkovCounter-fkilledCerenkovCounter << "("<< frac <<")"

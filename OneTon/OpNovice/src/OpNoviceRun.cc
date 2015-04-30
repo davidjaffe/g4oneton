@@ -59,7 +59,7 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
 {
   G4int evtNb = event->GetEventID();
   
-  G4cout << "---> end of event: " << evtNb << G4endl;
+  G4cout << "---> end of event: " << evtNb ; // nPMT
 
   
   //Hits collections
@@ -74,7 +74,7 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
   OnetonTrackerSD* aPmtSD  = static_cast<OnetonTrackerSD*>(SDman->FindSensitiveDetector(detName));
 
   G4int nPMT = aPmtSD->PMTnumbers.size();
-  //  G4cout << " nPMT " << nPMT << G4endl;
+  G4cout << " nPMT " << nPMT ; // nHits
 
   // do some counting of hits, unweighted and weighted, by process
   // initialize all maps to zero entries for each PMT
@@ -88,6 +88,8 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
   }
  
   G4int N = HC->entries();
+  G4cout << " nHit " << N ; // totWt
+  G4double totWt = 0.;
   for ( G4int i=0; i<N; i++) {
     G4int pn = (*HC)[i]->GetPmtNb();
     if (PMThits.find(pn)==PMThits.end()) { 
@@ -95,19 +97,21 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
     }
     PMThits[pn] += 1.;
     PMTwts[pn]  += (*HC)[i]->GetWeight();
+    totWt       += (*HC)[i]->GetWeight();
     if ( (*HC)[i]->GetProc()=="Cerenkov" ) {
       PMThitsC[pn] += 1.;
       PMTwtsC[pn]  += (*HC)[i]->GetWeight();
     }
   }
+  G4cout << " nWt " << totWt << G4endl;
 	 //G4cout << "\n From RecordEvent " << G4endl;
   for (std::map<G4int, G4double>::const_iterator it = PMThits.begin(); it != PMThits.end(); ++it){
-    G4cout << "PMT# " << it->first 
-	   << " #hits= " << it->second 
-	   << " #Cer.hits= " << PMThitsC.find(it->first)->second
-	   << " sum wts " << PMTwts.find(it->first)->second
-	   << " sum Cer.wts " << PMTwtsC.find(it->first)->second
-	   << G4endl;
+    if (false) G4cout << "PMT# " << it->first 
+		      << " #hits= " << it->second 
+		      << " #Cer.hits= " << PMThitsC.find(it->first)->second
+		      << " sum wts " << PMTwts.find(it->first)->second
+		      << " sum Cer.wts " << PMTwtsC.find(it->first)->second
+		      << G4endl;
 
     // store per event info 
     PMThpe[it->first].push_back(it->second);

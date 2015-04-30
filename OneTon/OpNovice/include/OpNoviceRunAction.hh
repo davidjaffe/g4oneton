@@ -32,21 +32,35 @@
 #define OpNoviceRunAction_h 1
 
 #include "G4UserRunAction.hh"
+#include "OnetonTrackerHit.hh"
 #include "globals.hh"
 
+#include "TH1.h"
+
+
 class G4Run;
+
+class TTree;
+class TFile;
 
 /// Run action class
 
 class OpNoviceRunAction : public G4UserRunAction
 {
-  public:
-    OpNoviceRunAction();
-    virtual ~OpNoviceRunAction();
+public:
+  OpNoviceRunAction();
+  virtual ~OpNoviceRunAction();
     
-    virtual G4Run* GenerateRun();
-    virtual void BeginOfRunAction(const G4Run*);
-    virtual void   EndOfRunAction(const G4Run*);
+  virtual G4Run* GenerateRun();
+  virtual void BeginOfRunAction(const G4Run*);
+  virtual void   EndOfRunAction(const G4Run*);
+  virtual void Tally( OnetonTrackerHit*);
+private:
+  TFile* rootFile;
+  G4String rootFileName;
+  TTree* rootTree;
+  OnetonTrackerHit* newHit;
+  std::vector<OnetonTrackerHit*> bunchOfHits;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

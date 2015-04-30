@@ -45,11 +45,11 @@ G4ThreadLocal G4Allocator<OnetonTrackerHit>* OnetonTrackerHitAllocator=0;
 
 OnetonTrackerHit::OnetonTrackerHit()
  : G4VHit(),
-   fTrackID(-1),
+   fTrackID(-1), 
    fParentID(-1),
    fPmtNb(-1),
    fEop(0.), fTop(0.),
-   fPos(G4ThreeVector()), fProc("NONE")
+   fPos(G4ThreeVector()), fProc("NONE"), fWt(0.), fPSType(-99)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -67,6 +67,9 @@ OnetonTrackerHit::OnetonTrackerHit(const OnetonTrackerHit& right)
   fEop      = right.fEop;
   fTop      = right.fTop;
   fPos       = right.fPos;
+  fWt        = right.fWt;
+  fProc      = right.fProc;
+  fPSType    = right.fPSType;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -79,6 +82,9 @@ const OnetonTrackerHit& OnetonTrackerHit::operator=(const OnetonTrackerHit& righ
   fEop      = right.fEop;
   fTop      = right.fTop;
   fPos       = right.fPos;
+  fWt        = right.fWt;
+  fProc      = right.fProc;
+  fPSType    = right.fPSType;
 
   return *this;
 }
@@ -113,7 +119,7 @@ void OnetonTrackerHit::Print()
 {
   G4cout
     << " trackID: " << fTrackID << " parentID: " << fParentID 
-    << " process: " << fProc
+    << " process: " << fProc << " procSubType: " << fPSType
     << " PmtNb: " << fPmtNb
     << " Weight: " << fWt
     << " Eop: " << std::setw(7) << G4BestUnit(fEop,"Energy")

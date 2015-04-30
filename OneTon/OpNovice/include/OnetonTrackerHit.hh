@@ -66,8 +66,9 @@ class OnetonTrackerHit : public G4VHit
   void SetEop     (G4double eop)      { fEop = eop; };
   void SetTop     (G4double top)      { fTop = top; } ; 
   void SetPos     (G4ThreeVector xyz) { fPos = xyz; };
-  void SetProc    (G4String proc)     { fProc= proc; };
+  void SetProc    (std::string proc)     { fProc= proc; };
   void SetWeight  (G4double wt)       { fWt  = wt;  };
+  void SetProcessSubType (G4int pst)  { fPSType = pst; } ;
 
     // Get methods
     G4int GetTrackID() const     { return fTrackID; };
@@ -76,8 +77,9 @@ class OnetonTrackerHit : public G4VHit
     G4double GetEop() const     { return fEop; };
     G4double GetTop() const     { return fTop; };
     G4ThreeVector GetPos() const { return fPos; };
-    G4String GetProc() const { return fProc;} ;
+    std::string GetProc() const { return fProc;} ;
     G4double GetWeight() const { return fWt;} ;
+    G4int GetProcessSubType() const { return fPSType;} ;
 
   private:
 
@@ -87,8 +89,9 @@ class OnetonTrackerHit : public G4VHit
       G4double      fEop;
       G4double      fTop;
       G4ThreeVector fPos;
-      G4String      fProc;
+      std::string      fProc;
       G4double      fWt;
+      G4int         fPSType; // process subtype
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
