@@ -29,7 +29,8 @@
 /// \brief Implementation of the OpNoviceRunAction class
 
 #include "OpNoviceRunAction.hh"
-#include "OpNovicePrimaryGeneratorAction.hh"
+//#include "OpNovicePrimaryGeneratorAction.hh"
+#include "PrimaryGeneratorAction.hh" 
 #include "OpNoviceRun.hh"
 
 #include "G4Run.hh"
@@ -83,15 +84,24 @@ void OpNoviceRunAction::BeginOfRunAction(const G4Run* run)
   rootTree = new TTree("Results", "Tree of results from Oneton sim.");
 //  OnetonTrackerHit* aHit = new OnetonTrackerHit();
 
-
+  // initialize pointers according to https://root.cern.ch/root/htmldoc/TTree.html, pointers should not be destroyed until TTree deleted
+  //OnetonTrackerHit* aHit = 0;
   rootTree->Branch("newHit","OnetonTrackerHit", &newHit);
-
+  //  OnetonUserTrackInformation* tInfo = 0;
+  rootTree->Branch("info","OnetonUserTrackInformation", &info);
 
 }
 
 void OpNoviceRunAction::Tally( OnetonTrackerHit* aHit)
 {
+  G4cout << "RunAction::Tally newHit" << G4endl;
   newHit = aHit;
+  rootTree->Fill();
+}
+void OpNoviceRunAction::TallyInfo( OnetonUserTrackInformation* tInfo)
+{
+  G4cout << "RunAction::TallyInfo" << G4endl;
+  info = tInfo;
   rootTree->Fill();
 }
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -143,6 +153,8 @@ void OpNoviceRunAction::EndOfRunAction(const G4Run* run)
      << "  The run was " << nofEvents << G4endl;
   }      
 
+  if (0){
+
     G4cout << "\n End of run info " << G4endl;
 
     std::map<G4int, G4double> Ahpe, Awpe, AhpeC, AwpeC ;
@@ -190,7 +202,7 @@ void OpNoviceRunAction::EndOfRunAction(const G4Run* run)
       G4cout	   << G4endl;
       AwpeC[it->first] = sum/float(nofEvents);
     }
-
+  
     // report averages per event
     G4cout << "\n Summary data for " << nofEvents << " events " << G4endl;
     G4cout << setw(4) << "PMT" 
@@ -209,7 +221,7 @@ void OpNoviceRunAction::EndOfRunAction(const G4Run* run)
 	     << setw(9) << setprecision(isz) << it->second-AhpeC[it->first] << setw(9) << setprecision(isz) << Awpe[it->first] - AwpeC[it->first] 
 	     << G4endl;
     }
-
+  }
 
 }
 

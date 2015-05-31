@@ -76,8 +76,12 @@ OpNoviceDetectorConstruction::OpNoviceDetectorConstruction()
   // PMT : dimensions of R7723 from Hamamatsu spec sheet
   fPMT_outerrad = 0.5*52.*mm;
   fPMT_z = 0.5*112.*mm;
+  // hodoscopes : upper 'telescope' is mostly 4" x 4" x 1cm thick plastic scintillator
+  ftele_thick0 = 0.5*(1.*cm);
+  ftele_width0 = 0.5*(4.*2.54*cm);
+  ftele_length0= 0.5*(4.*2.54*cm);
   // increase debug output with larger positive integer values
-  fdebug = 0; 
+  fdebug = 1; 
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -89,6 +93,7 @@ void OpNoviceDetectorConstruction::ConstructSDandField()
 {
   // Sensitive detectors
 
+  // PMTs
   G4String PmtSDname = "Oneton/PMT";
   OnetonTrackerSD* aPmtSD = new OnetonTrackerSD(PmtSDname,"PmtHitsCollection");
 
@@ -100,16 +105,22 @@ void OpNoviceDetectorConstruction::ConstructSDandField()
   // loop over volumes. daughters are physical volumes
   G4LogicalVolume* myLVolume = fexpHall_phys->GetLogicalVolume(); 
   for (G4int i=0; i < myLVolume->GetNoDaughters(); i++)  {
-    if (fdebug>0) G4cout << "daughter i="<<i<< " " <<myLVolume->GetDaughter(i)->GetName() << G4endl;
+    if (fdebug>0) G4cout << "daughter i="<<i<< " " <<myLVolume->GetDaughter(i)->GetName() ;//<< G4endl;
     if (myLVolume->GetDaughter(i)->GetName() == "PMT"){
       G4int cn = myLVolume->GetDaughter(i)->GetCopyNo();
-      if (fdebug>0) G4cout << " copy# " << cn << G4endl;
+      if (fdebug>0) G4cout << " copy# " << cn ;//<< G4endl;
       aPmtSD->PMTnumbers.push_back(cn);
     }
+    G4cout << G4endl;
   }
   G4cout << " OpNoviceDetectorConstruction::ConstructSDandField: number of PMTs is " << aPmtSD->PMTnumbers.size() << G4endl;
     
 
+  // Hodoscopes
+  G4String HodoSDname = "Oneton/Hodo";
+  OnetonTrackerSD* aHodoSD = new OnetonTrackerSD(HodoSDname,"HodoHitsCollection");
+  SetSensitiveDetector("Tele0_log",aHodoSD, true); 
+  SetSensitiveDetector("Tele1_log",aHodoSD, true); // Is this allowed?
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -210,6 +221,11 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4Element* Al = new G4Element("Aluminum", "Al", z=13,a=26.98*g/mole);
   G4Material* Photocathode = new G4Material("Photocathode",density=2.70*g/cm3, nelements=1);
   Photocathode->AddElement(Al,1);
+
+  // plasticscintillator : use polystyrene properties from RPP 2012. [C5H6CHCH2]n
+  G4Material* PlasticScintillator = new G4Material("PlasticScintillator", density=1.06*g/cm3, nelements=2);
+  PlasticScintillator->AddElement(H,1);
+  PlasticScintillator->AddElement(C,1);
 
 //
 // ------------ Generate & Add Material Properties Table ------------
@@ -479,11 +495,8 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 //
   G4Box* expHall_box = new G4Box("World",fExpHall_x,fExpHall_y,fExpHall_z);
 
-  G4LogicalVolume* expHall_log
-    = new G4LogicalVolume(expHall_box,air,"World",0,0,0);
-
-  G4VPhysicalVolume* expHall_phys
-    = new G4PVPlacement(0,G4ThreeVector(),expHall_log,"World",0,false,0);
+  G4LogicalVolume* expHall_log = new G4LogicalVolume(expHall_box,air,"World",0,0,0);
+  G4VPhysicalVolume* expHall_phys = new G4PVPlacement(0,G4ThreeVector(),expHall_log,"World",0,false,0);
   fexpHall_phys = expHall_phys;
 // The Water Tank
 //
@@ -566,6 +579,31 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4VisAttributes* PMTpc_att = new G4VisAttributes( G4Colour(1.,0.,1., 0.3) ); // magenta, partially transparent
   PMTpc_att->SetForceSolid(true);
   PMTpc_log->SetVisAttributes(PMTpc_att);
+
+  // define plastic scintillator hodoscopes 
+  G4Box* Tele0 = new G4Box("Tele0", ftele_width0, ftele_length0, ftele_thick0);
+  G4LogicalVolume* Tele0_log = new G4LogicalVolume(Tele0, PlasticScintillator,"Tele0_log", 0,0,0);
+  G4Box* Tele1 = new G4Box("Tele1", fExpHall_x-1.*cm, fExpHall_y-1.*cm, 0.5*cm); // large "hodoscope" on floor to record position of muon on floor
+  G4LogicalVolume* Tele1_log = new G4LogicalVolume(Tele1, PlasticScintillator,"Tele1_log", 0,0,0);
+  G4double zroof = fExpHall_z - 1.*cm ; //just under roof
+  G4double zfloor= -fExpHall_z + 1.*cm; //just above floor
+  G4double xtele0_0 = 10.*cm; 
+  G4double ytele0_0 = 0.*cm;
+  G4double ytele0_1 = 0.*cm;
+  G4double xtele0_1 = fcyl_outerrad - 10.*cm;
+  new G4PVPlacement(0, G4ThreeVector(xtele0_0, ytele0_0, zroof),     Tele0_log, "Hodo", expHall_log,false,0); // under roof
+  new G4PVPlacement(0, G4ThreeVector(xtele0_0, ytele0_0, ztop),      Tele0_log, "Hodo", expHall_log,false,1); // on top of cylinder
+  new G4PVPlacement(0, G4ThreeVector(xtele0_1, ytele0_1, zroof),     Tele0_log, "Hodo", expHall_log,false,2); // under roof
+  new G4PVPlacement(0, G4ThreeVector(xtele0_1, ytele0_1, ztop),      Tele0_log, "Hodo", expHall_log,false,3); // on top of cylinder
+  new G4PVPlacement(0, G4ThreeVector(      0.,       0., zfloor),    Tele1_log, "Hodo", expHall_log,false,10); // on floor
+  G4VisAttributes* Tele0_att = new G4VisAttributes( G4Colour(0.7, 0.4, 0.1, 0.3) ) ; // brown, partially transparent
+  Tele0_att->SetForceSolid(true);
+  Tele0_log->SetVisAttributes(Tele0_att);
+  G4VisAttributes* Tele1_att = new G4VisAttributes( G4Colour(0.7, 0.4, 0.1, 0.3) ) ; // brown, partially transparent
+  Tele1_att->SetForceSolid(true);
+  Tele1_log->SetVisAttributes(Tele0_att);
+  
+
 //
   G4bool useSurfaces = false;
   if (!useSurfaces) G4cout << "SUPPRESS use of surfaces " << G4endl;

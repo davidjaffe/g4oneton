@@ -55,16 +55,24 @@ void OnetonTrackingAction::PostUserTrackingAction(const G4Track* aTrack)
 {
   G4bool debug = false;
   OnetonUserTrackInformation* info = (OnetonUserTrackInformation*)(aTrack->GetUserInformation());
-  if (debug) G4cout << "aTrack " << aTrack << G4endl;
-  if (debug) G4cout << "track info: trk# " << aTrack->GetTrackID() << " parent " << aTrack->GetParentID() 
-	 << " " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
-	 << " #DirChanges " << info->GetDirChangeCount() 
-	 << " cos(ini,fin) " << info->GetCosIniFin() 
-	 << " boundaryProc " << info->GetBoundaryProc()
-	 << " track length " << G4BestUnit( aTrack->GetTrackLength(), "Length")
-	 << " track origin " << aTrack->GetVertexPosition()
-
-	 << G4endl; 
+  if (debug) G4cout << "aTrack " << aTrack 
+		    << "track info: trk# " << aTrack->GetTrackID() << " parent " << aTrack->GetParentID() 
+		    << " " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
+		    << " #DirChanges " << info->GetDirChangeCount() 
+		    << " cos(ini,fin) " << info->GetCosIniFin() 
+		    << " boundaryProc " << info->GetBoundaryProc()
+		    << " track length " << G4BestUnit( aTrack->GetTrackLength(), "Length")
+		    << " track origin " << aTrack->GetVertexPosition()
+		    << " start vtx " << info->GetStartVtx()
+		    << " final vtx " << info->GetFinalVtx()
+		    << " start p " << info->GetStartMomentum()
+		    << " final p " << info->GetFinalMomentum()
+		    << " PDG " << info->GetPDG()
+		    << " Fate&Origin " << info->GetFateOrigin()
+		    << " evtNb " << info->GetEvtNb()
+		    << " liquid pathlen " << info->GetLiquidPathLength()
+		    << " liquid Eloss " << info->GetLiquidELoss()
+		    << G4endl; 
     
 }
 

@@ -43,6 +43,10 @@
 #include "OpNoviceRunAction.hh"
 #include "G4RunManager.hh"
 
+#include "G4UnitsTable.hh"
+
+#include "OnetonUserTrackInformation.hh"
+
 //#include "G4Material.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -52,6 +56,7 @@ OnetonTrackerSD::OnetonTrackerSD(const G4String& name,
    fHitsCollection(NULL)
 {
   collectionName.insert(hitsCollectionName);
+  G4cout << "OnetonTrackerSD name " << name << " hitsCollectionName " << hitsCollectionName << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,87 +70,158 @@ void OnetonTrackerSD::Initialize(G4HCofThisEvent* hce)
 {
   // Create hits collection
 
-  fHitsCollection 
-    = new OnetonTrackerHitsCollection(SensitiveDetectorName, collectionName[0]); 
+  fHitsCollection = new OnetonTrackerHitsCollection(SensitiveDetectorName, collectionName[0]); 
 
   // Add this collection in hce
 
   G4int hcID = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
   hce->AddHitsCollection( hcID, fHitsCollection ); 
+  // G4cout << "OnetonTrackerSD::Initialize hcID " << hcID << " SensitiveDetectorName " << SensitiveDetectorName << " collectionName[0] " << collectionName[0] << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, 
-                                     G4TouchableHistory*)
+G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
 { 
 
-  G4bool debug = false;
+  G4int eventNumber = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+  //G4cout << "\n event# " << eventNumber << "\n " << G4endl;
+
+  G4bool debug = true;
+
+  G4bool killIt = true; // does true kill particle?
+  OnetonTrackerHit* newHit = new OnetonTrackerHit(); // might not use this
+
   //need to know if this is an optical photon
-  if(aStep->GetTrack()->GetDefinition()
-     != G4OpticalPhoton::OpticalPhotonDefinition()) return false;
+  G4bool opticalPhoton = aStep->GetTrack()->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition();
 
+  G4bool goodHit = opticalPhoton; // all OP are good, only particles leaving energy in hodo are good
 
-  OnetonTrackerHit* newHit = new OnetonTrackerHit();
-
-  // check to see if this optical photon has already been added to the hits collection.
-  G4int TrackID = aStep->GetTrack()->GetTrackID();
-  G4int nofHits = fHitsCollection->entries();
-  for ( G4int i=0; i<nofHits; i++ ) {
-    if ((*fHitsCollection)[i]->GetTrackID()==TrackID) {
-      G4cout << " OnetonTrackerSD::ProcessHits ERROR This TrackID " << TrackID << " has already been processed !!!!! " << G4endl;
-      aStep->GetTrack()->GetDynamicParticle()->DumpInfo();
+  if( !opticalPhoton) { // not an optical photon, create newhit for particles that deposit energy in a hodoscope
+    killIt = false;
+    G4double Edep = aStep->GetTotalEnergyDeposit() - aStep->GetNonIonizingEnergyDeposit(); // ionizing energy deposited
+    G4Track* aTrack = aStep->GetTrack();
+    if ( Edep>0 && aStep->GetPreStepPoint()->GetTouchableHandle()->GetVolume(0)->GetName()=="Hodo" ) {
+      newHit->SetEop( Edep );
+      newHit->SetTop(  aTrack->GetGlobalTime() );
+      newHit->SetPmtNb ( aStep->GetPreStepPoint()->GetTouchableHandle()->GetCopyNumber(0) );
+      newHit->SetPos ( aStep->GetPostStepPoint()->GetPosition());
+      newHit->SetTrkLen( aTrack->GetTrackLength() ) ;
+      newHit->SetTrkOrigin( aTrack->GetVertexPosition() ) ;
+      newHit->SetEvtNb( eventNumber );
+      newHit->SetWeight( 1. );
+      newHit->SetTrackID(  aTrack->GetTrackID() );
+      newHit->SetParentID( aTrack->GetParentID());
+      newHit->SetProc( "Hodo" );
+      newHit->SetProcessSubType( aTrack->GetDynamicParticle()->GetPDGcode() );
+      goodHit = true;
     }
+    /// 
+    if (debug) {
+      G4Material* matt1 = aStep->GetPreStepPoint()->GetMaterial();
+      G4Material* matt2 = aStep->GetPostStepPoint()->GetMaterial();
+      assert(matt1);
+      assert(matt2);
+      G4cout << " track# " << aTrack->GetTrackID() << " name " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
+	     << " pre-step material " << matt1->GetName()
+	     << " post-step material " << matt2->GetName()
+	     << " Edep_tot " << aStep->GetTotalEnergyDeposit() << " Edep_nonion " << aStep->GetNonIonizingEnergyDeposit()
+	     << " time " << aTrack->GetGlobalTime() << " KE " << aTrack->GetDynamicParticle()->GetKineticEnergy()
+	     << " copy # " << aStep->GetPreStepPoint()->GetTouchableHandle()->GetCopyNumber(0)
+	     << " volume0 " << aStep->GetPreStepPoint()->GetTouchableHandle()->GetVolume(0)->GetName()
+	     << " volume1 " << aStep->GetPreStepPoint()->GetTouchableHandle()->GetVolume(1)->GetName()
+	     << G4endl;
+    }
+
+
+    //return false;
   }
+  else { // processing of optical photon
 
-  // determine the weight = quantum efficiency to assign to this OP from the OP energy
-  // need to get the post-step material since photocathode is a surface and OP apparently doesn't stop "in" a surface
-  double Eop = aStep->GetTrack()->GetDynamicParticle()->GetKineticEnergy();
-  G4Material* mat = aStep->GetPostStepPoint()->GetMaterial();
-  assert(mat && "No material associated with step");
-  if (debug) G4cout << " material " << mat->GetName() <<  G4endl;
-  G4MaterialPropertiesTable* MPT = mat->GetMaterialPropertiesTable();
-  assert(MPT && "No materials properties table associated with material");
-  G4MaterialPropertyVector* QE = MPT->GetProperty("QUANTUM_EFFICIENCY");
-  assert(QE  && "No quantum efficiency in material properties table");
+    // check to see if this optical photon has already been added to the hits collection.
+    G4int TrackID = aStep->GetTrack()->GetTrackID();
+    G4int nofHits = fHitsCollection->entries();
+    for ( G4int i=0; i<nofHits; i++ ) {
+      if ((*fHitsCollection)[i]->GetTrackID()==TrackID) {
+	G4cout << " OnetonTrackerSD::ProcessHits ERROR This TrackID " << TrackID << " has already been processed !!!!! " << G4endl;
+	aStep->GetTrack()->GetDynamicParticle()->DumpInfo();
+      }
+    }
 
-  newHit->SetWeight( QE->Value(Eop) );
-  newHit->SetTrackID(  TrackID );
-  newHit->SetParentID( aStep->GetTrack()->GetParentID());
+    // determine the weight = quantum efficiency to assign to this OP from the OP energy
+    // need to get the post-step material since photocathode is a surface and OP apparently doesn't stop "in" a surface
+    double Eop = aStep->GetTrack()->GetDynamicParticle()->GetKineticEnergy();
+    G4Material* mat = aStep->GetPostStepPoint()->GetMaterial();
+    assert(mat && "No material associated with step");
+    if (debug) G4cout << " material " << mat->GetName() <<  G4endl;
+    G4MaterialPropertiesTable* MPT = mat->GetMaterialPropertiesTable();
+    assert(MPT && "No materials properties table associated with material");
+    G4MaterialPropertyVector* QE = MPT->GetProperty("QUANTUM_EFFICIENCY");
+    assert(QE  && "No quantum efficiency in material properties table");
 
-  newHit->SetPmtNb(aStep->GetPreStepPoint()->GetTouchableHandle()->GetReplicaNumber(1)); // use replica instead of copy number
-  newHit->SetEop( Eop );
-  newHit->SetTop(aStep->GetTrack()->GetGlobalTime() );
-  newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
-  // fun fact: if OP created with gun, then there is no creator process!
-  std::string ProcName = "NONE";
-  G4int ProcSubType = -99;
-  if (aStep->GetTrack()->GetCreatorProcess()) {
-    ProcName = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
-    ProcSubType = aStep->GetTrack()->GetCreatorProcess()->GetProcessSubType();
+    //OnetonTrackerHit* newHit = new OnetonTrackerHit();
+
+    newHit->SetEvtNb( eventNumber );
+
+    newHit->SetWeight( QE->Value(Eop) );
+    newHit->SetTrackID(  TrackID );
+    newHit->SetParentID( aStep->GetTrack()->GetParentID());
+
+    newHit->SetPmtNb(aStep->GetPreStepPoint()->GetTouchableHandle()->GetReplicaNumber(1)); // use replica instead of copy number
+    newHit->SetEop( Eop );
+    newHit->SetTop(aStep->GetTrack()->GetGlobalTime() );
+    newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
+    // fun fact: if OP created with gun, then there is no creator process!
+    std::string ProcName = "NONE";
+    G4int ProcSubType = -99;
+    if (aStep->GetTrack()->GetCreatorProcess()) {
+      ProcName = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
+      ProcSubType = aStep->GetTrack()->GetCreatorProcess()->GetProcessSubType();
+    }
+    newHit->SetProc( ProcName );
+    newHit->SetProcessSubType( ProcSubType );
+
+
+    OnetonUserTrackInformation* info = (OnetonUserTrackInformation*)(aStep->GetTrack()->GetUserInformation());
+    if (debug) G4cout << "aStep->GetTrack() " << aStep->GetTrack() 
+		      << "track info: trk# " << aStep->GetTrack()->GetTrackID() << " parent " << aStep->GetTrack()->GetParentID() 
+		      << " " << aStep->GetTrack()->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
+		      << " #DirChanges " << info->GetDirChangeCount() 
+		      << " cos(ini,fin) " << info->GetCosIniFin() 
+		      << " boundaryProc " << info->GetBoundaryProc()
+		      << " track length " << G4BestUnit( aStep->GetTrack()->GetTrackLength(), "Length")
+		      << " track origin " << aStep->GetTrack()->GetVertexPosition()
+		      << G4endl; 
+
+    newHit->SetDirChanges( info->GetDirChangeCount() ) ;
+    newHit->SetCosIF( info->GetCosIniFin() ) ;
+    newHit->SetbProc( info->GetBoundaryProc() ) ;
+    newHit->SetTrkLen( aStep->GetTrack()->GetTrackLength() ) ;
+    newHit->SetTrkOrigin( aStep->GetTrack()->GetVertexPosition() ) ;
+
+
   }
-  newHit->SetProc( ProcName );
-  newHit->SetProcessSubType( ProcSubType );
+  if (goodHit) {
+      fHitsCollection->insert( newHit );
 
-  fHitsCollection->insert( newHit );
+      // debugging output
+      if (debug) newHit->Print();
+      if (debug) aStep->GetTrack()->GetDynamicParticle()->DumpInfo();
 
-  // debugging output
-  if (debug) newHit->Print();
-  if (debug) aStep->GetTrack()->GetDynamicParticle()->DumpInfo();
+      // fill tree
+      //get run action pointer
+      OpNoviceRunAction* myRunAction = (OpNoviceRunAction*)(G4RunManager::GetRunManager()->GetUserRunAction());
+      if (debug) G4cout << " add newHit to tree. myRunAction=" << myRunAction << G4endl;
+      if(myRunAction){
+	myRunAction->Tally( newHit);
+      }
+      if (debug) G4cout << " added newHit to tree. killIt " << killIt << G4endl;
 
-  // fill tree
-  //get run action pointer
-  OpNoviceRunAction* myRunAction = (OpNoviceRunAction*)(G4RunManager::GetRunManager()->GetUserRunAction());
-  if (debug) G4cout << " add newHit to tree. myRunAction=" << myRunAction << G4endl;
-  if(myRunAction){
-    myRunAction->Tally( newHit);
+      //   prevent this OP from propagating further and being double counted
+      //aStep->GetTrack()->SetTrackStatus(fStopAndKill);
   }
-
-
-  //   prevent this OP from propagating further and being double counted
-  //aStep->GetTrack()->SetTrackStatus(fStopAndKill);
-
-  return true;
+  return killIt; //true;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

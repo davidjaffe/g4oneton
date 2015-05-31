@@ -12,8 +12,9 @@
 # this view essentially puts 1ton vessel vertical
 /vis/viewer/set/viewpointThetaPhi -80. 90.
 #
-# no scintillation
+# no scintillation, Cerenkov light generated
 /process/inactivate Scintillation
+/process/inactivate Cerenkov
 #
 # deal with lots of optical photons
 /vis/ogl/set/displayListLimit 150000
@@ -26,7 +27,7 @@
 #
 # cosmic muon. z=121cm is just under top of dark box
 /gun/particle mu+
-/gun/energy 5 GeV
+/gun/energy 25 GeV
 #/gun/position 20 30. 121. cm
 #/gun/direction 0 0 -1
 #/gun/direction -.2 0 -1
@@ -43,6 +44,13 @@
 #/gun/position 18. 18. 121. cm
 #/gun/direction 0. 0. -1.
 #
+# hit the telescope: vertical, thru centers
+/gun/position  10. 0. 122. cm
+/gun/direction 0. 0. -1.
+# hit the telescope: angled, one edge top, other edge lower
+/gun/position  15. 0. 122. cm
+/gun/direction -0.1 0 -1.
+#
 # coordinate axes
 /vis/scene/add/axes 0. 0. 0. 0.5 m  
 #
@@ -57,7 +65,7 @@
 #/vis/filtering/trajectories/particleFilter-0/invert true 
 
 #/run/beamOn 10
-/process/activate Scintillation
-#/run/beamOn 100
-/run/beamOn 1
+######/process/activate Scintillation
+/run/beamOn 10000
+#/run/beamOn 1
 

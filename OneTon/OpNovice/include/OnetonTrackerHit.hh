@@ -70,28 +70,49 @@ class OnetonTrackerHit : public G4VHit
   void SetWeight  (G4double wt)       { fWt  = wt;  };
   void SetProcessSubType (G4int pst)  { fPSType = pst; } ;
 
-    // Get methods
-    G4int GetTrackID() const     { return fTrackID; };
-    G4int GetParentID() const  { return fParentID; };
-    G4int GetPmtNb() const   { return fPmtNb; };
-    G4double GetEop() const     { return fEop; };
-    G4double GetTop() const     { return fTop; };
-    G4ThreeVector GetPos() const { return fPos; };
-    std::string GetProc() const { return fProc;} ;
-    G4double GetWeight() const { return fWt;} ;
-    G4int GetProcessSubType() const { return fPSType;} ;
 
-  private:
+  void SetDirChanges( G4double dc)      { fDirChanges = dc   ; } ; 
+  void SetCosIF( G4double cif)          { fCosIF      = cif  ; } ;
+  void SetbProc( G4int bp )             { fbProc      = bp   ; } ;
+  void SetTrkLen( G4double tl )         { fTrkLen     = tl   ; } ; 
+  void SetTrkOrigin( G4ThreeVector xyz) { fTrkOrigin  = xyz  ; } ; 
+  void SetEvtNb( G4int n )              { fEvtNb      = n    ; } ;
 
-      G4int         fTrackID;
-      G4int         fParentID;
-      G4int         fPmtNb;
-      G4double      fEop;
-      G4double      fTop;
-      G4ThreeVector fPos;
-      std::string      fProc;
-      G4double      fWt;
-      G4int         fPSType; // process subtype
+
+  // Get methods
+  G4int GetTrackID() const     { return fTrackID; };
+  G4int GetParentID() const  { return fParentID; };
+  G4int GetPmtNb() const   { return fPmtNb; };
+  G4double GetEop() const     { return fEop; };
+  G4double GetTop() const     { return fTop; };
+  G4ThreeVector GetPos() const { return fPos; };
+  std::string GetProc() const { return fProc;} ;
+  G4double GetWeight() const { return fWt;} ;
+  G4int GetProcessSubType() const { return fPSType;} ;
+  G4double GetDirChanges() const { return fDirChanges;} ;
+  G4double GetCosIF() const      { return fCosIF ; } ;
+  G4int    GetbProc() const      { return fbProc ; } ;
+  G4double GetTrkLen() const     { return fTrkLen; } ; 
+  G4ThreeVector GetTrkOrigin()   { return fTrkOrigin; } ;
+  G4int    GetEvtNb() const      { return fEvtNb; } ;
+
+private:
+
+  G4int         fTrackID;
+  G4int         fParentID;
+  G4int         fPmtNb;
+  G4double      fEop;
+  G4double      fTop;
+  G4ThreeVector fPos;
+  std::string      fProc;
+  G4double      fWt;
+  G4int         fPSType; // process subtype
+  G4double fDirChanges; // # of times OP changes directions
+  G4double fCosIF;  // cosine(initial OP direction, final OP direction)
+  G4int    fbProc; // boundary process
+  G4double fTrkLen; // OP path length
+  G4ThreeVector fTrkOrigin; // OP origin
+  G4int    fEvtNb;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

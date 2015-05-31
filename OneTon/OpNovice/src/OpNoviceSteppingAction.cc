@@ -41,6 +41,8 @@
 
 #include "G4UnitsTable.hh"
 
+#include "OpNoviceRunAction.hh"
+
 // lifted from examples/extended/optical/LXe
 #include "G4SteppingManager.hh"
 #include "G4SDManager.hh"
@@ -89,14 +91,76 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
      fCerenkovCounter = 0;
   }
 
-  G4bool debug = false;
+  G4bool debug = true;
+  G4bool boundary_debug = false;
 
   G4Track* track = step->GetTrack();
+  G4bool trackIsDone = track->GetTrackStatus()==fStopAndKill ; // last step for this track
+  G4bool saveTrack = (track->GetParentID()==0 || ( track->GetCreatorProcess()->GetProcessName()=="Decay" ) ) ;
   G4StepPoint* preStep  = step->GetPreStepPoint();
   G4StepPoint* postStep = step->GetPostStepPoint();
   OnetonUserTrackInformation* trackInformation = (OnetonUserTrackInformation*)track->GetUserInformation();
-  if (debug)   G4cout << " trackInformation " << trackInformation 
-	 << " track->GetUserInformation() " << track->GetUserInformation() << G4endl;
+  if (debug) G4cout << " trackInformation ptr is " << trackInformation << G4endl;
+  trackInformation->SetStartVtx( track->GetVertexPosition() );
+  trackInformation->SetEvtNb( eventNumber );
+  if (trackInformation->GetStartMomentum()==G4ThreeVector()) trackInformation->SetStartMomentum( track->GetMomentum() );
+  trackInformation->SetPDG( track->GetDynamicParticle()->GetPDGcode() );
+  if (track->GetParentID()==0) {
+    trackInformation->SetFateOrigin( 00 );
+  }
+  if (postStep) {
+    if ( track->GetVolume()->GetName()=="liqcyl"){
+      trackInformation->SetLiquidELoss( step->GetTotalEnergyDeposit() );
+      trackInformation->SetLiquidPathLength( step->GetStepLength() );
+    }
+    // figure out what happened at the end of the life of this track that we want to save
+    if (trackIsDone && saveTrack) {
+    G4bool leftWorld = (postStep->GetStepStatus()==fWorldBoundary);
+    G4bool stopped  = track->GetKineticEnergy()<=1*CLHEP::eV;
+    G4bool decayed = false, annihilated = false;
+    if (step->GetPostStepPoint()->GetProcessDefinedStep()) {
+      G4String procName = step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName();
+      annihilated = (procName=="annihil");
+      decayed   = (procName=="Decay") ;
+    }
+    if (leftWorld || stopped || decayed || annihilated ) {
+      if (leftWorld) trackInformation->SetFateOrigin( 0 );
+      if (stopped)  trackInformation->SetFateOrigin( 2 );
+      if (decayed)  trackInformation->SetFateOrigin( 1 );
+      if (annihilated) trackInformation->SetFateOrigin( 3 );
+      // fill tree
+      //get run action pointer
+      OpNoviceRunAction* myRunAction = (OpNoviceRunAction*)(G4RunManager::GetRunManager()->GetUserRunAction());
+      if (debug) G4cout << " add trackInformation to tree. myRunAction=" << myRunAction << " leftWorld,stopped,decayed,annihilated " << leftWorld << stopped << decayed << annihilated << G4endl;
+      if(myRunAction){ 	myRunAction->TallyInfo( trackInformation);       }
+    }
+    }
+  }
+
+
+  // postStep status = 0 implies particle left mother volume ("OutOfWorld")
+  if (debug) {
+    G4cout << " trackInformation " << trackInformation << " track ID " << track->GetTrackID() << " status " << track->GetTrackStatus() << " KE " << track->GetKineticEnergy() ;
+    if (preStep) G4cout << " preStep: Status " << preStep->GetStepStatus() ;
+    if (preStep->GetMaterial()) G4cout << " Material " << preStep->GetMaterial()->GetName() ;
+    if (postStep) G4cout << " postStep: Status " << postStep->GetStepStatus() ;
+    if (postStep->GetMaterial()) G4cout << " Material " << postStep->GetMaterial()->GetName() ;
+    if (step->GetPostStepPoint()->GetProcessDefinedStep())      G4cout << " process " << step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName();
+    G4cout << G4endl;
+    const std::vector<const G4Track*>* Sec = step->GetSecondaryInCurrentStep() ;
+    if (Sec->size()>0){
+      G4cout << "Secondaries: " ;
+      for (size_t i = 0; i < Sec->size() ; i++){
+	//G4cout << ((*Sec)[i])->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << " " ;
+	G4cout << Sec->at(i)->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()  ;
+	G4cout << " id " << Sec->at(i)->GetTrackID() << " parentID " << Sec->at(i)->GetParentID()  <<  " KE " << Sec->at(i)->GetKineticEnergy()  ;
+	G4cout << " status " << Sec->at(i)->GetTrackStatus() ; 
+	G4cout << " creatorProc " << Sec->at(i)->GetCreatorProcess()->GetProcessName() <<  " "  ;
+      }
+      G4cout << G4endl;
+    }
+
+  }
 
   G4String ParticleName = track->GetDynamicParticle()->GetParticleDefinition()->GetParticleName();
 
@@ -112,20 +176,20 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
     if (debug) G4cout << " processmanager " << pm << " #processes " << nprocesses << " processvector " << pv << G4endl;
     G4int i;
     for( i=0;i<nprocesses;i++){
-      if (debug)  G4cout << "stepaction " << ParticleName << " process#,name " << i << ", " << (*pv)[i]->GetProcessName() << G4endl;
+      if (boundary_debug)  G4cout << "stepaction " << ParticleName << " process#,name " << i << ", " << (*pv)[i]->GetProcessName() << G4endl;
       if((*pv)[i]->GetProcessName()=="OpBoundary"){
         boundary = (G4OpBoundaryProcess*)(*pv)[i];
         break;
       }
     }
   }
-  if (debug) G4cout << " boundary " << boundary << G4endl;
+  if (boundary_debug) G4cout << " boundary " << boundary << G4endl;
   if (boundary) {
     boundaryStatus=boundary->GetStatus();
-    if (debug)  G4cout << " boundaryStatus " << boundaryStatus  << G4endl;
+    if (boundary_debug)  G4cout << " boundaryStatus " << boundaryStatus  << G4endl;
     G4String preProc = "NONE";
     if (preStep->GetProcessDefinedStep()) preProc = preStep->GetProcessDefinedStep()->GetProcessName();
-    if (debug)  G4cout << " boundaryStatus " << boundaryStatus 
+    if (boundary_debug)  G4cout << " boundaryStatus " << boundaryStatus 
 	   << " dot products, current " << step->GetPreStepPoint()->GetMomentumDirection().dot( step->GetPostStepPoint()->GetMomentumDirection() ) 
 	   << " wrt initial " << step->GetPreStepPoint()->GetMomentumDirection().dot( track->GetVertexMomentumDirection() )
 	   << " track length " << G4BestUnit( track->GetTrackLength(), "Length")
@@ -139,14 +203,14 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
     trackInformation->SetBoundaryProc( boundaryStatus );
       switch(boundaryStatus){
       case Absorption:
-	if (debug) 	G4cout << " Absorption boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) 	G4cout << " Absorption boundaryStatus " << boundaryStatus << G4endl;
 	//     trackInformation->AddTrackStatusFlag(boundaryAbsorbed);
         //eventInformation->IncBoundaryAbsorption();
         break;
       case Detection: //Note, this assumes that the volume causing detection
                       //is the photocathode because it is the only one with
                       //non-zero efficiency
-	if (debug) G4cout << " Detection boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " Detection boundaryStatus " << boundaryStatus << G4endl;
 	break;
         /*{
         //Triger sensitive detector manually since photon is
@@ -159,44 +223,44 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
         break;
         }*/
       case FresnelReflection:
-	if (debug) G4cout << " FresnelReflection boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " FresnelReflection boundaryStatus " << boundaryStatus << G4endl;
 	break;
 
       case FresnelRefraction:
-	if (debug) G4cout << " FresnelRefraction boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " FresnelRefraction boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case SameMaterial:
-	if (debug) G4cout << " SameMaterial boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " SameMaterial boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case StepTooSmall:
-	if (debug) G4cout << " StepTooSmall boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " StepTooSmall boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case NoRINDEX:
-	if (debug) G4cout << " NoRINDEX boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " NoRINDEX boundaryStatus " << boundaryStatus << G4endl;
 	break;
 
       case TotalInternalReflection:
-	if (debug) G4cout << " TotalInternalReflection boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " TotalInternalReflection boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case LambertianReflection:
-	if (debug) G4cout << " LambertianReflection boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " LambertianReflection boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case LobeReflection:
-	if (debug) G4cout << " LobeReflection boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " LobeReflection boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case SpikeReflection:
-	if (debug) G4cout << " SpikeReflection boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " SpikeReflection boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case Transmission:
-	if (debug) G4cout << " Transmission boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " Transmission boundaryStatus " << boundaryStatus << G4endl;
 	break;
       case BackScattering:
-	if (debug) G4cout << " BackScattering boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " BackScattering boundaryStatus " << boundaryStatus << G4endl;
 	break;
         //trackInformation->IncReflections();
 	//        fExpectedNextStatus=StepTooSmall;
       default:
-	if (debug) G4cout << " default boundaryStatus " << boundaryStatus << G4endl;
+	if (boundary_debug) G4cout << " default boundaryStatus " << boundaryStatus << G4endl;
         break;
       }
   }

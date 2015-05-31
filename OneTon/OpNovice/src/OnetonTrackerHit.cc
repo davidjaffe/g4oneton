@@ -49,7 +49,14 @@ OnetonTrackerHit::OnetonTrackerHit()
    fParentID(-1),
    fPmtNb(-1),
    fEop(0.), fTop(0.),
-   fPos(G4ThreeVector()), fProc("NONE"), fWt(0.), fPSType(-99)
+   fPos(G4ThreeVector()), fProc("NONE"), fWt(0.), fPSType(-99),
+   fDirChanges(-1), 
+   fCosIF(-2.),
+   fbProc(-99), 
+   fTrkLen(-1.),
+   fTrkOrigin(G4ThreeVector()),
+   fEvtNb(-1)
+
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -70,6 +77,12 @@ OnetonTrackerHit::OnetonTrackerHit(const OnetonTrackerHit& right)
   fWt        = right.fWt;
   fProc      = right.fProc;
   fPSType    = right.fPSType;
+  fDirChanges= right.fDirChanges;
+  fCosIF     = right.fCosIF;
+  fbProc     = right.fbProc;
+  fTrkLen    = right.fTrkLen;
+  fTrkOrigin = right.fTrkOrigin;
+  fEvtNb     = right.fEvtNb;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -85,6 +98,12 @@ const OnetonTrackerHit& OnetonTrackerHit::operator=(const OnetonTrackerHit& righ
   fWt        = right.fWt;
   fProc      = right.fProc;
   fPSType    = right.fPSType;
+  fDirChanges= right.fDirChanges;
+  fCosIF     = right.fCosIF;
+  fbProc     = right.fbProc;
+  fTrkLen    = right.fTrkLen;
+  fTrkOrigin = right.fTrkOrigin;
+  fEvtNb     = right.fEvtNb;
 
   return *this;
 }
@@ -117,16 +136,34 @@ void OnetonTrackerHit::Draw()
 
 void OnetonTrackerHit::Print()
 {
-  G4cout
-    << " trackID: " << fTrackID << " parentID: " << fParentID 
-    << " process: " << fProc << " procSubType: " << fPSType
-    << " PmtNb: " << fPmtNb
-    << " Weight: " << fWt
-    << " Eop: " << std::setw(7) << G4BestUnit(fEop,"Energy")
-    << " Top: " << std::setw(7) << G4BestUnit(fTop,"Time")
-    << " Position: "
-    << std::setw(7) << G4BestUnit( fPos,"Length")
-    << G4endl;
+  if (fProc=="Hodo") {
+    G4cout
+      << " HODO: Evt# " << fEvtNb << " trackID " << fTrackID << " PDGcode " << fPSType 
+      << " parentID: " << fParentID 
+      << " Hodo# " << fPmtNb
+      << " Eop " << std::setw(7) << G4BestUnit(fEop,"Energy")
+      << " Top " << std::setw(7) << G4BestUnit(fTop,"Time")
+      << " Position "   << std::setw(7) << G4BestUnit( fPos,"Length")
+      << " Origin vtx " << std::setw(7) << G4BestUnit(fTrkOrigin, "Length")
+      << " TrkLen " << std::setw(7) << G4BestUnit(fTrkLen, "Length")
+      << G4endl;
+  }
+  else {
+    G4cout
+      << " PMT: Evt# " << fEvtNb << " trackID " << fTrackID << " parentID: " << fParentID 
+      << " optical process " << fProc << " procSubType: " << fPSType
+      << " PmtNb " << fPmtNb
+      << " Wt " << fWt
+      << " Eop " << std::setw(7) << G4BestUnit(fEop,"Energy")
+      << " Top " << std::setw(7) << G4BestUnit(fTop,"Time")
+      << " Position "   << std::setw(7) << G4BestUnit( fPos,"Length")
+      << " Origin vtx " << std::setw(7) << G4BestUnit(fTrkOrigin, "Length")
+      << " TrkLen " << std::setw(7) << G4BestUnit(fTrkLen, "Length")
+      << " #DirChanges " << fDirChanges 
+      << " cos(ini,fin) "<< fCosIF
+      << " boundaryProc "<< fbProc
+      << G4endl;
+  }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

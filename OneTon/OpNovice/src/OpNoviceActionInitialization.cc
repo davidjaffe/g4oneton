@@ -29,7 +29,8 @@
 /// \brief Implementation of the OpNoviceActionInitialization class
 
 #include "OpNoviceActionInitialization.hh"
-#include "OpNovicePrimaryGeneratorAction.hh"
+//#include "OpNovicePrimaryGeneratorAction.hh"
+#include "PrimaryGeneratorAction.hh" 
 #include "OpNoviceRunAction.hh"
 #include "OpNoviceSteppingAction.hh"
 #include "OpNoviceStackingAction.hh"
@@ -58,7 +59,7 @@ void OpNoviceActionInitialization::BuildForMaster() const
 
 void OpNoviceActionInitialization::Build() const
 {
-  SetUserAction(new OpNovicePrimaryGeneratorAction());
+  SetUserAction(new PrimaryGeneratorAction());
   SetUserAction(new OpNoviceRunAction());
   SetUserAction(new OpNoviceSteppingAction());
   SetUserAction(new OpNoviceStackingAction());

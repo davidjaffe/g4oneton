@@ -33,6 +33,7 @@
 
 #include "G4UserRunAction.hh"
 #include "OnetonTrackerHit.hh"
+#include "OnetonUserTrackInformation.hh"
 #include "globals.hh"
 
 #include "TH1.h"
@@ -55,12 +56,14 @@ public:
   virtual void BeginOfRunAction(const G4Run*);
   virtual void   EndOfRunAction(const G4Run*);
   virtual void Tally( OnetonTrackerHit*);
+  virtual void TallyInfo( OnetonUserTrackInformation*);
 private:
   TFile* rootFile;
   G4String rootFileName;
   TTree* rootTree;
-  OnetonTrackerHit* newHit;
+  OnetonTrackerHit* newHit =0;
   std::vector<OnetonTrackerHit*> bunchOfHits;
+  OnetonUserTrackInformation* info=0;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

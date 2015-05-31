@@ -30,6 +30,7 @@
 //
 #include "G4VUserTrackInformation.hh"
 #include "globals.hh"
+#include "G4ThreeVector.hh"
 
 #ifndef OnetonUserTrackInformation_h
 #define OnetonUserTrackInformation_h 1
@@ -65,6 +66,31 @@ class OnetonUserTrackInformation : public G4VUserTrackInformation
   void SetBoundaryProc( G4int bp ) { fBoundaryProc = bp;};
   G4int GetBoundaryProc() const {return fBoundaryProc;};
 
+  void SetLiquidPathLength( G4double pl ) { fLiqPathLen += pl;};
+  G4double GetLiquidPathLength() const {return fLiqPathLen;};
+
+  void SetLiquidELoss( G4double el ) { fLiqELoss += el ;};
+  G4double GetLiquidELoss() const {return fLiqELoss;};
+
+  void SetFateOrigin( G4int fo ) { fFateOrigin = fo || fFateOrigin;};
+  G4int GetFateOrigin() const {return fFateOrigin ;};
+
+  void SetEvtNb( G4int rn ) { fEvtNb = rn;};
+  G4int GetEvtNb() const {return fEvtNb;};
+
+  void SetStartVtx( G4ThreeVector sv ) { fStartVtx = sv;};
+  G4ThreeVector GetStartVtx() const {return fStartVtx;};
+  void SetFinalVtx( G4ThreeVector fv ) { fFinalVtx = fv;};
+  G4ThreeVector GetFinalVtx() const {return fFinalVtx;};
+  void SetStartMomentum( G4ThreeVector sp ) {fStartP = sp;};
+  G4ThreeVector GetStartMomentum() const {return fStartP;};
+  void SetFinalMomentum( G4ThreeVector sp ) {fFinalP = sp;};
+  G4ThreeVector GetFinalMomentum() const {return fFinalP;};
+  
+  void SetPDG( G4int pdg) {fPDG = pdg;};
+  G4int GetPDG() const {return fPDG;};
+  
+
 
   //  inline virtual void Print() const{};
 
@@ -74,6 +100,11 @@ class OnetonUserTrackInformation : public G4VUserTrackInformation
   G4int fDirChanges;
   G4double fCosIniFin;
   G4int fBoundaryProc;
+  G4double fLiqPathLen, fLiqELoss;
+  G4int fFateOrigin;
+  G4int fEvtNb;
+  G4ThreeVector fStartVtx, fStartP, fFinalVtx, fFinalP;
+  G4int fPDG;
 };
 
 #endif

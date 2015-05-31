@@ -58,6 +58,8 @@ class OpNoviceDetectorConstruction : public G4VUserDetectorConstruction
     G4double fliq_innerrad, fliq_outerrad, fliq_z, fliq_phimin, fliq_deltaphi ;
     G4double fsheet_innerrad, fsheet_outerrad, fsheet_z, fsheet_phimin, fsheet_deltaphi ;
     G4double fPMT_outerrad,   fPMT_z    ;
+  G4double ftele_thick0, ftele_width0, ftele_length0 ;
+
   std::vector< std::vector< G4double > > thedata;
   G4VPhysicalVolume* fexpHall_phys;
 

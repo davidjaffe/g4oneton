@@ -34,7 +34,8 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 OnetonUserTrackInformation::OnetonUserTrackInformation()
-  : fDirChanges(0), fCosIniFin(-2.), fBoundaryProc(-1) {
+  : fDirChanges(0), fCosIniFin(-2.), fBoundaryProc(-1), fLiqPathLen(0.), fLiqELoss(0.), fFateOrigin(0), fEvtNb(-1), fStartVtx(), fStartP(), fFinalVtx(), fFinalP(), fPDG(0)
+{
 
   // G4cout << " Hello from OnetonUserTrackInformation " << G4endl;
 }
