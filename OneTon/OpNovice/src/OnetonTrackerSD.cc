@@ -88,7 +88,7 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
 
   //G4cout << "\n event# " << eventNumber << "\n " << G4endl;
 
-  G4bool debug = true;
+  G4bool debug = false;
 
   G4bool killIt = true; // does true kill particle?
   OnetonTrackerHit* newHit = new OnetonTrackerHit(); // might not use this
@@ -180,6 +180,7 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
       ProcSubType = aStep->GetTrack()->GetCreatorProcess()->GetProcessSubType();
     }
     newHit->SetProc( ProcName );
+    newHit->SetiProc( ProcName );
     newHit->SetProcessSubType( ProcSubType );
 
 
@@ -228,7 +229,7 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
 
 void OnetonTrackerSD::EndOfEvent(G4HCofThisEvent*)
 {
-  if ( verboseLevel>1 ) { 
+  if ( verboseLevel>2 ) { 
      G4int nofHits = fHitsCollection->entries();
      G4cout << G4endl
             << "-------->Hits Collection: in this event they are " << nofHits 

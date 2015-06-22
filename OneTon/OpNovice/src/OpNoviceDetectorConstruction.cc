@@ -111,6 +111,10 @@ void OpNoviceDetectorConstruction::ConstructSDandField()
       if (fdebug>0) G4cout << " copy# " << cn ;//<< G4endl;
       aPmtSD->PMTnumbers.push_back(cn);
     }
+    if (myLVolume->GetDaughter(i)->GetName() == "Hodo"){
+      G4int cn = myLVolume->GetDaughter(i)->GetCopyNo();
+      if (fdebug>0) G4cout << " copy# " << cn ;
+    }
     G4cout << G4endl;
   }
   G4cout << " OpNoviceDetectorConstruction::ConstructSDandField: number of PMTs is " << aPmtSD->PMTnumbers.size() << G4endl;
@@ -552,7 +556,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   new G4PVPlacement(0, G4ThreeVector(0.,-fliq_outerrad/2., zbottom), PMT_log, "PMT", expHall_log,false,4); // 0,-y
 
 // place PMTs at top of acrylic vessel, in contact with vessel. copy numbers (100-199 = top)
-  G4double ztop = fcyl_z + fPMT_z;
+  G4double ztop = fcyl_z + fPMT_z; 
   G4RotationMatrix* rotD3 = new G4RotationMatrix();
   rotD3->rotateY(180.*deg);
   new G4PVPlacement(rotD3, G4ThreeVector(0.,0.,ztop),                 PMT_log, "PMT", expHall_log,false,100);
@@ -587,21 +591,81 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4LogicalVolume* Tele1_log = new G4LogicalVolume(Tele1, PlasticScintillator,"Tele1_log", 0,0,0);
   G4double zroof = fExpHall_z - 1.*cm ; //just under roof
   G4double zfloor= -fExpHall_z + 1.*cm; //just above floor
-  G4double xtele0_0 = 10.*cm; 
-  G4double ytele0_0 = 0.*cm;
-  G4double ytele0_1 = 0.*cm;
-  G4double xtele0_1 = fcyl_outerrad - 10.*cm;
-  new G4PVPlacement(0, G4ThreeVector(xtele0_0, ytele0_0, zroof),     Tele0_log, "Hodo", expHall_log,false,0); // under roof
-  new G4PVPlacement(0, G4ThreeVector(xtele0_0, ytele0_0, ztop),      Tele0_log, "Hodo", expHall_log,false,1); // on top of cylinder
-  new G4PVPlacement(0, G4ThreeVector(xtele0_1, ytele0_1, zroof),     Tele0_log, "Hodo", expHall_log,false,2); // under roof
-  new G4PVPlacement(0, G4ThreeVector(xtele0_1, ytele0_1, ztop),      Tele0_log, "Hodo", expHall_log,false,3); // on top of cylinder
+  G4double xtele0_0,xtele0_1, ytele0_0,ytele0_1, zroof0, zroof1, ztop0, ztop1;
+  xtele0_0=xtele0_1= ytele0_0=ytele0_1= zroof0= zroof1= ztop0= ztop1 = 1.23e20; // initialize to crazy value
+  G4String Telescope_description = "Nothing yet";
+  G4int Telescope_configuration = 2; // <================ SET TELESCOPE CONFIGURATION HERE <===========
+  if (Telescope_configuration==1){ // one near center, one near edge
+    xtele0_0 = 10.*cm; 
+    ytele0_0 = 0.*cm;
+    ytele0_1 = 0.*cm;
+    xtele0_1 = fcyl_outerrad - 10.*cm;
+    zroof0 = zroof1 = zroof;
+    ztop0  = ztop1  = ztop ;
+    Telescope_description = "Telescope description: One near center, one near edge, both at y=0";
+  }
+  else if (Telescope_configuration==2){ // both near center, displaced to allow 2x2cm^2 overlap
+    xtele0_0 = 10.*cm; 
+    ytele0_0 =   ftele_width0 - 1.*cm;
+    ytele0_1 = -(ftele_width0 - 1.*cm);
+    xtele0_1 = xtele0_0 + ftele_length0 - 2.*cm + ftele_length0;
+    zroof0 = zroof + ftele_thick0; // avoid overlap
+    zroof1 = zroof - ftele_thick0;
+    ztop0  = ztop  + ftele_thick0;
+    ztop1  = ztop  - ftele_thick0;
+    Telescope_description = "Telescope description: Both near center, displaced about y=0 to allow 2x2 cm2 overlap";
+  }
+  else if (Telescope_configuration==4){ // both near center, displaced with no overlap
+    xtele0_0 = 10.*cm; 
+    ytele0_0 =  0.*cm;
+    ytele0_1 =  0.*cm;
+    xtele0_1 = xtele0_0 + 3*ftele_length0 ;
+    zroof0 = zroof ; 
+    zroof1 = zroof ;
+    ztop0  = ztop + fPMT_z + 1.*mm ; // avoid overlap of hodo and top PMT
+    ztop1  = ztop + fPMT_z + 1.*mm ;
+    Telescope_description = "Telescope description: Both near center, displaced about y=0. No overlap";
+  }
+  else if (Telescope_configuration==5){ // stack hodos, near center
+    xtele0_0 = 10.*cm; 
+    ytele0_0 =  0.*cm;
+    ytele0_1 =  0.*cm;
+    xtele0_1 = xtele0_0 ;
+    zroof0 = zroof ; 
+    zroof1 = zroof - 2*ftele_thick0 - 1.*mm;
+    ztop0  = ztop + fPMT_z + 1.*mm ; // avoid overlap of hodo and top PMT
+    ztop1  = ztop0 + 2*fPMT_z + 1.*mm ; 
+    zfloor = 0.5*(zroof + ztop) ;// big hodo between others
+    Telescope_description = "Telescope description: Both near center, vertically stacked. Big hodo between small hodos in z";
+  }
+  else if (Telescope_configuration==6){ // near center, but not stacked
+    xtele0_0 = 10.*cm; 
+    ytele0_0 =  0.*cm;
+    ytele0_1 =  0.*cm;
+    xtele0_1 = xtele0_0 + 2*ftele_length0 ;
+    zroof0 = zroof ; 
+    zroof1 = zroof - 2*ftele_thick0 - 1.*mm;
+    ztop0  = ztop + fPMT_z + 1.*mm ; // avoid overlap of hodo and top PMT
+    ztop1  = ztop0 + 2*fPMT_z + 1.*mm ; 
+    zfloor = 0.5*(zroof + ztop) ;// big hodo between others
+    Telescope_description = "Telescope description: Both near center, unstacked. Big hodo between small hodos in z";
+  }
+  else {
+    assert(0 && "OpNoviceDetectorConstruction::Construct Invalid Telescope Configuration");
+  }
+  new G4PVPlacement(0, G4ThreeVector(xtele0_0, ytele0_0, zroof0),     Tele0_log, "Hodo", expHall_log,false,0); // under roof
+  new G4PVPlacement(0, G4ThreeVector(xtele0_0, ytele0_0, ztop0),      Tele0_log, "Hodo", expHall_log,false,1); // on top of cylinder
+  new G4PVPlacement(0, G4ThreeVector(xtele0_1, ytele0_1, zroof1),     Tele0_log, "Hodo", expHall_log,false,2); // under roof
+  new G4PVPlacement(0, G4ThreeVector(xtele0_1, ytele0_1, ztop1),      Tele0_log, "Hodo", expHall_log,false,3); // on top of cylinder
   new G4PVPlacement(0, G4ThreeVector(      0.,       0., zfloor),    Tele1_log, "Hodo", expHall_log,false,10); // on floor
   G4VisAttributes* Tele0_att = new G4VisAttributes( G4Colour(0.7, 0.4, 0.1, 0.3) ) ; // brown, partially transparent
   Tele0_att->SetForceSolid(true);
   Tele0_log->SetVisAttributes(Tele0_att);
-  G4VisAttributes* Tele1_att = new G4VisAttributes( G4Colour(0.7, 0.4, 0.1, 0.3) ) ; // brown, partially transparent
+  G4VisAttributes* Tele1_att = new G4VisAttributes( G4Colour(0.7/2, 0.4, 0.1, 0.3) ) ; // brown, partially transparent
   Tele1_att->SetForceSolid(true);
   Tele1_log->SetVisAttributes(Tele0_att);
+  G4cout << "OpNoviceDetectorConstruction::Construction Telescope_configuration=" << Telescope_configuration
+	 << " " << Telescope_description << G4endl;
   
 
 //

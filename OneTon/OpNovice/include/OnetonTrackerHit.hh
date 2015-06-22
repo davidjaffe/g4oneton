@@ -37,6 +37,8 @@
 #include "G4ThreeVector.hh"
 #include "tls.hh"
 
+//#include "structHit.hh"
+
 /// Tracker hit class
 ///
 /// It defines data members to store the properties of optical photons
@@ -67,6 +69,17 @@ class OnetonTrackerHit : public G4VHit
   void SetTop     (G4double top)      { fTop = top; } ; 
   void SetPos     (G4ThreeVector xyz) { fPos = xyz; };
   void SetProc    (std::string proc)     { fProc= proc; };
+  void SetiProc   (std::string proc)    {
+    if (proc=="Scintillation") { 
+      fiProc = 1 ;
+    } 
+    else if (proc=="Cerenkov") { 
+      fiProc = 2 ;
+    }  else { 
+      fiProc = 3;
+    }
+  };
+  void SetiProc   (G4int ip)          { fiProc = ip;};
   void SetWeight  (G4double wt)       { fWt  = wt;  };
   void SetProcessSubType (G4int pst)  { fPSType = pst; } ;
 
@@ -87,6 +100,7 @@ class OnetonTrackerHit : public G4VHit
   G4double GetTop() const     { return fTop; };
   G4ThreeVector GetPos() const { return fPos; };
   std::string GetProc() const { return fProc;} ;
+  G4int GetiProc() const {return fiProc;};
   G4double GetWeight() const { return fWt;} ;
   G4int GetProcessSubType() const { return fPSType;} ;
   G4double GetDirChanges() const { return fDirChanges;} ;
@@ -113,6 +127,7 @@ private:
   G4double fTrkLen; // OP path length
   G4ThreeVector fTrkOrigin; // OP origin
   G4int    fEvtNb;
+  G4int    fiProc;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

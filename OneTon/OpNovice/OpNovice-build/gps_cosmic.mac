@@ -1,5 +1,6 @@
-/control/verbose 2
-/tracking/verbose 1
+#/control/verbose 0
+/tracking/verbose 0
+
 # avoid all those annoying 'FresnelRefraction' messages
 /process/setVerbose 0 OpBoundary
 # avoid all other optical photon messages
@@ -11,6 +12,8 @@
 #/vis/viewer/set/viewpointThetaPhi 90. 0.
 # this view essentially puts 1ton vessel vertical
 /vis/viewer/set/viewpointThetaPhi -80. 90.
+##this is vertical
+/vis/viewer/set/viewpointThetaPhi -89.9 90
 #
 # no scintillation, Cerenkov light generated
 /process/inactivate Scintillation
@@ -28,26 +31,64 @@
 #### use General Particle Source (gps)
 # cosmic muon. z=121cm is just under top of dark box
 /gps/particle mu+
+#/gps/particle e+
+#/gps/particle mu-
+
 
 # rectangular source
 /gps/pos/type Plane
 /gps/pos/shape Rectangle
-/gps/pos/centre 10. 0. 122. cm
-/gps/pos/halfx 5. cm
-/gps/pos/halfy 5. cm
+## illuminate only central hodo
+#/gps/pos/centre 10. 0. 122. cm
+#/gps/pos/halfx 5. cm
+#/gps/pos/halfy 5. cm
+## illuminate both central and outer hodo
+#/gps/pos/centre 26.15 0. 122. cm
+#/gps/pos/halfx 26.15 cm
+#/gps/pos/halfy 5. cm
+####### illuminate overlapping central hodos
+## center of region is at (14.08,0)cm 
+## full range of region is (18.32,18.32)cm
+#/gps/pos/centre 14.08 0. 150. cm
+/gps/pos/centre 14.08 0. 121.8 cm
+/gps/pos/halfx 10. cm
+/gps/pos/halfy 10. cm
+####### illuminate side-by-side  central hodos
+## center of region is at (17.62,0)cm 
+## full xwidth of region is 25.4cm, ywidth is size of hodo 
+#/gps/pos/centre 17.62 0. 150. cm
+#/gps/pos/halfx 13. cm
+#/gps/pos/halfy 6. cm
+
+### point illumination of hodo0 (config4_v2)
+#/gps/position 10. 0. 122. cm
+### point illumination of hodo2 (config4_v3)
+#/gps/position 25.24 0 122. cm
+### point to illuminate hodo2 in config6
+#/gps/position 20. 0. 122. cm
+### try this
+#/gps/position 20. 0. 150. cm
+
 
 # direction (0,70degrees)
-/gps/ang/type cos
+#/gps/ang/type cos
+/gps/ang/type iso
 /gps/mintheta 0. rad
-##/gps/maxtheta 1.22 rad
-/gps/maxtheta 0.01
+## illuminate both central and outer hodo
+#/gps/maxtheta 1.20
+## illuminate overlapping central hodos
+/gps/maxtheta 0.20 rad
+#
+#### straight down
+##/gps/direction 0 0 -1.
+
 
 # energy distribution
 /gps/ene/type Pow
-/gps/ene/min 0.5 GeV
-/gps/ene/max 100. GeV
-/gps/ene/min 0.10 GeV
-/gps/ene/max 0.11 GeV
+/gps/ene/min 0.1 GeV
+/gps/ene/max 10. GeV
+#/gps/ene/min 0.10 GeV
+#/gps/ene/max 0.11 GeV
 /gps/ene/alpha -2.
 
 #/gun/position 20 30. 121. cm
@@ -89,5 +130,7 @@
 #/run/beamOn 10
 ######/process/activate Scintillation
 #/run/beamOn 100000
-/run/beamOn 10
-
+#/process/activate Cerenkov
+#/run/beamOn 1000
+#/run/beamOn 1
+/run/beamOn 10000

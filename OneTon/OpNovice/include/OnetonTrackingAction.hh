@@ -34,15 +34,15 @@
 
 #include "G4UserTrackingAction.hh"
 
-
 class OnetonTrackingAction : public G4UserTrackingAction {
 
-  public:
-    OnetonTrackingAction();
-    virtual ~OnetonTrackingAction();
+public:
+  OnetonTrackingAction();
+  virtual ~OnetonTrackingAction();
    
-    virtual void PreUserTrackingAction(const G4Track*);
-    virtual void PostUserTrackingAction(const G4Track*);
+  virtual void PreUserTrackingAction(const G4Track*);
+  virtual void PostUserTrackingAction(const G4Track*);
+  virtual void DumpUserTrackInfo(const G4Track*);
 
 };
 

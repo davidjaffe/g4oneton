@@ -32,6 +32,8 @@
 
 #include "OnetonUserTrackInformation.hh"
 
+#include "OnetonTrackingAction.hh"
+
 #include "G4Step.hh"
 #include "G4Track.hh"
 #include "G4OpticalPhoton.hh"
@@ -70,7 +72,6 @@ OpNoviceSteppingAction::OpNoviceSteppingAction()
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
 OpNoviceSteppingAction::~OpNoviceSteppingAction()
 { ; }
 
@@ -91,10 +92,16 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
      fCerenkovCounter = 0;
   }
 
-  G4bool debug = true;
+  G4bool debug = false;
   G4bool boundary_debug = false;
 
   G4Track* track = step->GetTrack();
+  G4int pdg =  track->GetDynamicParticle()->GetPDGcode();
+  //  if (pdg==-11) debug = debug || true; /// DEBUG POSITRONS
+  if (debug) {
+    G4cout << "OpNoviceSteppingAction::UserSteppingAction Dump positron before last step " << G4endl;
+    DumpUserTrackInfo( track ); /////////////////// <<<<<<<<<<<<<<<<<<< DEBUG  <<<<<<<<<<<<<
+  }
   G4bool trackIsDone = track->GetTrackStatus()==fStopAndKill ; // last step for this track
   G4bool saveTrack = (track->GetParentID()==0 || ( track->GetCreatorProcess()->GetProcessName()=="Decay" ) ) ;
   G4StepPoint* preStep  = step->GetPreStepPoint();
@@ -103,8 +110,11 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
   if (debug) G4cout << " trackInformation ptr is " << trackInformation << G4endl;
   trackInformation->SetStartVtx( track->GetVertexPosition() );
   trackInformation->SetEvtNb( eventNumber );
-  if (trackInformation->GetStartMomentum()==G4ThreeVector()) trackInformation->SetStartMomentum( track->GetMomentum() );
-  trackInformation->SetPDG( track->GetDynamicParticle()->GetPDGcode() );
+  if (trackInformation->GetStartMomentum()==G4ThreeVector())     trackInformation->SetStartMomentum( preStep->GetMomentum() );
+  trackInformation->SetFinalMomentum( track->GetMomentum() );
+  trackInformation->SetFinalVtx( track->GetPosition() ); 
+  trackInformation->SetPDG(pdg );
+  G4bool notNeutrino = !(abs(pdg)==12 || abs(pdg)==14);
   if (track->GetParentID()==0) {
     trackInformation->SetFateOrigin( 00 );
   }
@@ -131,8 +141,12 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
       // fill tree
       //get run action pointer
       OpNoviceRunAction* myRunAction = (OpNoviceRunAction*)(G4RunManager::GetRunManager()->GetUserRunAction());
-      if (debug) G4cout << " add trackInformation to tree. myRunAction=" << myRunAction << " leftWorld,stopped,decayed,annihilated " << leftWorld << stopped << decayed << annihilated << G4endl;
-      if(myRunAction){ 	myRunAction->TallyInfo( trackInformation);       }
+      if (debug) {
+	G4cout << " add trackInformation to tree. myRunAction=" << myRunAction << " leftWorld,stopped,decayed,annihilated " << leftWorld << stopped << decayed << annihilated << G4endl;
+	G4cout << "OpNoviceSteppingAction::UserSteppingAction Dump positron after last step, prior to TallyInfo " << G4endl;
+	DumpUserTrackInfo( track ); /////////////////// <<<<<<<<<<<<<<<<<<< DEBUG <<<<<<<<<<<<<
+      }
+      if(myRunAction && notNeutrino){ 	myRunAction->TallyInfo( trackInformation);       }
     }
     }
   }
@@ -286,5 +300,29 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
      }
   }
 }
+void OpNoviceSteppingAction::DumpUserTrackInfo(const G4Track* aTrack)
+{
+  OnetonUserTrackInformation* info = (OnetonUserTrackInformation*)(aTrack->GetUserInformation());
+  G4cout << "aTrack " << aTrack 
+	 << " track info: trk# " << aTrack->GetTrackID() << " parent " << aTrack->GetParentID() 
+	 << " " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
+	 << " #DirChanges " << info->GetDirChangeCount() 
+	 << " cos(ini,fin) " << info->GetCosIniFin() 
+	 << " boundaryProc " << info->GetBoundaryProc()
+	 << " track length " << G4BestUnit( aTrack->GetTrackLength(), "Length")
+	 << " track origin " << aTrack->GetVertexPosition()
+	 << " start vtx " << info->GetStartVtx()
+	 << " final vtx " << info->GetFinalVtx()
+	 << " start p " << info->GetStartMomentum()
+	 << " final p " << info->GetFinalMomentum()
+	 << " PDG " << info->GetPDG()
+	 << " Fate&Origin " << info->GetFateOrigin()
+	 << " evtNb " << info->GetEvtNb()
+	 << " liquid pathlen " << info->GetLiquidPathLength()
+	 << " liquid Eloss " << info->GetLiquidELoss()
+	 << G4endl; 
+    
+}
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

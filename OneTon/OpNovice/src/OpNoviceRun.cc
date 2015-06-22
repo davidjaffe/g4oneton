@@ -59,7 +59,7 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
 {
   G4int evtNb = event->GetEventID();
   
-  G4cout << "---> end of event: " << evtNb ; // nPMT
+  if ( evtNb<=100 || evtNb%100==0 )   G4cout << "---> end of event: " << evtNb ; 
 
   
   //Hits collections

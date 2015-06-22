@@ -49,6 +49,7 @@ class OpNoviceSteppingAction : public G4UserSteppingAction
 
     // method from the base class
     virtual void UserSteppingAction(const G4Step*);
+  virtual void DumpUserTrackInfo(const G4Track*);
 
   private:
     G4int fScintillationCounter;

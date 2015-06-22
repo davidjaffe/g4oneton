@@ -61,6 +61,7 @@
 #include "G4UIExecutive.hh"
 #endif
 
+#include <ctime>
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 namespace {
   void PrintUsage() {
@@ -107,7 +108,7 @@ int main(int argc,char** argv)
 
   // Choose the Random engine
   //
-  G4Random::setTheEngine(new CLHEP::RanecuEngine);
+  G4Random::setTheEngine(new CLHEP::RanluxEngine); // was RanecuEngine
 
   // Construct the default run manager
   //
@@ -118,8 +119,13 @@ int main(int argc,char** argv)
   G4RunManager * runManager = new G4RunManager;
 #endif
 
-  // Seed the random number generator manually
-  G4Random::setTheSeed(myseed);
+  // Seed the random number generator manually?
+  G4bool manualSeed = false;
+  myseed = time(0);
+  if (manualSeed)   myseed = 246813579;
+  G4int luxury = 4;
+  G4Random::setTheSeed(myseed,luxury);
+  G4Random::showEngineStatus();
 
   // Set mandatory initialization classes
   //

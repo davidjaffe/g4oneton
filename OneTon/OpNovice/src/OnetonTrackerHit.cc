@@ -55,7 +55,7 @@ OnetonTrackerHit::OnetonTrackerHit()
    fbProc(-99), 
    fTrkLen(-1.),
    fTrkOrigin(G4ThreeVector()),
-   fEvtNb(-1)
+   fEvtNb(-1), fiProc(-1)
 
 {}
 
@@ -76,6 +76,7 @@ OnetonTrackerHit::OnetonTrackerHit(const OnetonTrackerHit& right)
   fPos       = right.fPos;
   fWt        = right.fWt;
   fProc      = right.fProc;
+  fiProc      = right.fiProc;
   fPSType    = right.fPSType;
   fDirChanges= right.fDirChanges;
   fCosIF     = right.fCosIF;
@@ -97,6 +98,7 @@ const OnetonTrackerHit& OnetonTrackerHit::operator=(const OnetonTrackerHit& righ
   fPos       = right.fPos;
   fWt        = right.fWt;
   fProc      = right.fProc;
+  fiProc      = right.fiProc;
   fPSType    = right.fPSType;
   fDirChanges= right.fDirChanges;
   fCosIF     = right.fCosIF;
@@ -151,7 +153,7 @@ void OnetonTrackerHit::Print()
   else {
     G4cout
       << " PMT: Evt# " << fEvtNb << " trackID " << fTrackID << " parentID: " << fParentID 
-      << " optical process " << fProc << " procSubType: " << fPSType
+      << " optical process " << fProc << " iProc " << fiProc << " procSubType: " << fPSType
       << " PmtNb " << fPmtNb
       << " Wt " << fWt
       << " Eop " << std::setw(7) << G4BestUnit(fEop,"Energy")

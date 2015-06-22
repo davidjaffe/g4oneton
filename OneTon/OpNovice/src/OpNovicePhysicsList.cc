@@ -55,6 +55,8 @@
 #include "G4LossTableManager.hh"
 #include "G4EmSaturation.hh"
  
+
+#include "G4SystemOfUnits.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 OpNovicePhysicsList::OpNovicePhysicsList() 
@@ -278,6 +280,10 @@ void OpNovicePhysicsList::SetCuts()
   //   the default cut value for all particle types
   //
   SetCutsWithDefault();
+  //G4double def = 0.1*mm; //GetCutValue("e+");
+  //SetCutValue(def,"mu+");
+  //SetCutValue(def,"mu-");
+  //G4cout << " OpNovicePhysicsList::SetCuts Use cut value " << def << "mm for muons " << G4endl;
 
   if (verboseLevel>0) DumpCutValuesTable();
 }

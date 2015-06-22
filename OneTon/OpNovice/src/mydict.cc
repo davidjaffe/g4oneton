@@ -39,20 +39,9 @@ namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
 #include "../include/OnetonTrackerHit.hh"
-#include "G4VHit.hh"
-#include "globals.hh"
-#include "G4ios.hh"
-#include "G4Types.hh"
-#include "tls.hh"
-#include "templates.hh"
-#include "G4ExceptionSeverity.hh"
-#include "G4THitsCollection.hh"
-#include "G4VHitsCollection.hh"
-#include "G4Allocator.hh"
-#include "G4AllocatorPool.hh"
-#include "/Users/djaffe/work/GEANT4work/geant4.10.1-install/include/Geant4/G4ThreeVector.hh"
 #include "CLHEP/Vector/ThreeVector.h"
-#include "CLHEP/Utility/defs.h"
+#include "../include/OnetonUserTrackInformation.hh"
+#include "/Users/djaffe/work/ROOT_v6.02.05work/root-6.02.05-install/include/RConfig.h"
 
 // Header files passed via #pragma extra_include
 
@@ -71,7 +60,7 @@ namespace ROOT {
       ::OnetonTrackerHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::OnetonTrackerHit),0);
       static ::ROOT::TGenericClassInfo 
-         instance("OnetonTrackerHit", "../include/OnetonTrackerHit.hh", 44,
+         instance("OnetonTrackerHit", "../include/OnetonTrackerHit.hh", 46,
                   typeid(::OnetonTrackerHit), DefineBehavior(ptr, ptr),
                   &OnetonTrackerHit_Dictionary, isa_proxy, 0,
                   sizeof(::OnetonTrackerHit) );
@@ -97,6 +86,51 @@ namespace ROOT {
    }
 
    static void OnetonTrackerHit_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *OnetonUserTrackInformation_Dictionary();
+   static void OnetonUserTrackInformation_TClassManip(TClass*);
+   static void *new_OnetonUserTrackInformation(void *p = 0);
+   static void *newArray_OnetonUserTrackInformation(Long_t size, void *p);
+   static void delete_OnetonUserTrackInformation(void *p);
+   static void deleteArray_OnetonUserTrackInformation(void *p);
+   static void destruct_OnetonUserTrackInformation(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::OnetonUserTrackInformation*)
+   {
+      ::OnetonUserTrackInformation *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::OnetonUserTrackInformation),0);
+      static ::ROOT::TGenericClassInfo 
+         instance("OnetonUserTrackInformation", "../include/OnetonUserTrackInformation.hh", 52,
+                  typeid(::OnetonUserTrackInformation), DefineBehavior(ptr, ptr),
+                  &OnetonUserTrackInformation_Dictionary, isa_proxy, 0,
+                  sizeof(::OnetonUserTrackInformation) );
+      instance.SetNew(&new_OnetonUserTrackInformation);
+      instance.SetNewArray(&newArray_OnetonUserTrackInformation);
+      instance.SetDelete(&delete_OnetonUserTrackInformation);
+      instance.SetDeleteArray(&deleteArray_OnetonUserTrackInformation);
+      instance.SetDestructor(&destruct_OnetonUserTrackInformation);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::OnetonUserTrackInformation*)
+   {
+      return GenerateInitInstanceLocal((::OnetonUserTrackInformation*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_(Init) = GenerateInitInstanceLocal((const ::OnetonUserTrackInformation*)0x0); R__UseDummy(_R__UNIQUE_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *OnetonUserTrackInformation_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::OnetonUserTrackInformation*)0x0)->GetClass();
+      OnetonUserTrackInformation_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void OnetonUserTrackInformation_TClassManip(TClass* ){
    }
 
 } // end of namespace ROOT
@@ -169,6 +203,27 @@ namespace ROOT {
 
 namespace ROOT {
    // Wrappers around operator new
+   static void *new_OnetonUserTrackInformation(void *p) {
+      return  p ? new(p) ::OnetonUserTrackInformation : new ::OnetonUserTrackInformation;
+   }
+   static void *newArray_OnetonUserTrackInformation(Long_t nElements, void *p) {
+      return p ? new(p) ::OnetonUserTrackInformation[nElements] : new ::OnetonUserTrackInformation[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_OnetonUserTrackInformation(void *p) {
+      delete ((::OnetonUserTrackInformation*)p);
+   }
+   static void deleteArray_OnetonUserTrackInformation(void *p) {
+      delete [] ((::OnetonUserTrackInformation*)p);
+   }
+   static void destruct_OnetonUserTrackInformation(void *p) {
+      typedef ::OnetonUserTrackInformation current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::OnetonUserTrackInformation
+
+namespace ROOT {
+   // Wrappers around operator new
    static void *new_CLHEPcLcLHep3Vector(void *p) {
       return  p ? ::new((::ROOT::TOperatorNewHelper*)p) ::CLHEP::Hep3Vector : new ::CLHEP::Hep3Vector;
    }
@@ -192,20 +247,9 @@ namespace {
   void TriggerDictionaryInitialization_mydict_Impl() {
     static const char* headers[] = {
 "../include/OnetonTrackerHit.hh",
-"G4VHit.hh",
-"globals.hh",
-"G4ios.hh",
-"G4Types.hh",
-"tls.hh",
-"templates.hh",
-"G4ExceptionSeverity.hh",
-"G4THitsCollection.hh",
-"G4VHitsCollection.hh",
-"G4Allocator.hh",
-"G4AllocatorPool.hh",
-"/Users/djaffe/work/GEANT4work/geant4.10.1-install/include/Geant4/G4ThreeVector.hh",
 "CLHEP/Vector/ThreeVector.h",
-"CLHEP/Utility/defs.h",
+"../include/OnetonUserTrackInformation.hh",
+"/Users/djaffe/work/ROOT_v6.02.05work/root-6.02.05-install/include/RConfig.h",
 0
     };
     static const char* includePaths[] = {
@@ -220,6 +264,7 @@ R"DICTFWDDCLS(
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 extern int __Cling_Autoloading_Map;
 class __attribute__((annotate("$clingAutoload$../include/OnetonTrackerHit.hh")))  OnetonTrackerHit;
+class __attribute__((annotate("$clingAutoload$../include/OnetonUserTrackInformation.hh")))  OnetonUserTrackInformation;
 namespace CLHEP{class __attribute__((annotate("$clingAutoload$../include/OnetonTrackerHit.hh")))  Hep3Vector;}
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
@@ -230,26 +275,16 @@ namespace CLHEP{class __attribute__((annotate("$clingAutoload$../include/OnetonT
 
 #define _BACKWARD_BACKWARD_WARNING_H
 #include "../include/OnetonTrackerHit.hh"
-#include "G4VHit.hh"
-#include "globals.hh"
-#include "G4ios.hh"
-#include "G4Types.hh"
-#include "tls.hh"
-#include "templates.hh"
-#include "G4ExceptionSeverity.hh"
-#include "G4THitsCollection.hh"
-#include "G4VHitsCollection.hh"
-#include "G4Allocator.hh"
-#include "G4AllocatorPool.hh"
-#include "/Users/djaffe/work/GEANT4work/geant4.10.1-install/include/Geant4/G4ThreeVector.hh"
 #include "CLHEP/Vector/ThreeVector.h"
-#include "CLHEP/Utility/defs.h"
+#include "../include/OnetonUserTrackInformation.hh"
+#include "/Users/djaffe/work/ROOT_v6.02.05work/root-6.02.05-install/include/RConfig.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
     static const char* classesHeaders[]={
 "CLHEP::Hep3Vector", payloadCode, "@",
 "OnetonTrackerHit", payloadCode, "@",
+"OnetonUserTrackInformation", payloadCode, "@",
 nullptr};
 
     static bool isInitialized = false;

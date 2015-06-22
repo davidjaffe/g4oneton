@@ -51,6 +51,7 @@
 #include <map>
 #include <vector>
 #include <iomanip>
+#include <stdlib.h> // getenv
 using std::setw;
 using std::setprecision;
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -58,7 +59,8 @@ using std::setprecision;
 OpNoviceRunAction::OpNoviceRunAction()
  : G4UserRunAction()
 {  
-
+  useTree = true;
+  debug   = false;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -75,34 +77,146 @@ G4Run* OpNoviceRunAction::GenerateRun()
 
 void OpNoviceRunAction::BeginOfRunAction(const G4Run* run)
 { 
+
   G4cout << "### Run " << run->GetRunID() << " start." << G4endl;
+
   
   //inform the runManager to save random number seed
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
-  rootFileName = "../output/runX.root";
-  rootFile = new TFile(rootFileName.c_str(),"RECREATE","Oneton Sim Output");
-  rootTree = new TTree("Results", "Tree of results from Oneton sim.");
-//  OnetonTrackerHit* aHit = new OnetonTrackerHit();
+  if (useTree) {
+    G4cout << "OpNoviceRunAction::BeginOfRunAction PWD=" << std::getenv("PWD") << G4endl;
+    rootFileName = std::getenv("OUTPUT_ROOT_FILE");
+    G4cout << "OpNoviceRunAction::BeginOfRunAction rootFileName=" << rootFileName << G4endl;
+    //G4String nothing = std::getenv("THIS_WILL_GIVE_A_NULL_POINTER_BECAUSE_IT_IS_NOT_DEFINED");
+    //if (rootFileName==nothing) rootFileName = "../output/runX.root"; 
+    rootFile = new TFile(rootFileName.c_str(),"RECREATE","Oneton Sim Output");
+    G4cout << "Opened ROOT output file " << rootFileName << G4endl;
+    //    rootTree1 = new TTree("Hits", "Oneton hits");
+    //rootTree2 = new TTree("Tracks", "Oneton tracks");
+    rootTree3 = new TTree("dumHits","Oneton hits w/o object");
+    rootTree4 = new TTree("dumTracks","Oneton hits w/o object");
+    
+    
+    // initialize pointers according to https://root.cern.ch/root/htmldoc/TTree.html, pointers should not be destroyed until TTree deleted
+    //rootTree1->Branch("newHit","OnetonTrackerHit", &newHit);
+    //rootTree2->Branch("info","OnetonUserTrackInformation", &info);
 
-  // initialize pointers according to https://root.cern.ch/root/htmldoc/TTree.html, pointers should not be destroyed until TTree deleted
-  //OnetonTrackerHit* aHit = 0;
-  rootTree->Branch("newHit","OnetonTrackerHit", &newHit);
-  //  OnetonUserTrackInformation* tInfo = 0;
-  rootTree->Branch("info","OnetonUserTrackInformation", &info);
+    rootTree3->Branch("fEvtNb",&fEvtNb,"fEvtNb/I");
+    rootTree3->Branch("fTrackID",&fTrackID,"fTrackID/I");
+    rootTree3->Branch("fParentID",&fParentID,"fParentID/I");
+    rootTree3->Branch("fPmtNb",&fPmtNb,"fPmtNb/I");
+    rootTree3->Branch("fPSType",&fPSType,"fPSType/I");
+    rootTree3->Branch("fbProc",&fbProc,"fbProc/I");
+    rootTree3->Branch("fiProc",&fiProc,"fiProc/I");
+    rootTree3->Branch("fEop",&fEop,"fEop/D");
+    rootTree3->Branch("fTop",&fTop,"fTop/D");
+    rootTree3->Branch("fWt",&fWt,"fWt/D");
+    rootTree3->Branch("fDirChanges",&fDirChanges,"fDirChanges/D");
+    rootTree3->Branch("fCosIF",&fCosIF,"fCosIF/D");
+    rootTree3->Branch("fTrkLen",&fTrkLen,"fTrkLen/D");
+    //    rootTree3->Branch("fProc",fProc,"fProc/C"); // no & for C?
+    rootTree3->Branch("fPosX",&fPosX,"fPosX/D");
+    rootTree3->Branch("fPosY",&fPosY,"fPosY/D");
+    rootTree3->Branch("fPosZ",&fPosZ,"fPosZ/D");
+    rootTree3->Branch("fTrkOriginX",&fTrkOriginX,"fTrkOriginX/D");
+    rootTree3->Branch("fTrkOriginY",&fTrkOriginY,"fTrkOriginY/D");
+    rootTree3->Branch("fTrkOriginZ",&fTrkOriginZ,"fTrkOriginZ/D");
 
+    rootTree4->Branch("fDirChanges",&fDirChanges,"fDirChanges/I");
+    rootTree4->Branch("fPDG",&fPDG,"fPDG/I");
+    rootTree4->Branch("fBoundaryProc",&fBoundaryProc,"fBoundaryProc/I");
+    rootTree4->Branch("fFateOrigin",&fFateOrigin,"fFateOrigin/I");
+    rootTree4->Branch("fEvtNb",&fEvtNb,"fEvtNb/I");
+
+    rootTree4->Branch("fLiqPathLen",&fLiqPathLen,"fLiqPathLen/D");
+    rootTree4->Branch("fLiqELoss",&fLiqELoss,"fLiqELoss/D");
+    rootTree4->Branch("fCosIniFin",&fCosIniFin,"fCosIniFin/D");
+    rootTree4->Branch("fStartVtxX",&fStartVtxX,"fStartVtxX/D");
+    rootTree4->Branch("fStartPX",&fStartPX,"fStartPX/D");
+    rootTree4->Branch("fFinalVtxX",&fFinalVtxX,"fFinalVtxX/D");
+    rootTree4->Branch("fFinalPX",&fFinalPX,"fFinalPX/D");
+
+    rootTree4->Branch("fStartVtxY",&fStartVtxY,"fStartVtxY/D");
+    rootTree4->Branch("fStartPY",&fStartPY,"fStartPY/D");
+    rootTree4->Branch("fFinalVtxY",&fFinalVtxY,"fFinalVtxY/D");
+    rootTree4->Branch("fFinalPY",&fFinalPY,"fFinalPY/D");
+
+    rootTree4->Branch("fStartVtxZ",&fStartVtxZ,"fStartVtxZ/D");
+    rootTree4->Branch("fStartPZ",&fStartPZ,"fStartPZ/D");
+    rootTree4->Branch("fFinalVtxZ",&fFinalVtxZ,"fFinalVtxZ/D");
+    rootTree4->Branch("fFinalPZ",&fFinalPZ,"fFinalPZ/D");
+
+  }
 }
 
 void OpNoviceRunAction::Tally( OnetonTrackerHit* aHit)
 {
-  G4cout << "RunAction::Tally newHit" << G4endl;
-  newHit = aHit;
-  rootTree->Fill();
+  if (useTree) {
+    if (debug) G4cout << "RunAction::Tally newHit" << G4endl;
+    newHit = aHit;
+    //rootTree1->Fill();
+    fEvtNb =        newHit->GetEvtNb();
+    fTrackID =      newHit->GetTrackID();
+    fParentID =     newHit->GetParentID();
+    fPmtNb =        newHit->GetPmtNb();
+    fEop =          newHit->GetEop();
+    fTop =          newHit->GetTop();
+    fPosX =          newHit->GetPos().getX();
+    fPosY =          newHit->GetPos().getY();
+    fPosZ =          newHit->GetPos().getZ();
+    fProc =         newHit->GetProc();
+    fWt =           newHit->GetWeight();
+    fPSType =       newHit->GetProcessSubType();
+    fDirChanges =   newHit->GetDirChanges(); 
+    fCosIF =        newHit->GetCosIF();
+    fbProc =        newHit->GetbProc();
+    fTrkLen =       newHit->GetTrkLen(); // OP path length
+    fTrkOriginX =    newHit->GetTrkOrigin().getX(); // OP origin (3vector)
+    fTrkOriginY =    newHit->GetTrkOrigin().getY(); // OP origin (3vector)
+    fTrkOriginZ =    newHit->GetTrkOrigin().getZ(); // OP origin (3vector)
+    fiProc =        newHit->GetiProc();
+
+
+    rootTree3->Fill();
+  }
+  else  {
+    if (debug) G4cout << "RunAction::Tally not using tree " << G4endl;
+  }
 }
 void OpNoviceRunAction::TallyInfo( OnetonUserTrackInformation* tInfo)
 {
-  G4cout << "RunAction::TallyInfo" << G4endl;
-  info = tInfo;
-  rootTree->Fill();
+  if (useTree) {
+    if (debug) G4cout << "RunAction::TallyInfo" << G4endl;
+    info = tInfo;
+    //rootTree2->Fill();
+
+    fDirChanges =     info->GetDirChangeCount();
+    fCosIniFin =      info->GetCosIniFin();
+    fBoundaryProc =   info->GetBoundaryProc();
+    fLiqPathLen =     info->GetLiquidPathLength();
+    fLiqELoss =       info->GetLiquidELoss();
+    fFateOrigin =     info->GetFateOrigin();
+    fEvtNb =          info->GetEvtNb();
+    fStartVtxX =      info->GetStartVtx().getX();
+    fStartPX =        info->GetStartMomentum().getX();
+    fFinalVtxX =      info->GetFinalVtx().getX();
+    fFinalPX =        info->GetFinalMomentum().getX();
+
+    fStartVtxY =      info->GetStartVtx().getY();
+    fStartPY =        info->GetStartMomentum().getY();
+    fFinalVtxY =      info->GetFinalVtx().getY();
+    fFinalPY =        info->GetFinalMomentum().getY();
+
+    fStartVtxZ =      info->GetStartVtx().getZ();
+    fStartPZ =        info->GetStartMomentum().getZ();
+    fFinalVtxZ =      info->GetFinalVtx().getZ();
+    fFinalPZ =        info->GetFinalMomentum().getZ();
+    fPDG =            info->GetPDG();
+  rootTree4->Fill();
+  }
+  else {
+    if (debug) G4cout << "RunAction::TallyInfo not using tree " << G4endl;
+  }
 }
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -111,8 +225,10 @@ void OpNoviceRunAction::EndOfRunAction(const G4Run* run)
   G4int nofEvents = run->GetNumberOfEvent();
   if (nofEvents == 0) return;
 
-  rootFile->Write();
-  rootFile->Close();
+  if (useTree) {
+    rootFile->Write();
+    rootFile->Close();
+  }
   
   /*
   // Run conditions

@@ -92,20 +92,22 @@ OpNoviceStackingAction::ClassifyNewTrack(const G4Track * aTrack)
 void OpNoviceStackingAction::NewStage()
 {
   G4double frac = -1.;
-  if (fScintillationCounter>0) frac = float(fScintillationCounter-fkilledScintillationCounter)/float(fScintillationCounter);
-  G4cout << "Scint OP/evt= "
-         << fScintillationCounter 
-	 << " killed: "<< fkilledScintillationCounter 
-	 << " propagated (fraction): " << fScintillationCounter-fkilledScintillationCounter << "("<< frac <<")" ;
+  if (fScintillationCounter + fCerenkovCounter > 0){
+    if (fScintillationCounter>0) frac = float(fScintillationCounter-fkilledScintillationCounter)/float(fScintillationCounter);
+    G4cout << "Scint OP/evt= "
+	   << fScintillationCounter 
+	   << " killed: "<< fkilledScintillationCounter 
+	   << " propagated (fraction): " << fScintillationCounter-fkilledScintillationCounter << "("<< frac <<")" ;
     //	 << G4endl;
-  frac = -1.;
-  if (fCerenkovCounter>0) frac = float(fCerenkovCounter-fkilledCerenkovCounter)/float(fCerenkovCounter);
-  G4cout << " Cer OP/evt= "
-         << fCerenkovCounter 
-	 << " killed: "<< fkilledCerenkovCounter 
-	 << " propagated (fraction): " << fCerenkovCounter-fkilledCerenkovCounter << "("<< frac <<")"
-	 << G4endl;
-  fScintillationCounter = fkilledScintillationCounter = fCerenkovCounter = fkilledCerenkovCounter = 0;
+    frac = -1.;
+    if (fCerenkovCounter>0) frac = float(fCerenkovCounter-fkilledCerenkovCounter)/float(fCerenkovCounter);
+    G4cout << " Cer OP/evt= "
+	   << fCerenkovCounter 
+	   << " killed: "<< fkilledCerenkovCounter 
+	   << " propagated (fraction): " << fCerenkovCounter-fkilledCerenkovCounter << "("<< frac <<")"
+	   << G4endl;
+    fScintillationCounter = fkilledScintillationCounter = fCerenkovCounter = fkilledCerenkovCounter = 0;
+  }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
