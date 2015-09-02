@@ -18,6 +18,7 @@
 # no scintillation, Cerenkov light generated
 /process/inactivate Scintillation
 /process/inactivate Cerenkov
+/process/activate Cerenkov
 #
 # deal with lots of optical photons
 /vis/ogl/set/displayListLimit 150000

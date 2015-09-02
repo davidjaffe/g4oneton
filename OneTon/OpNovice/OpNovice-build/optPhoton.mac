@@ -1,14 +1,9 @@
-/control/verbose 2
-/tracking/verbose 3
-#
-/gun/particle opticalphoton
-/gun/energy 3 eV
-#
-/gun/direction 5 -3 0
-/OpNovice/gun/optPhotonPolar
-/run/beamOn 1
-#
-/gun/position 30 40 50 cm
-/gun/direction 1 1 1
-/OpNovice/gun/optPhotonPolar
-/run/beamOn 1
+#/control/verbose 2
+#/tracking/verbose 3
+# swap gun for gps
+/gps/particle opticalphoton
+/gps/energy 3 eV
+/gps/direction 0 0 -1
+/gps/position 0 0 0
+/gps/polarization 0 0 1
+#/run/beamOn 1
