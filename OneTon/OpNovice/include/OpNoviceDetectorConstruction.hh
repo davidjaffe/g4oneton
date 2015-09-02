@@ -56,7 +56,7 @@ class OpNoviceDetectorConstruction : public G4VUserDetectorConstruction
     G4double fcyl_innerrad, fcyl_outerrad, fcyl_z, fcyl_phimin, fcyl_deltaphi ;
     G4double fcyl_thickness;
     G4double fliq_innerrad, fliq_outerrad, fliq_z, fliq_phimin, fliq_deltaphi ;
-    G4double fsheet_innerrad, fsheet_outerrad, fsheet_z, fsheet_phimin, fsheet_deltaphi ;
+  G4double fsheet_innerrad, fsheet_outerrad, fsheet_z, fsheet_phimin, fsheet_deltaphi, fsheet_vspace;
     G4double fPMT_outerrad,   fPMT_z    ;
   G4double ftele_thick0, ftele_width0, ftele_length0 ;
 

@@ -67,15 +67,16 @@ OpNoviceDetectorConstruction::OpNoviceDetectorConstruction()
   fliq_z        = fcyl_z - fcyl_thickness;
   fliq_phimin   = 0.*deg;
   fliq_deltaphi   = 360.*deg;
-  // teflon sheet
-  fsheet_outerrad = fliq_outerrad;
-  fsheet_innerrad = fliq_outerrad - 1./8.*25.4*mm;
-  fsheet_z        = fliq_z;
-  fsheet_phimin   = 0.*deg;
-  fsheet_deltaphi   = 360.*deg;
   // PMT : dimensions of R7723 from Hamamatsu spec sheet
   fPMT_outerrad = 0.5*52.*mm;
   fPMT_z = 0.5*112.*mm;
+  // teflon sheet: with a vertical space of width=pmt diameter
+  fsheet_outerrad = fliq_outerrad;
+  fsheet_innerrad = fliq_outerrad - 1./8.*25.4*mm;
+  fsheet_z        = fliq_z;
+  fsheet_vspace   = fPMT_outerrad*2./fsheet_outerrad/pi*180.*deg;
+  fsheet_phimin   = 0.*deg   + fsheet_vspace/2.;
+  fsheet_deltaphi = 360.*deg - fsheet_vspace/2.;
   // hodoscopes : upper 'telescope' is mostly 4" x 4" x 1cm thick plastic scintillator
   ftele_thick0 = 0.5*(1.*cm);
   ftele_width0 = 0.5*(4.*2.54*cm);
@@ -515,12 +516,18 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
                         expHall_log,false,0);
 */
 // acrylic cylinder (liquid will be placed inside)
+  G4bool makeAVinvisible = false;
   G4Tubs* acrylic_cyl  = new G4Tubs("acrylic_cyl", fcyl_innerrad, fcyl_outerrad, fcyl_z, fcyl_phimin, fcyl_deltaphi );
   G4LogicalVolume* cyl_log = new G4LogicalVolume(acrylic_cyl, Acrylic,"acrylcyl",0,0,0);
   G4VPhysicalVolume* cyl_phys = new G4PVPlacement(0,G4ThreeVector(),cyl_log,"acrylcyl",expHall_log,false,0);
   G4VisAttributes* cyl_att = new G4VisAttributes( G4Colour( 0.,0.,1.,0.2) ); // blue, almost transparent
   cyl_att->SetForceSolid(true);
   cyl_log->SetVisAttributes(cyl_att);
+  if (makeAVinvisible) {
+    cyl_log->SetVisAttributes( G4VisAttributes::GetInvisible() ) ;
+    G4cout << "OpNoviceDetectorConstruction:: Make acrylic vessel invisible " << G4endl;
+  }
+
 
 // water cylinder inside glass vial
   G4Tubs* liquid_cyl = new G4Tubs("liquid_cyl",  fliq_innerrad, fliq_outerrad, fliq_z, fliq_phimin, fliq_deltaphi );
@@ -528,13 +535,13 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4VPhysicalVolume* liqcyl_phys = new G4PVPlacement(0,G4ThreeVector(),liqcyl_log,"liqcyl",cyl_log,false,0);
 
   // FIXME : IMPLEMENTATION OF BLACK TEFLON SHEET SHOULD BE DYNAMIC
-  if (0) {
+  if (1) {
   // black teflon sheet    
     G4Tubs* ptfe_tube = new G4Tubs("ptfe_tube", fsheet_innerrad, fsheet_outerrad, fsheet_z, fsheet_phimin, fsheet_deltaphi);
     G4LogicalVolume* ptfetube_log = new G4LogicalVolume(ptfe_tube,Teflon,"ptfetube", 0,0,0);
     //    G4VPhysicalVolume* ptfetube_phys = new G4PVPlacement(0,G4ThreeVector(),ptfetube_log,"ptfetube",cyl_log,false,0);
     new G4PVPlacement(0,G4ThreeVector(),ptfetube_log,"ptfetube",cyl_log,false,0);
-    G4VisAttributes* ptfetube_att = new G4VisAttributes( G4Colour( 0.,1.,0.,0.2) ); // green, almost transparent
+    G4VisAttributes* ptfetube_att = new G4VisAttributes( G4Colour( 0.,1.,0.,0.2) ); // 010=green :  0.2=almost transparent, 0.8=almost opaque
     ptfetube_att->SetForceSolid(true);
     ptfetube_log->SetVisAttributes(ptfetube_att);
     G4cout << "\n ++++++ BLACK TEFLON LINER ENABLED ++++++ \n" << G4endl;
@@ -594,7 +601,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4double xtele0_0,xtele0_1, ytele0_0,ytele0_1, zroof0, zroof1, ztop0, ztop1;
   xtele0_0=xtele0_1= ytele0_0=ytele0_1= zroof0= zroof1= ztop0= ztop1 = 1.23e20; // initialize to crazy value
   G4String Telescope_description = "Nothing yet";
-  G4int Telescope_configuration = 2; // <================ SET TELESCOPE CONFIGURATION HERE <===========
+  G4int Telescope_configuration = 7; // <================ SET TELESCOPE CONFIGURATION HERE <===========
   if (Telescope_configuration==1){ // one near center, one near edge
     xtele0_0 = 10.*cm; 
     ytele0_0 = 0.*cm;
@@ -626,7 +633,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
     ztop1  = ztop + fPMT_z + 1.*mm ;
     Telescope_description = "Telescope description: Both near center, displaced about y=0. No overlap";
   }
-  else if (Telescope_configuration==5){ // stack hodos, near center
+  else if (Telescope_configuration==5){ // stack hodos, near center, big hodos between others in z and above AV
     xtele0_0 = 10.*cm; 
     ytele0_0 =  0.*cm;
     ytele0_1 =  0.*cm;
@@ -638,7 +645,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
     zfloor = 0.5*(zroof + ztop) ;// big hodo between others
     Telescope_description = "Telescope description: Both near center, vertically stacked. Big hodo between small hodos in z";
   }
-  else if (Telescope_configuration==6){ // near center, but not stacked
+  else if (Telescope_configuration==6){ // near center, but not stacked. big hodo between others in z and above AV
     xtele0_0 = 10.*cm; 
     ytele0_0 =  0.*cm;
     ytele0_1 =  0.*cm;
@@ -649,6 +656,17 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
     ztop1  = ztop0 + 2*fPMT_z + 1.*mm ; 
     zfloor = 0.5*(zroof + ztop) ;// big hodo between others
     Telescope_description = "Telescope description: Both near center, unstacked. Big hodo between small hodos in z";
+  }
+  else if (Telescope_configuration==7){ // near center, but not stacked. big hodo on floor
+    xtele0_0 = 10.*cm; 
+    ytele0_0 =  0.*cm;
+    ytele0_1 =  0.*cm;
+    xtele0_1 = xtele0_0 + 2*ftele_length0 ;
+    zroof0 = zroof - 2*ftele_thick0 - 1.*mm;
+    zroof1 = zroof ; 
+    ztop0  = ztop + fPMT_z + 1.*mm ; // avoid overlap of hodo and top PMT
+    ztop1  = ztop0 + fPMT_z + 1.*mm ; 
+    Telescope_description = "Telescope description: Both near center, unstacked. Big hodo on floor.";
   }
   else {
     assert(0 && "OpNoviceDetectorConstruction::Construct Invalid Telescope Configuration");

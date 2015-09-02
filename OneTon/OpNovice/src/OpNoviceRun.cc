@@ -59,7 +59,8 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
 {
   G4int evtNb = event->GetEventID();
   
-  if ( evtNb<=100 || evtNb%100==0 )   G4cout << "---> end of event: " << evtNb ; 
+  G4bool bleat =  ( evtNb<=100 || evtNb%100==0 ) ;
+  if (bleat)   G4cout << "---> end of event: " << evtNb ; 
 
   
   //Hits collections
@@ -74,7 +75,7 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
   OnetonTrackerSD* aPmtSD  = static_cast<OnetonTrackerSD*>(SDman->FindSensitiveDetector(detName));
 
   G4int nPMT = aPmtSD->PMTnumbers.size();
-  G4cout << " nPMT " << nPMT ; // nHits
+  if (bleat) G4cout << " nPMT " << nPMT ; // nHits
 
   // do some counting of hits, unweighted and weighted, by process
   // initialize all maps to zero entries for each PMT
@@ -88,7 +89,7 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
   }
  
   G4int N = HC->entries();
-  G4cout << " nHit " << N ; // totWt
+  if (bleat) G4cout << " nHit " << N ; // totWt
   G4double totWt = 0.;
   for ( G4int i=0; i<N; i++) {
     G4int pn = (*HC)[i]->GetPmtNb();
@@ -103,7 +104,7 @@ void OpNoviceRun::RecordEvent(const G4Event* event)
       PMTwtsC[pn]  += (*HC)[i]->GetWeight();
     }
   }
-  G4cout << " nWt " << totWt << G4endl;
+  if (bleat) G4cout << " nWt " << totWt << G4endl;
 	 //G4cout << "\n From RecordEvent " << G4endl;
   for (std::map<G4int, G4double>::const_iterator it = PMThits.begin(); it != PMThits.end(); ++it){
     if (false) G4cout << "PMT# " << it->first 
