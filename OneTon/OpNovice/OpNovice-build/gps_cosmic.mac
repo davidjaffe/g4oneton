@@ -1,4 +1,4 @@
-#/control/verbose 0
+/control/verbose 1
 /tracking/verbose 0
 
 # avoid all those annoying 'FresnelRefraction' messages
@@ -46,7 +46,7 @@
 #/gps/pos/centre 26.15 0. 122. cm
 #/gps/pos/halfx 26.15 cm
 #/gps/pos/halfy 5. cm
-####### illuminate overlapping central hodos
+####### illuminate overlapping central hodos (configuration 2)
 ## center of region is at (14.08,0)cm 
 ## full range of region is (18.32,18.32)cm
 #/gps/pos/centre 14.08 0. 150. cm
@@ -133,4 +133,4 @@
 #/process/activate Cerenkov
 #/run/beamOn 1000
 #/run/beamOn 1
-/run/beamOn 10000
+#/run/beamOn 10000
