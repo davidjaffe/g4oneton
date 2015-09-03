@@ -1,0 +1,13 @@
+# avoid all those annoying 'FresnelRefraction' messages
+/process/setVerbose 0 OpBoundary
+# avoid all other optical photon messages
+/process/setVerbose 0 Cerenkov
+/process/setVerbose 0 Scintillation
+/process/setVerbose 0 OpAbsorption
+/process/setVerbose 0 OpRayleigh
+/gps/particle e-
+/gps/energy 478. keV
+/gps/direction 0 0 -1
+/gps/polarization 0 0 1
+/gps/position -248.75 0 -600 mm
+/run/beamOn 3

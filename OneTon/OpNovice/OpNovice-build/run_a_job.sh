@@ -5,6 +5,7 @@
 # 1 = prefix for control file : gps_cosmic optPhoton
 # 2 = string for output log, root files, control files
 # 3 = number of events to generate
+# 4 = relative Z position if cName is "shootPmt"
 #
 #
 # process inputs
@@ -16,7 +17,11 @@ cName=$1
 std_control_file=${cName}.mac
 if [ ${cName} == "shootPmt" ] ; then
     rm ${std_control_file}
-    ./shoot_Pmt.sh $3
+    relZ=1.
+    if [ $# -gt 3 ] ; then
+	relZ=$4
+    fi
+    ./shoot_Pmt.sh $3 ${relZ}
 fi
 if [ ! -f ${std_control_file} ]; then
     echo "control file ${std_control_file} does NOT EXIST. Check first argument"

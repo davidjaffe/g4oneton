@@ -76,7 +76,7 @@ void OnetonTrackerSD::Initialize(G4HCofThisEvent* hce)
 
   G4int hcID = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
   hce->AddHitsCollection( hcID, fHitsCollection ); 
-  // G4cout << "OnetonTrackerSD::Initialize hcID " << hcID << " SensitiveDetectorName " << SensitiveDetectorName << " collectionName[0] " << collectionName[0] << G4endl;
+  //G4cout << "OnetonTrackerSD::Initialize hcID " << hcID << " SensitiveDetectorName " << SensitiveDetectorName << " collectionName[0] " << collectionName[0] << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -123,7 +123,7 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
       G4Material* matt2 = aStep->GetPostStepPoint()->GetMaterial();
       assert(matt1);
       assert(matt2);
-      G4cout << " track# " << aTrack->GetTrackID() << " name " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
+      G4cout << "OnetonTrackerSD::ProcessHits track# " << aTrack->GetTrackID() << " name " << aTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
 	     << " pre-step material " << matt1->GetName()
 	     << " post-step material " << matt2->GetName()
 	     << " Edep_tot " << aStep->GetTotalEnergyDeposit() << " Edep_nonion " << aStep->GetNonIonizingEnergyDeposit()
@@ -154,7 +154,7 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
     double Eop = aStep->GetTrack()->GetDynamicParticle()->GetKineticEnergy();
     G4Material* mat = aStep->GetPostStepPoint()->GetMaterial();
     assert(mat && "No material associated with step");
-    if (debug) G4cout << " material " << mat->GetName() <<  G4endl;
+    if (debug) G4cout << "OnetonTrackerSD::ProcessHits material " << mat->GetName() <<  G4endl;
     G4MaterialPropertiesTable* MPT = mat->GetMaterialPropertiesTable();
     assert(MPT && "No materials properties table associated with material");
     G4MaterialPropertyVector* QE = MPT->GetProperty("QUANTUM_EFFICIENCY");
@@ -167,8 +167,12 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
     newHit->SetWeight( QE->Value(Eop) );
     newHit->SetTrackID(  TrackID );
     newHit->SetParentID( aStep->GetTrack()->GetParentID());
-
-    newHit->SetPmtNb(aStep->GetPreStepPoint()->GetTouchableHandle()->GetReplicaNumber(1)); // use replica instead of copy number
+    G4int npmt = aStep->GetPreStepPoint()->GetTouchableHandle()->GetCopyNumber(0);// use copy instead of replica number
+    if (debug) G4cout << "OnetonTrackerSD::ProcessHits replica# " << aStep->GetPreStepPoint()->GetTouchableHandle()->GetReplicaNumber(1)
+		      << " copy number(0) " << aStep->GetPreStepPoint()->GetTouchableHandle()->GetCopyNumber(0)
+		      << " npmt " << npmt 
+		      << G4endl;
+    newHit->SetPmtNb( npmt ); // use copy instead of replica number
     newHit->SetEop( Eop );
     newHit->SetTop(aStep->GetTrack()->GetGlobalTime() );
     newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
@@ -185,7 +189,7 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
 
 
     OnetonUserTrackInformation* info = (OnetonUserTrackInformation*)(aStep->GetTrack()->GetUserInformation());
-    if (debug) G4cout << "aStep->GetTrack() " << aStep->GetTrack() 
+    if (debug) G4cout << "OnetonTrackerSD::ProcessHits aStep->GetTrack() " << aStep->GetTrack() 
 		      << "track info: trk# " << aStep->GetTrack()->GetTrackID() << " parent " << aStep->GetTrack()->GetParentID() 
 		      << " " << aStep->GetTrack()->GetDynamicParticle()->GetParticleDefinition()->GetParticleName()
 		      << " #DirChanges " << info->GetDirChangeCount() 
@@ -213,11 +217,11 @@ G4bool OnetonTrackerSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
       // fill tree
       //get run action pointer
       OpNoviceRunAction* myRunAction = (OpNoviceRunAction*)(G4RunManager::GetRunManager()->GetUserRunAction());
-      if (debug) G4cout << " add newHit to tree. myRunAction=" << myRunAction << G4endl;
+      if (debug) G4cout << "OnetonTrackerSD::ProcessHits add newHit to tree. myRunAction=" << myRunAction << G4endl;
       if(myRunAction){
 	myRunAction->Tally( newHit);
       }
-      if (debug) G4cout << " added newHit to tree. killIt " << killIt << G4endl;
+      if (debug) G4cout << "OnetonTrackerSD::ProcessHits added newHit to tree. killIt " << killIt << G4endl;
 
       //   prevent this OP from propagating further and being double counted
       //aStep->GetTrack()->SetTrackStatus(fStopAndKill);

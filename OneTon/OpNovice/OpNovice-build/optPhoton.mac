@@ -5,5 +5,5 @@
 /gps/energy 3 eV
 /gps/direction 0 0 -1
 /gps/position 0 0 0
-/gps/polarization 0 0 1
+
 #/run/beamOn 1
