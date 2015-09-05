@@ -13,7 +13,7 @@ class oneton():
 
     def __init__(self,input_rfn='../output/runX.root',EventsToProcess=-1):
 
-        self.debug_dumping = True #False
+        self.debug_dumping = 1 # <=0: nothing, 1:summary of hits, 2:all hits
         
         self.rfn = input_rfn #'../output/runX.root'
         self.hfn = input_rfn.replace('output','hists')
@@ -119,9 +119,9 @@ class oneton():
                         hs = 'RHph'
                         hdict[hs].Fill(float(i),float(Rh))
                         hdict['RvTh_'+str(i)].Fill(float(Th),float(Rh))
-                if self.debug_dumping:
+                if self.debug_dumping>0:
                     print '\n'
-                    self.dump(hEvent)
+                    if self.debug_dumping>1: self.dump(hEvent)
                     for hitType in self.hitTypes:
                         self.dumpHodos(pmts[hitType],hitType=hitType)
                     self.dump(tEvent)

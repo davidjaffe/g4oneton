@@ -15,9 +15,10 @@
 ##this is vertical
 /vis/viewer/set/viewpointThetaPhi -89.9 90
 #
-# no scintillation, Cerenkov light generated
+# no scintillation, Cerenkov light generated????
 /process/inactivate Scintillation
 /process/inactivate Cerenkov
+/process/activate Scintillation
 /process/activate Cerenkov
 #
 # deal with lots of optical photons
